@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div id="single">
+        <img src="http://img.hb.aicdn.com/3c9d04d54a42e50303876d1a31c8499a003d1bf61848e-FRcPDq_fw658">
+    </div>
+
+    <div id="muti">
+        <img src="http://img.hb.aicdn.com/3c9d04d54a42e50303876d1a31c8499a003d1bf61848e-FRcPDq_fw658">
+        <img src="http://img.hb.aicdn.com/3c9d04d54a42e50303876d1a31c8499a003d1bf61848e-FRcPDq_fw658">
+        <img src="http://img.hb.aicdn.com/3c9d04d54a42e50303876d1a31c8499a003d1bf61848e-FRcPDq_fw658">
+    </div>
+
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/plugins/jquery.imgpreload.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        
+        //After DOM loaded
+        $('#single img').imgpreload(function(){
+
+        });
+
+        $('#muti img').imgpreload({
+            each: function(){
+                
+            },
+            all: function(){
+                console.log($(this));
+            }
+        });
+        
+        //Before DOM loaded
+        $.imgpreload('http://img.hb.aicdn.com/3c9d04d54a42e50303876d1a31c8499a003d1bf61848e-FRcPDq_fw658',function(){
+
+        });
+
+        $.imgpreload(['http://img.hb.aicdn.com/3c9d04d54a42e50303876d1a31c8499a003d1bf61848e-FRcPDq_fw658','http://img.hb.aicdn.com/3c9d04d54a42e50303876d1a31c8499a003d1bf61848e-FRcPDq_fw658'],{
+            each: function(){
+
+            },
+            all: function(){
+
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>
