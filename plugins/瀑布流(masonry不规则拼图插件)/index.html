@@ -299,7 +299,7 @@
             columnWidth: 100//必填
           });
         });
-        
+        $container.append( html ).masonry( 'appended', html );
         //ajax初始化第一页数据
         getData();
         $(window).scroll(masonryEvent);
