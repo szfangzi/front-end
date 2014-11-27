@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <style type="text/css">
+    #container {
+        background: #FFF;
+        padding: 5px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        clear: both;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+    .box {
+        margin: 5px;
+        padding: 5px;
+        background: #D8D5D2;
+        font-size: 11px;
+        line-height: 1.4em;
+        float: left;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+    .box h2 {
+        font-size: 14px;
+        font-weight: 200;
+    }
+    .box img {
+        display: block;
+        width: 100%;
+    }
+    .col1 { width: 80px; }
+    .col2 { width: 180px; }
+    .col3 { width: 280px; }
+    .col4 { width: 380px; }
+    .col5 { width: 480px; }
+    
+    .col1 img { max-width: 80px; }
+    .col2 img { max-width: 180px; }
+    .col3 img { max-width: 280px; }
+    .col4 img { max-width: 380px; }
+    .col5 img { max-width: 480px; }
+    </style>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div id="container" class="transitions-enabled infinite-scroll clearfix masonry">
+
+
+
+    </div>
+
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/plugins/jquery.masonry2.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      
+        var $container = $('#container');
+        
+        $container.imagesLoaded(function(){
+          $container.masonry({
+            itemSelector: '.box',
+            columnWidth: 100//必填
+          });
+        });
+        html = '<div class="box col1"><p>Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula</p></div><div class="box col2"><p>Vestibulum volutpat, lacus a ultrices sagittis,</p><p>Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula</p><p>Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis.</p></div>';
+        html+=html;
+        html+=html;
+        html+=html;
+        html+=html;
+        html+=html;
+        html = '<div>'+html+'</div>';
+        html = $(html).find('.box');
+        $container.append( html ).masonry( 'appended', html );
+        //ajax初始化第一页数据
+        getData();
+        $(window).scroll(masonryEvent);
+        //scroll事件会触发两次, scrollFix修复这个bug
+        var scrollFix = null;
+        function masonryEvent(){
+            if(scrollFix) clearTimeout(scrollFix);
+            scrollFix = setTimeout(function(){
+                if($(window).scrollTop() >= $(document).height()-$(window).height()){
+                    $(window).unbind('scroll', masonryEvent);
+                    getData();
+                }
+            }, 200);
+        }
+        
+        function getData(){
+            /* ajax拉数据
+            $.get('', params, function(rs){
+                
+                if(还有数据){
+                    $(window).scroll(masonryEvent);
+                }else{
+                    提示没有数据了
+                }
+            });
+            */
+        }
+      
+    });
+    </script>
+</body>
+
+</html>
