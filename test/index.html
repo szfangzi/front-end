@@ -1,105 +1,62 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <meta http-equiv="cleartype" content="on">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" sizes="196x196" href="img/touch/touch-icon-196x196.png">
+        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#222222">
+
+        <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page -->
+        <!--
+        <link rel="canonical" href="http://www.example.com/" >
+        -->
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <!--
+        <meta name="mobile-web-app-capable" content="yes">
+        -->
+
+        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+        <!--
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="">
+        -->
+
+        <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+        <!--
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+        -->
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <style type="text/css">
-        .platinum{width: 420px;float: left;}
-        .packPrice{width: 400px;float: left;}
-        </style>
+        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <div class="platinum">
-            HEX 美元欧元支付对比数据<br/>
-        </div>
-
-        <div class="packPrice">
-            <div class="my">
-                我自己充值的 pack价格<br/>
-            </div>
-            <div class="hexprimal">
-                hexprimal.com pack价格<br/>
-            </div>
-        </div>
-
-        <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="js/vendor/underscore-min.js"></script>
-        <script type="text/javascript">
-        $.get('data.php', function(data) {
-            var $data = $(data);
-            var $trs = $data.find('.bankTable.rmbhl tr');
-            var todayDollar = 0,
-                todayE100 = 0;
-            var html = '';
-
-            _.each($trs, function( value, key, list ) {
-                if(key == 0){
-                    return;
-                }
-
-                var value = $(value).find('td');
-
-                if(key == 1){
-                    todayDollar = value.eq(1).html()/100;
-                    todayE100 = value.eq(2).html();
-                }
-                var rs = value.eq(1).html()-value.eq(2).html()/1.4,
-                    rs = rs.toString().substring(0, 5);
-
-                html += value.eq(0).html()+' 10000P 美元支付比欧元支付贵'+rs+'软妹币<br/>';
-            });
-            
-            $('.platinum').append(html);
-
-            var myPrice = todayE100 / 14000,
-                myPriceHtml = '';
-
-            myPriceHtml += '140:'+ (myPrice*140).toString().substring(0, 5)+'软妹币<br/>';
-            myPriceHtml += '145:'+ (myPrice*145).toString().substring(0, 5)+'软妹币<br/>';
-            myPriceHtml += '150:'+ (myPrice*150).toString().substring(0, 5)+'软妹币<br/>';
-            myPriceHtml += '155:'+ (myPrice*155).toString().substring(0, 5)+'软妹币<br/>';
-            $('.my').append(myPriceHtml);
-
-            $.get('hexprimal.php', function(data) {
-                var $data = $(data);
-                var $products = $data.find('.products li');
-                var html = '';
-    
-                _.each($products, function( value, key, list ) {
-                    var value = $(value),
-                        title = value.find('h3').html(),
-                        price = value.find('ins .amount').html();
-                        price = price.substring(1, price.length);
-
-                    var rmb = price * todayDollar;
-                    html += '一个'+title+' '+rmb.toString().substring(0, 5)+'软妹币<br/>';
-                });
-                
-                $('.hexprimal').append(html);
-            });
-        });
-
-        
+<input id="y" />
 
 
-        
-        </script>
+
+
+        <!--<script src="js/vendor/jquery-2.1.0.min.js"></script>
+        <script src="js/vendor/ejs.min.js"></script>
+        <script src="js/vendor/underscore1.7(ext).js"></script>-->
+        <script src="js/bundle.min.js"></script>
+
     </body>
 </html>
