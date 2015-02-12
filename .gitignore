@@ -1,0 +1,5 @@
+#log
+*.log
+.settings
+logs/
+node_modules/

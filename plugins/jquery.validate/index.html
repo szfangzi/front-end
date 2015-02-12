@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+
+        <!-- Add your site or application content here -->
+        <form class="cmxform" id="commentForm" method="get" action="">
+            <p>
+                <label for="requiredCheck">启动所有必填</label>
+                <input type="checkbox" class="checkbox" id="requiredCheck" name="requiredCheck">
+            </p>
+            <fieldset>
+                <p>
+                  <label for="name">Name</label>
+                  <input type="text" name="name">
+                </p>
+                <p>
+                  <label for="password">password</label>
+                  <input id="password" type="password" name="password">
+                </p>
+                <p>
+                  <label for="confirm_password">confirm_password</label>
+                  <input id="confirm_password" type="password" name="confirm_password">
+                </p>
+                <p>
+                  <label for="number">number</label>
+                  <input id="number" type="text" name="number">
+                </p>
+            </fieldset>
+            <fieldset id="newsletter_topics">
+                <label for="topic_marketflash">
+                    <input type="checkbox" id="topic_marketflash" value="marketflash" name="topic">Marketflash
+                </label>
+                <label for="topic_fuzz">
+                    <input type="checkbox" id="topic_fuzz" value="fuzz" name="topic">Latest fuzz
+                </label>
+                <label for="topic_digester">
+                    <input type="checkbox" id="topic_digester" value="digester" name="topic">Mailing list digester
+                </label>
+                <p>
+                    <input class="submit" type="submit" value="Submit">
+                </p>
+            </fieldset>
+        </form>
+
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/vendor/underscore-min.js"></script>
+        <script src="js/plugins/jquery.validate.js"></script>
+        <script src="js/plugins//localization/messages_zh.js"></script>
+        <script type="text/javascript">
+
+            jQuery.validator.addMethod("notNumber", function(value, element) {
+              return _.isNaN(parseInt(value));
+            }, "名字不能是数字获取以数字开头哦");
+
+            $("form").validate({
+                submitHandler: function(form) {
+
+                    console.log('提交！！！');
+                },
+                rules: {  
+                    name: {
+                        required:"#requiredCheck:checked",
+                        notNumber:true,
+                        minlength: 2,
+                    },   
+                    password: {  
+                        required:"#requiredCheck:checked",
+                        minlength: 5,
+                    },  
+                    confirm_password: {  
+                        required: "#requiredCheck:checked",
+                        minlength: 5,
+                        equalTo: "#password"
+                    },
+                    number:{
+                        number:true,
+                    },
+                    topic:{
+                        required:"#requiredCheck:checked",
+                    }
+                },  
+                messages: {  
+                    name: {
+                        required:"打钩后所有必填",
+                    },
+                    confirm_password: {  
+                        equalTo: "密码要一致"  
+                    },  
+                }  
+            });
+            
+        </script>
+    </body>
+</html>
