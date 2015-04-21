@@ -42,12 +42,25 @@
         <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
         -->
 
-        <!--<link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">-->
-        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.7.1.min.js"></script>
     </head>
     <body>
+
+        <!-- Add your site or application content here -->
+
+        <?php
+            /*if(!empty($_POST['name'])){
+                $aaa = $_POST['name'];
+                echo "$aaa asdasd";
+                echo 'asdasd';
+                $ccc = 'asdasd';
+            }*/
+            $a = 1.25;
+            $b = (int)$a;
+            echo $a.' '.$b;
+        ?>
 
         <form action="" method="post">
             <input name="name" />
