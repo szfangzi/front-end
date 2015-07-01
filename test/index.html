@@ -44,25 +44,63 @@
 
         <!--<link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">-->
-        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
         <script src="js/vendor/modernizr-2.7.1.min.js"></script>
     </head>
     <body>
 
-        <form action="" method="post">
-            <input name="name" />
-            <button type="submit">ok</button>
-        </form>
+        <div id="view">
+            <input type="button" value="show" id="btnShow" />
+            <input type="button" value="hide" id="btnHide" />
+        </div>
+        <div id="info">
+            姓名：张国荣<br/>
+            性别：男<br/>
+            邮箱：abc@qq.com
+        </div>
 
         <script src="js/vendor/jquery-2.1.0.min.js"></script>
-        <script src="js/vendor/jquerymobile.js"></script>
         <script src="js/vendor/underscore-min.js"></script>
+        <script src="js/vendor/backbone.js"></script>
         <!--<script src="js/plugins/"></script>-->
         <script src="js/main.js"></script>
         <script type="text/javascript">
 
+        var student = Backbone.Model.extend({
+            defaults:{
+                Code:'1001',
+                Name:'ken',
+                Score:'100'
+            },
+        });
+        var stulist = Backbone.Collection.extend({
+            model:student,
+            good:function(){
+                return this.filter(function(stu){console.log(stu);
+                    return stu.get('Score') > 400;
+                });
+            }
+        });
 
-//console.log($('div[aid="1,2"]').html());
+        var stumodels = [{
+            Code:'1001',
+            Name:'ken',
+            Score:'600'
+        },{
+            Code:'1002',
+            Name:'ken',
+            Score:'100'
+        },{
+            Code:'1003',
+            Name:'ken',
+            Score:'6700'
+        }];
+
+        var stus = new stulist(stumodels);
+        var stug = stus.good();
+        for (var i = 0;i < stug.length; i++){
+            console.log(stug[i].toJSON());
+        };
+        
         </script>
     </body>
 </html>
