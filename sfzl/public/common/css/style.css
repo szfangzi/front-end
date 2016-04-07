@@ -523,20 +523,110 @@ em, b, i{font-style: normal;font-weight: normal;}
   position: relative;
   height: 104px;
 }
-#factoryBox .detailList .item .pic img{}
-#factoryBox .detailList .item .falogo img{}
-#factoryBox .detailList .item .b2{}
-#factoryBox .detailList .item .b2 .title{}
-#factoryBox .detailList .item .b2 .s1{}
-#factoryBox .detailList .item .b2 .s2{}
-#factoryBox .detailList .item .b3{}
-#factoryBox .detailList .item .b3 .box{}
-#factoryBox .detailList .item .b3 label{}
-#factoryBox .detailList .item .b3 .price{}
-#factoryBox .detailList .item .b3 .price i{}
-#factoryBox .detailList .item .linkFaBtn{}
-#factoryBox .detailList .item .goFaBtn{}
-#factoryBox .detailList .item .r{}
+#factoryBox .detailList .item .pic img{
+  float: left;
+  width: 180px;
+}
+#factoryBox .detailList .item .falogo img{
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  border: 2px solid #ddd;
+  left: 100px;
+  top: 18px;
+}
+#factoryBox .detailList .item .b2{
+  float: left;
+  margin-left: 25px;
+  width: 284px;
+  height: 104px;
+}
+#factoryBox .detailList .item .b2 .title{
+  float: left;
+  width: 284px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+#factoryBox .detailList .item .b2 .s1{
+  float: left;
+  width: 284px;
+  margin-top: 8px;
+}
+#factoryBox .detailList .item .b2 .s2{
+  float: left;
+  width: 284px;
+  margin-top: 8px;
+}
+#factoryBox .detailList .item .b3{
+  float: left;
+  height: 104px;
+  width: 342px;
+}
+#factoryBox .detailList .item .b3 .box{
+  float: left;
+  width: 156px;
+  margin-right: 12px;
+  margin-top: 12px;
+  
+}
+#factoryBox .detailList .item .b3 label{
+  float: left;
+    text-align: right;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 8px;  
+}
+#factoryBox .detailList .item .b3 .price{
+  float: left;
+    width: 80px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 5px 0;
+    position: relative;
+}
+#factoryBox .detailList .item .b3 .price i{
+    font-size: 12px;
+    width: 32px;
+    height: 16px;
+    background-color: #FF6700;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    right: -20px;
+    top: 7px;
+}
+#factoryBox .detailList .item .linkFaBtn{
+  width: 100px;
+    height: 64px;
+    margin-top: 16px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 64px;
+    color: #999;
+    float: left;
+    margin-right: 15px;
+}
+#factoryBox .detailList .item .goFaBtn{
+  width: 100px;
+    height: 64px;
+    margin-top: 16px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 64px;
+    color: #999;
+    float: left;
+}
+#factoryBox .detailList .item .r{
+  float: right;
+  width: 160px;
+  margin-right: 15px;
+}
 #factoryBox .detailList .item .r .city{}
 #factoryBox .detailList .item .r .faStatus{}
 #factoryBox .detailList .item .r .faStatus i{}
+#factoryBox .detailList .item .r .faStatus i.red{color: #c92027;}
+#factoryBox .detailList .item .r .faStatus i.orange{color: #ff6700;}
