@@ -396,7 +396,147 @@ em, b, i{font-style: normal;font-weight: normal;}
 #designerBox .listSearchBox .search_input{border-left: none;}
 
 /*factory page*/
-#factoryBox{padding-bottom: 40px;}
+#factoryBox{background-color: #EEEEEE;padding-bottom: 40px;}
 #factoryBox .listSearchBox .l{float: left;width: 750px;}
 #factoryBox .listSearchBox .l .box{float: left;width: 100px;height: 50px;position: relative;}
 #factoryBox .listSearchBox .selectBox{top: 0;left: 0;width: 100px;}
+#factoryBox .listSearchBox .sortBtn{
+  float: left;
+  width: 100px;
+  border:1px solid #ddd;
+  height: 40px;
+  line-height: 40px;
+  background-color: white;
+  position: relative;
+}
+#factoryBox .listSearchBox .sortBtn span{
+  float: left;
+  margin-left: 27px;
+}
+#factoryBox .listSearchBox .sortBtn i{
+  float: left;
+  width: 12px;
+  height: 13px;
+  background: url(../img/icon.png) -67px 0 no-repeat; 
+  display: inline-block;
+  margin-top: 13px;
+  margin-left: 3px;
+}
+
+
+#factoryBox .list{overflow: hidden;}
+#factoryBox .list .item{
+  background-color: white; 
+  width: 230px;
+  float: left;
+  margin:15px 9px;
+  position: relative;
+  height: 420px;
+}
+#factoryBox .list .item .city{
+  background-color: #1B2139;
+  position: absolute;
+  left: 0;
+  top: 196px;
+  color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-indent: 10px;
+  padding-right: 10px;
+  height: 22px;
+  line-height: 22px;
+}
+#factoryBox .list .item:hover .city{
+  background-color: #FF6700;
+}
+#factoryBox .list .item .pic{
+  float: left;
+  height: 185px;
+  width: 100%;
+  overflow: hidden;
+}
+#factoryBox .list .item .pic img{
+  float: left;
+}
+#factoryBox .list .item .falogo{
+  
+}
+#factoryBox .list .item .falogo img{
+  float: left;
+  width: 86px;
+  height: 86px;
+  border-radius: 43px;
+  border: 2px solid #ddd;
+  float: left;
+  margin-left: 68px;
+  margin-top: 15px;
+}
+#factoryBox .list .item .title{
+      float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 8px;
+}
+#factoryBox .list .item .s1{
+  float: left;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}
+#factoryBox .list .item .b{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+#factoryBox .list .item .b .linkFaBtn{
+  float: left;
+    width: 114px;
+    height: 46px;
+    text-align: center;
+    line-height: 46px;
+    border: 1px solid #ddd;
+}
+#factoryBox .list .item .b .goFaBtn{
+  float: left;
+    width: 113px;
+    height: 46px;
+    text-align: center;
+    line-height: 46px;
+    border: 1px solid #ddd;
+    border-left: none;
+}
+
+
+/*factory detail list page*/
+
+#factoryBox.factoryDetailList .sortBtn span{
+  margin-left: 17px;
+}
+#factoryBox .detailList{overflow: hidden;}
+#factoryBox .detailList .item{
+  background-color: white; 
+  width: 100%;
+  float: left;
+  margin-top:25px;
+  position: relative;
+  height: 104px;
+}
+#factoryBox .detailList .item .pic img{}
+#factoryBox .detailList .item .falogo img{}
+#factoryBox .detailList .item .b2{}
+#factoryBox .detailList .item .b2 .title{}
+#factoryBox .detailList .item .b2 .s1{}
+#factoryBox .detailList .item .b2 .s2{}
+#factoryBox .detailList .item .b3{}
+#factoryBox .detailList .item .b3 .box{}
+#factoryBox .detailList .item .b3 label{}
+#factoryBox .detailList .item .b3 .price{}
+#factoryBox .detailList .item .b3 .price i{}
+#factoryBox .detailList .item .linkFaBtn{}
+#factoryBox .detailList .item .goFaBtn{}
+#factoryBox .detailList .item .r{}
+#factoryBox .detailList .item .r .city{}
+#factoryBox .detailList .item .r .faStatus{}
+#factoryBox .detailList .item .r .faStatus i{}
