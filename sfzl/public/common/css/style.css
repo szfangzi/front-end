@@ -22,8 +22,9 @@ em, b, i{font-style: normal;font-weight: normal;}
 .clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0} 
 .clearfloat{zoom:1} 
 .cire{border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-webkit-border-radius:50%;}
+.relative{position: relative;}
 
-
+.icon{background: url(../img/icon.png) no-repeat 0 0;}
 .mask {background: rgba(43, 46, 56, 0.9);position: fixed;z-index: 9999;top: -5000px;right: -5000px;bottom: -5000px;left: -5000px;display: none;-webkit-backface-visibility: hidden;backface-visibility: hidden;}
 .loadingWrapper {
     position: fixed;
@@ -160,27 +161,46 @@ em, b, i{font-style: normal;font-weight: normal;}
 
 /*logobox*/
 .logobox{ height: 160px; width: 100%; background-color: #fff; }
-.logo{ margin:35px 0; float:left; display:block;text-indent: -9999em; background: url(image/logo.png) no-repeat;width: 190px; height: 90px;}
-.car_a{ float: right; background: url(image/car.png) no-repeat 12px center; padding:10px 15px 10px 45px; border: 1px solid #ddd; margin-top: 60px; }
+.logobox .logo{ margin:35px 0; float:left; display:block;text-indent: -9999em; background: url(image/logo.png) no-repeat;width: 190px; height: 90px;}
+.logobox .car_a{ float: right; background: url(image/car.png) no-repeat 12px center; padding:10px 15px 10px 45px; border: 1px solid #ddd; margin-top: 60px; }
 
-.selectbox{float: left; margin-top: 38px; margin-left: 80px;padding-right: 90px;}
-.selectbox .search_panel{position: relative;}
-.selectbox .search_btn{font-family:"微软雅黑", Arial, sans-serif;font-size: 20px;letter-spacing: 5px;color: #FFF;background-color: #c92027; cursor: pointer;height: 100%; border: none; width: 100%;}
-.selectbox .search_btnbox{position: absolute; right: -90px; top:0; z-index: 100; width: 90px;  height:38px; overflow: hidden; text-align: center;}
-.selectbox .search_input{font-family:"微软雅黑", Arial, sans-serif;vertical-align: middle;padding: 6px 0; text-indent: 10px; height: 22px; line-height: 22px; width: 610px; border: none; outline: 0; background-color: #FFF; *margin-left: -10px;*margin-top: -1px;}
-.selectbox .search_field{ padding: 2px 0 2px 2px;height: 34px; background-color: #c92027;}
-.selectbox .search_list{height: 25px;}
-.selectbox .search_list li{text-align: center; float: left;width: 60px;height: 25px; line-height: 25px; cursor: pointer;}
-.selectbox .search_list li.on{color: #FFF;background-color: #c92027;}
-.selectbox .search_info{ margin-top: 6px }
-.selectbox .search_info a{ margin-right: 15px; }
+.logobox .selectbox{float: left; margin-top: 38px; margin-left: 80px;padding-right: 90px;}
+.logobox .selectbox .search_panel{position: relative;}
+.logobox .selectbox .search_btn{font-family:"微软雅黑", Arial, sans-serif;font-size: 20px;letter-spacing: 5px;color: #FFF;background-color: #c92027; cursor: pointer;height: 100%; border: none; width: 100%;}
+.logobox .selectbox .search_btnbox{position: absolute; right: -90px; top:0; z-index: 100; width: 90px;  height:38px; overflow: hidden; text-align: center;}
+.logobox .selectbox .search_input{font-family:"微软雅黑", Arial, sans-serif;vertical-align: middle;padding: 6px 0; text-indent: 10px; height: 22px; line-height: 22px; width: 610px; border: none; outline: 0; background-color: #FFF; *margin-left: -10px;*margin-top: -1px;}
+.logobox .selectbox .search_field{ padding: 2px 0 2px 2px;height: 34px; background-color: #c92027;}
+.logobox .selectbox .search_list{height: 25px;}
+.logobox .selectbox .search_list li{text-align: center; float: left;width: 60px;height: 25px; line-height: 25px; cursor: pointer;}
+.logobox .selectbox .search_list li.on{color: #FFF;background-color: #c92027;}
+.logobox .selectbox .search_info{ margin-top: 6px }
+.logobox .selectbox .search_info a{ margin-right: 15px; }
 
+/*stars*/
+.stars{
+  width: 83px;
+  height: 15px;
+  background: url(../img/icon.png) no-repeat -371px 0;
+}
+.stars.s2{
+  background-position: -371px -15px;
+}
+.stars.s3{
+  background-position: -371px -30px;
+}
+.stars.s4{
+  background-position: -371px -45px;
+}
+.stars.s5{
+  background-position: -371px -60px;
+}
 
 /*menu*/
 .menubox{ background-color: #1b2139; width: 100%; height:46px;}
 .all_typebox{ float: left;width: 230px;}
 .all_type{height: 46px;color: #fff; line-height: 46px; font-size: 16px; background: url(image/leib.png) no-repeat 195px center #c92027; text-indent: 25px; letter-spacing: 1px;}
-.menu_list li { float: left; margin: 0 34px;  line-height: 46px; }
+.menu_list li { float: left; padding: 0 34px;  line-height: 45px; }
+.menu_list li.on{background-color: #c92027;}
 .menu_list li a{color: #fff;font-size: 16px; letter-spacing: 1px;}
 
 #index .menu_main{display: block;}
@@ -268,6 +288,30 @@ em, b, i{font-style: normal;font-weight: normal;}
 .item-price{display: block;color: #c92027; font-size: 20px; margin-top: 5px;}
 
 .listSearchBox{margin-top: 20px;height: 50px;}
+/*列表页选项框*/
+.listSearchBox .tabBox{float: left;}
+.listSearchBox .tabBox a{padding-left:1px;float: left;width: 94px;height: 40px;text-align: center;line-height: 40px;background-color: white;border:1px solid #ddd;border-left:none; }
+.listSearchBox .tabBox a.on{padding-left:0px;background-color: #E3E3E3;border:none;width: 96px;height: 42px;line-height: 42px;}
+.listSearchBox .tabBox a:first-child{border-left:1px solid #ddd; }
+/*列表页标签搜索*/
+.listSearchBox .searchTag{padding-bottom:20px; padding-left:10px; float: left;background-color: #e3e3e3;}
+.listSearchBox .searchTag .tagList{float: left;margin-top: 20px;width: 100%;}
+.listSearchBox .searchTag .tagList .l{float: left;width: 70px;text-align: right;}
+.listSearchBox .searchTag .tagList .r{float: left;width: 1150px;}
+.listSearchBox .searchTag .tagList .r a{float: left;margin-left:20px;}
+.listSearchBox .searchTag .tagList .r a.on{color: #c92027;}
+.listSearchBox .searchTag .tagList .r.color a{margin-left: 0;width: 24px;height: 20px;}
+.listSearchBox .searchTag .tagList .r a.c1{background-color:#0AB499;}
+.listSearchBox .searchTag .tagList .r a.c2{background-color:#1CC571;}
+.listSearchBox .searchTag .tagList .r a.c3{background-color:#62ACDE;}
+.listSearchBox .searchTag .tagList .r a.c4{background-color:#9E5EB5;}
+.listSearchBox .searchTag .tagList .r a.c5{background-color:#374A60;}
+.listSearchBox .searchTag .tagList .r a.c6{background-color:#E7BF0E;}
+.listSearchBox .searchTag .tagList .r a.c7{background-color:#DF831D;}
+.listSearchBox .searchTag .tagList .r a.c8{background-color:#E25A45;}
+.listSearchBox .searchTag .tagList .r a.c9{background-color:#EDF0F1;}
+.listSearchBox .searchTag .tagList .r a.c10{background-color:#ADB9B9;}
+.listSearchBox .searchTag .tagList .r a.c11{background-color:#000000;}
 .listSearchBox .search_wt{float: right;position: relative;}
 .listSearchBox .search_btn{background-color: #1B2139; float: left; font-family:"微软雅黑", Arial, sans-serif;font-size: 20px;text-align: center; color: #FFF;cursor: pointer;height: 100%;width:74px;height: 40px;border:none;}
 .listSearchBox .search_input{border:1px solid #ddd; float: left; font-family:"微软雅黑", Arial, sans-serif;vertical-align: middle;padding: 6px 0; text-indent: 10px; height:28px; line-height: 22px; width:348px; border-right: none; outline: 0; background-color: #FFF;}
@@ -281,7 +325,7 @@ em, b, i{font-style: normal;font-weight: normal;}
 /*index page*/
 #index .bannerbox{padding-left: 250px;}
 
-#indexBox{padding-bottom: 40px;}
+#indexBox, #shopIndexBox{padding-bottom: 40px;}
 /*changebox*/
 #indexBox .changebox{ height: 169px; padding-top: 15px;}
 #indexBox .change_one{background-color: #eee; width: 230px; height: 100%; text-align: center; float: left;}
@@ -324,10 +368,10 @@ em, b, i{font-style: normal;font-weight: normal;}
 #indexBox .factoryList .item .f .s2{float:left;width: 100%;}
 
 /*recommend*/
-#indexBox #recommend .card-item .f{}
-#indexBox #recommend .card-item .f .item-price{float: left;}
-#indexBox #recommend .card-item .f .r{float: right; margin-top: 7px;color: #696969}
-#indexBox #recommend .card-item .f .r i{margin-top:3px;float: left;width:15px; height: 13px; background: -15px 0 no-repeat url(../img/icon.png);}
+#shopIndexBox #recommend .card-item .f, #indexBox #recommend .card-item .f{}
+#shopIndexBox #recommend .card-item .f .item-price, #indexBox #recommend .card-item .f .item-price{float: left;}
+#shopIndexBox #recommend .card-item .f .r, #indexBox #recommend .card-item .f .r{float: right; margin-top: 7px;color: #696969}
+#shopIndexBox #recommend .card-item .f .r i, #indexBox #recommend .card-item .f .r i{margin-top:3px;float: left;width:15px; height: 13px; background: -15px 0 no-repeat url(../img/icon.png);}
 
 
 /*designer page*/
@@ -362,7 +406,13 @@ em, b, i{font-style: normal;font-weight: normal;}
 .designerFlowerListModal .confirm:hover{}
 
 #designerBox .flowerList{overflow: hidden;}
-#designerBox .flowerList .item{padding-bottom: 15px;background-color: white; width: 230px;float: left;margin:15px 9px;}
+#designerBox .flowerList .item{
+  padding-bottom: 15px;
+  background-color: white; 
+  width: 230px;
+  float: left;
+  margin:15px 9px;
+}
 #designerBox .flowerList .item .pic{float: left;width: 230px;height: 258px;}
 #designerBox .flowerList .item .m{margin-left: 15px; float: left;width: 230px;margin-top: 15px;}
 #designerBox .flowerList .item .m .face{float: left;border:1px solid #ccc;}
@@ -370,36 +420,19 @@ em, b, i{font-style: normal;font-weight: normal;}
 #designerBox .flowerList .item .m .r .s1{width: 150px;float: left;margin-top: 10px;}
 #designerBox .flowerList .item .m .r .s2{width: 150px;float: left;margin-top: 5px;color: #999;}
 
-#designerBox .listSearchBox{margin-top: 20px;height: 50px;}
-#designerBox .listSearchBox .tabBox{float: left;}
-#designerBox .listSearchBox .tabBox a{float: left;width: 94px;height: 40px;text-align: center;line-height: 40px;background-color: white;border:1px solid #ddd;}
-#designerBox .listSearchBox .tabBox a.on{background-color: #E3E3E3;border:none;width: 96px;height: 42px;line-height: 42px;}
-#designerBox .listSearchBox .searchTag{display: none; padding-bottom:20px; padding-left:10px; float: left;background-color: #e3e3e3;}
-#designerBox .listSearchBox .searchTag .tagList{float: left;margin-top: 20px;width: 100%;}
-#designerBox .listSearchBox .searchTag .tagList .l{float: left;width: 70px;text-align: right;}
-#designerBox .listSearchBox .searchTag .tagList .r{float: left;width: 1150px;}
-#designerBox .listSearchBox .searchTag .tagList .r a{float: left;margin-left:20px;}
-#designerBox .listSearchBox .searchTag .tagList .r a.on{color: #c92027;}
-#designerBox .listSearchBox .searchTag .tagList .r.color a{margin-left: 0;width: 24px;height: 20px;}
-#designerBox .listSearchBox .searchTag .tagList .r a.c1{background-color:#0AB499;}
-#designerBox .listSearchBox .searchTag .tagList .r a.c2{background-color:#1CC571;}
-#designerBox .listSearchBox .searchTag .tagList .r a.c3{background-color:#62ACDE;}
-#designerBox .listSearchBox .searchTag .tagList .r a.c4{background-color:#9E5EB5;}
-#designerBox .listSearchBox .searchTag .tagList .r a.c5{background-color:#374A60;}
-#designerBox .listSearchBox .searchTag .tagList .r a.c6{background-color:#E7BF0E;}
-#designerBox .listSearchBox .searchTag .tagList .r a.c7{background-color:#DF831D;}
-#designerBox .listSearchBox .searchTag .tagList .r a.c8{background-color:#E25A45;}
-#designerBox .listSearchBox .searchTag .tagList .r a.c9{background-color:#EDF0F1;}
-#designerBox .listSearchBox .searchTag .tagList .r a.c10{background-color:#ADB9B9;}
-#designerBox .listSearchBox .searchTag .tagList .r a.c11{background-color:#000000;}
+#designerBox .listSearchBox .searchTag{display: none;}
 #designerBox .listSearchBox .selectBox{left: -74px;}
 #designerBox .listSearchBox .search_input{border-left: none;}
 
 /*factory page*/
 #factoryBox{background-color: #EEEEEE;padding-bottom: 40px;}
-#factoryBox .listSearchBox .l{float: left;width: 750px;}
-#factoryBox .listSearchBox .l .box{float: left;width: 100px;height: 50px;position: relative;}
-#factoryBox .listSearchBox .selectBox{top: 0;left: 0;width: 100px;}
+#factoryBox .banner,
+#shopIndexBox .banner{
+  padding-top: 0;
+}
+.listSearchBox .l{float: left;width: 750px;}
+.listSearchBox .l .box{float: left;width: 100px;height: 50px;position: relative;}
+.listSearchBox .selectBox{top: 0;left: 0;width: 100px;}
 #factoryBox .listSearchBox .sortBtn{
   float: left;
   width: 100px;
@@ -510,12 +543,16 @@ em, b, i{font-style: normal;font-weight: normal;}
 
 
 /*factory detail list page*/
-
+#factoryBox.factoryDetailList .banner{
+  padding-top: 0;
+}
 #factoryBox.factoryDetailList .sortBtn span{
   margin-left: 17px;
 }
-#factoryBox .detailList{overflow: hidden;}
-#factoryBox .detailList .item{
+#factoryBox .detailList,
+#diyBox.faListWrapper .list{overflow: hidden;}
+#factoryBox .detailList .item,
+#diyBox.faListWrapper .list .item{
   background-color: white; 
   width: 100%;
   float: left;
@@ -523,11 +560,22 @@ em, b, i{font-style: normal;font-weight: normal;}
   position: relative;
   height: 104px;
 }
-#factoryBox .detailList .item .pic img{
+#factoryBox .detailList .item .pic,
+#diyBox.faListWrapper .list .item .pic{
+  float: left;
+  width: 180px;
+  height: 104px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+#factoryBox .detailList .item .pic img,
+#diyBox.faListWrapper .list .item .pic img{
   float: left;
   width: 180px;
 }
-#factoryBox .detailList .item .falogo img{
+#factoryBox .detailList .item .falogo img,
+#diyBox.faListWrapper .list .item .falogo img{
   position: absolute;
   width: 64px;
   height: 64px;
@@ -536,41 +584,48 @@ em, b, i{font-style: normal;font-weight: normal;}
   left: 100px;
   top: 18px;
 }
-#factoryBox .detailList .item .b2{
+#factoryBox .detailList .item .b2,
+#diyBox.faListWrapper .list .item .b2{
   float: left;
   margin-left: 25px;
   width: 284px;
   height: 104px;
 }
-#factoryBox .detailList .item .b2 .title{
+#factoryBox .detailList .item .b2 .title,
+#diyBox.faListWrapper .list .item .b2 .title{
   float: left;
   width: 284px;
   font-size: 18px;
   margin-top: 10px;
 }
-#factoryBox .detailList .item .b2 .s1{
+#factoryBox .detailList .item .b2 .s1,
+#diyBox.faListWrapper .list .item .b2 .s1{
   float: left;
   width: 284px;
   margin-top: 8px;
 }
-#factoryBox .detailList .item .b2 .s2{
+#factoryBox .detailList .item .b2 .s2,
+#diyBox.faListWrapper .list .item .b2 .s2{
   float: left;
   width: 284px;
   margin-top: 8px;
 }
-#factoryBox .detailList .item .b3{
+#factoryBox .detailList .item .b3,
+#diyBox.faListWrapper .list .item .b3{
   float: left;
   height: 104px;
   width: 342px;
 }
-#factoryBox .detailList .item .b3 .box{
+#factoryBox .detailList .item .b3 .box,
+#diyBox.faListWrapper .list .item .b3 .box{
   float: left;
   width: 156px;
   margin-right: 12px;
   margin-top: 12px;
   
 }
-#factoryBox .detailList .item .b3 label{
+#factoryBox .detailList .item .b3 label,
+#diyBox.faListWrapper .list .item .b3 label{
   float: left;
     text-align: right;
     width: 50px;
@@ -578,7 +633,8 @@ em, b, i{font-style: normal;font-weight: normal;}
     line-height: 30px;
     margin-right: 8px;  
 }
-#factoryBox .detailList .item .b3 .price{
+#factoryBox .detailList .item .b3 .price,
+#diyBox.faListWrapper .list .item .b3 .price{
   float: left;
     width: 80px;
     text-align: center;
@@ -586,7 +642,8 @@ em, b, i{font-style: normal;font-weight: normal;}
     padding: 5px 0;
     position: relative;
 }
-#factoryBox .detailList .item .b3 .price i{
+#factoryBox .detailList .item .b3 .price i,
+#diyBox.faListWrapper .list .item .b3 .price i{
     font-size: 12px;
     width: 32px;
     height: 16px;
@@ -597,7 +654,8 @@ em, b, i{font-style: normal;font-weight: normal;}
     right: -20px;
     top: 7px;
 }
-#factoryBox .detailList .item .linkFaBtn{
+#factoryBox .detailList .item .linkFaBtn,
+#diyBox.faListWrapper .list .item .linkFaBtn{
   width: 100px;
     height: 64px;
     margin-top: 16px;
@@ -609,7 +667,15 @@ em, b, i{font-style: normal;font-weight: normal;}
     float: left;
     margin-right: 15px;
 }
-#factoryBox .detailList .item .goFaBtn{
+#factoryBox .detailList .item .goFaBtn:hover,
+#diyBox.faListWrapper .list .item .goFaBtn:hover,
+#factoryBox .detailList .item .linkFaBtn:hover,
+#diyBox.faListWrapper .list .item .linkFaBtn:hover{
+  color: white;
+  border:none;
+}
+#factoryBox .detailList .item .goFaBtn,
+#diyBox.faListWrapper .list .item .goFaBtn{
   width: 100px;
     height: 64px;
     margin-top: 16px;
@@ -620,13 +686,339 @@ em, b, i{font-style: normal;font-weight: normal;}
     color: #999;
     float: left;
 }
-#factoryBox .detailList .item .r{
-  float: right;
-  width: 160px;
-  margin-right: 15px;
+#factoryBox .detailList .item .r,
+#diyBox.faListWrapper .list .item .r{
+      float: right;
+    width: 160px;
+    margin-right: 15px;
+    margin-top: 20px;
 }
-#factoryBox .detailList .item .r .city{}
-#factoryBox .detailList .item .r .faStatus{}
-#factoryBox .detailList .item .r .faStatus i{}
-#factoryBox .detailList .item .r .faStatus i.red{color: #c92027;}
-#factoryBox .detailList .item .r .faStatus i.orange{color: #ff6700;}
+#factoryBox .detailList .item .r .city,
+#diyBox.faListWrapper .list .item .r .city{
+      float: left;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: right;
+}
+#factoryBox .detailList .item .r .faStatus,
+#diyBox.faListWrapper .list .item .r .faStatus{
+  float: left;
+    width: 100%;
+    text-align: right;
+}
+#factoryBox .detailList .item .r .faStatus i,
+#diyBox.faListWrapper .list .item .r .faStatus i{}
+#factoryBox .detailList .item .r .faStatus i.red,
+#diyBox.faListWrapper .list .item .r .faStatus i.red{color: #c92027;}
+#factoryBox .detailList .item .r .faStatus i.orange,
+#diyBox.faListWrapper .list .item .r .faStatus i.orange{color: #ff6700;}
+
+/*diy page*/
+#diyBox{padding-bottom: 40px;}
+#diyBox .banner{padding-top: 0;}
+#diyBox .bannerbox{
+  width: 100%;
+  height: 198px;
+  background: url(../img/diyBanner.png) no-repeat center;
+}
+#diyBox.flowerListWrapper .listSearchBox .selectBox,
+#diyBox.maListWrapper .listSearchBox .selectBox{left: -74px;}
+#diyBox.flowerListWrapper .listSearchBox .search_input,
+#diyBox.maListWrapper .listSearchBox .search_input{border-left: none;}
+
+#diyBox.flowerListWrapper .pro_box, 
+#diyBox.maListWrapper .pro_box{
+  margin-top: 250px;
+}
+
+#diyBox .list{overflow: hidden;}
+#diyBox.flowerListWrapper .list .item, 
+#diyBox.maListWrapper .list .item{
+  padding-bottom: 15px;
+  background-color: white;
+  width: 230px;
+  float: left;
+  margin:15px 9px;
+  position: relative;
+}
+#diyBox.flowerListWrapper .list .item .pic, 
+#diyBox.maListWrapper .list .item .pic{
+  float: left;
+  width: 230px;
+  height: 258px;
+  overflow: hidden;
+}
+#diyBox.flowerListWrapper .list .item .pic img,
+#diyBox.maListWrapper .list .item .pic img{
+  float: left;
+}
+#diyBox.flowerListWrapper .list .item .title,
+#diyBox.maListWrapper .list .item .title{
+  float: left;
+  width: 100%;
+  padding: 10px 0 0 5px;
+  box-sizing: border-box;
+}
+#diyBox.flowerListWrapper .list .item .s1,
+#diyBox.maListWrapper .list .item .s1{
+  float: left;
+  width: 100%;
+  padding: 10px 0 0 5px;
+  box-sizing: border-box;
+}
+#diyBox.flowerListWrapper .list .item .s1 i,
+#diyBox.maListWrapper .list .item .s1 i{
+  color: #c92027;
+}
+#diyBox.flowerListWrapper .list .item .isSelected,
+#diyBox.maListWrapper .list .item .isSelected{
+  width: 230px;
+  height: 49px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#diyBox.flowerListWrapper .list .item:hover .isSelected,
+#diyBox.maListWrapper .list .item:hover .isSelected{
+  background: url(../img/icon.png) no-repeat 0 -303px;
+}
+#diyBox.flowerListWrapper .list .item.on .isSelected,
+#diyBox.maListWrapper .list .item.on .isSelected{
+  background: url(../img/icon.png) no-repeat 0 -352px;
+}
+
+#diyBox.faListWrapper .list .item .boxMask{
+  backface-visibility: hidden; 
+  background: rgba(43, 46, 56, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+}
+#diyBox.faListWrapper .list .item:hover .boxMask{
+  display: inline-block;
+}
+#diyBox.faListWrapper .list .item .isSelected{
+  width: 180px;
+  height: 104px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 20;
+  cursor: pointer;
+}
+#diyBox.faListWrapper .list .item:hover .isSelected{
+  display: inline-block;
+}
+#diyBox.faListWrapper .list .item .isSelected span{
+  display: none;
+}
+#diyBox.faListWrapper .list .item .isSelected .s1,
+#diyBox.faListWrapper .list .item .isSelected .s2{
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+  }
+#diyBox.faListWrapper .list .item:hover .isSelected .s1{
+  display: inline-block;
+}
+#diyBox.faListWrapper .list .item .isSelected i{
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  width: 33px;
+  height: 33px;
+}
+#diyBox.faListWrapper .list .item:hover .isSelected i{
+  background: url(../img/icon.png) no-repeat -54px -16px;
+}
+#diyBox.faListWrapper .list .item.on .isSelected{
+  display: inline-block;
+}
+#diyBox.faListWrapper .list .item.on .boxMask{
+  display: inline-block;
+}
+#diyBox.faListWrapper .list .item.on .isSelected i{
+  background: url(../img/icon.png) no-repeat -87px -16px;
+}
+#diyBox.faListWrapper .list .item.on .isSelected .s1{
+  display: none;
+}
+#diyBox.faListWrapper .list .item.on .isSelected .s2{
+  display: inline-block;
+}
+
+.diyFloatWrapper{
+    position: fixed;
+    width: 100%;
+    height: 112px;
+    background-color: #E6E6E6;
+    border: 2px solid #ddd;
+    box-sizing: border-box;
+    bottom: 30px;
+    left: 0;
+    z-index: 100;
+}
+.diyFloatWrapper .fixed{
+  width: 100px;
+  height: 108px;
+  position: absolute;
+  top: 0;
+  left: -120px;
+  background-color: #E6E6E6;
+  z-index: 110;
+}
+.diyFloatWrapper .nextBtn{
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 130px;
+  height: 46px;
+  background-color: #1B2139;
+  font-size: 24px;
+  border:none;
+  color: white;
+  cursor: pointer;
+}
+.diyFloatWrapper .w{
+  padding-left: 300px;
+  box-sizing: border-box;
+}
+.diyFloatWrapper .diyFloatBox{
+  float: left;
+}
+.diyFloatWrapper .diyFloatBox.fst{
+  position: absolute;
+  left: -70px;
+  top: 0;
+}
+.diyFloatWrapper .diyFloatBox .add{
+  background-position: -53px -120px;
+  width: 49px;
+  height: 49px;
+  float: left;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+.diyFloatWrapper .diyFloatBox .diyFloat{
+  float: left;
+  width: 284px;
+  height: 82px;
+  background-color: white;
+  margin-top: 13px;
+  margin-right: 20px;
+}
+.diyFloatWrapper .diyFloatBox .diyFloat .txt{
+  float: left;
+  font-size: 24px;
+  width: 50px;
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #aaa;
+}
+.diyFloatWrapper .diyFloatBox .diyFloat .pic{
+  float: right;
+  width: 188px;
+  height: 72px;
+  margin-top: 5px;
+  margin-right: 5px;
+  overflow: hidden;
+}
+.diyFloatWrapper .diyFloatBox .diyFloat .pic img{
+  float: left;
+}
+
+
+
+/*店铺页面*/
+#shopIndexBox{
+  background-color: #eee;
+}
+#shopIndexBox .recommendBg{
+  height: 70px;
+  background: url(../img/bg1.png) no-repeat 0 0;
+  margin-top: 80px;
+}
+#shopIndexBox .newProductsAdBoxWrapper{
+  width: 100%;
+  height: 677px;
+  background: url(../img/shopNewBg.png) no-repeat 0 0;
+}
+#shopIndexBox .newProductsAdBox{
+  padding-top: 20px;
+  overflow: hidden;
+  
+}
+#shopIndexBox .newProductsAdBox .a1{
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#shopIndexBox .newProductsAdBox .a2, 
+#shopIndexBox .newProductsAdBox .a3, 
+#shopIndexBox .newProductsAdBox .a4{
+  float: left;
+  width: 290px;
+  height: 470px;
+  margin-right: 25px;
+}
+#shopIndexBox .newProductsAdBox .a5{
+  float: left;
+  width: 290px;
+  height: 470px;
+}
+#shopIndexBox .newProductsAdBox .a5 a{
+  float: left;
+}
+#shopIndexBox .newProductsAdBox .a5 a:first-child{
+  margin-bottom: 12px;
+}
+.shopIndexBoxFoot{
+  height: 126px;
+}
+.shopIndexBoxFoot .bg{
+  background: url(../img/bg1.png) no-repeat 0 -70px;
+  width: 100%;
+  height: 96px;
+  margin-top: 20px;
+}
+
+/*shopTop*/
+.shopLogoBox{ height: 58px;padding-top: 22px;padding-bottom: 25px; width: 100%; background-color: #fff; }
+.shopLogoBox .logo{float:left; display:block;height: 55px;}
+.shopLogoBox .logo img{height: 55px;float: left;}
+.shopLogoBox .b2{
+  float: left;
+  height: 45px;
+  margin-top: 10px;
+  width: 150px;
+  padding-right: 15px;
+  margin-left: 15px;
+}
+.shopLogoBox .b2 .shopName{
+  float: left;
+  font-size: 18px;
+}
+.shopLogoBox .b2 .stars{
+  float: left;
+}
+
+.shopLogoBox .car_a{ float: right; background: url(image/car.png) no-repeat 12px center; padding:10px 15px 10px 45px; border: 1px solid #ddd; margin-top: 60px; }
+
+.shopLogoBox .selectbox{float: left; margin-top: 38px; margin-left: 80px;padding-right: 90px;}
+.shopLogoBox .selectbox .search_panel{position: relative;}
+.shopLogoBox .selectbox .search_btn{font-family:"微软雅黑", Arial, sans-serif;font-size: 20px;letter-spacing: 5px;color: #FFF;background-color: #c92027; cursor: pointer;height: 100%; border: none; width: 100%;}
+.shopLogoBox .selectbox .search_btnbox{position: absolute; right: -90px; top:0; z-index: 100; width: 90px;  height:38px; overflow: hidden; text-align: center;}
+.shopLogoBox .selectbox .search_input{font-family:"微软雅黑", Arial, sans-serif;vertical-align: middle;padding: 6px 0; text-indent: 10px; height: 22px; line-height: 22px; width: 610px; border: none; outline: 0; background-color: #FFF; *margin-left: -10px;*margin-top: -1px;}
+.shopLogoBox .selectbox .search_field{ padding: 2px 0 2px 2px;height: 34px; background-color: #c92027;}
+.shopLogoBox .selectbox .search_list{height: 25px;}
+.shopLogoBox .selectbox .search_list li{text-align: center; float: left;width: 60px;height: 25px; line-height: 25px; cursor: pointer;}
+.shopLogoBox .selectbox .search_list li.on{color: #FFF;background-color: #c92027;}
+.shopLogoBox .selectbox .search_info{ margin-top: 6px }
+.shopLogoBox .selectbox .search_info a{ margin-right: 15px; }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>丝纺之路</title>
-    <link rel="stylesheet" type="text/css" href="../public/common/css/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="../public/common/css/style.css" />
 </head>
 
 <body>
@@ -147,30 +147,11 @@
         </div>
     </div>
 
-    <div id="factoryBox" class="factoryDetailList">
+    <div id="diyBox" class="faListWrapper">
 		<!--lunbo-->
 		<div class="banner">
 		    <div class="bannerbox">
-		        <div id="slideBox" class="slideBox">
-		            <div class="hd">
-		                <ul>
-		                    <li></li>
-		                    <li></li>
-		                </ul>
-		            </div>
-		            <div class="bd">
-		                <ul>
-		                    <li>
-		                        <a href="#"><img src="../public/common/img/p1.jpg" /></a>
-		                    </li>
-		                    <li>
-		                        <a href="#"><img src="../public/common/img/p2.jpg" /></a>
-		                    </li>
-		                </ul>
-		            </div>
-		            <!-- <a class="prev" href="javascript:void(0)"></a>
-					<a class="next" href="javascript:void(0)"></a> -->
-		        </div>
+		        
 		    </div>
 		</div>
     	
@@ -185,34 +166,15 @@
                         <i></i>
                     </ul>
                 </div>
-				<div class="box">
-                    <ul class="selectBox">
-                        <li class="on">设备选择</li>
-                        <li>b</li>
-                        <li>c</li>
-                        <i></i>
-                    </ul>
-                </div>
                 <div class="box">
                     <ul class="selectBox">
-                        <li class="on">工艺选择</li>
+                        <li class="on">业务选择</li>
                         <li>b</li>
                         <li>c</li>
                         <i></i>
                     </ul>
                 </div>
-                <div class="box">
-                    <ul class="selectBox">
-                        <li class="on">布料选择</li>
-                        <li>b</li>
-                        <li>c</li>
-                        <i></i>
-                    </ul>
-                </div>
-                <a href="javascript:;" class="sortBtn">
-                    <span>工厂详情</span><i></i>
-                </a>
-			</div>
+            </div>
 			<div class="search_wt">
                 <form>
                     <input type="text" class="search_input" placeholder="请输入关键字" />
@@ -222,15 +184,21 @@
 		</div>
 		<!--search start-->
 
-        <!--list start-->
+        <!--flower start-->
         <div class="w pro_box">
             <h3 class="tit">
-				<span class="fl titname">加工厂详情列表</span>
+				<span class="fl titname">加工厂选择</span>
 			</h3>
-            <div class="detailList">
+            <div class="list">
                 <div class="item">
+                    <div class="isSelected">
+                        <span class="s1">选择此工厂</span>
+                        <span class="s2">已选择</span>
+                        <i></i>
+                    </div>
                     <a href="javascript:;" class="pic">
                         <img src="../public/common/img/fa1.jpg">
+                        <div class="boxMask"></div>
                     </a>
                     <a href="javascript:;" class="falogo">
                         <img src="../public/common/img/fi.jpg">
@@ -262,8 +230,14 @@
                     </div>
                 </div>
                 <div class="item">
+                    <div class="isSelected">
+                        <span class="s1">选择此工厂</span>
+                        <span class="s2">已选择</span>
+                        <i></i>
+                    </div>
                     <a href="javascript:;" class="pic">
                         <img src="../public/common/img/fa1.jpg">
+                        <div class="boxMask"></div>
                     </a>
                     <a href="javascript:;" class="falogo">
                         <img src="../public/common/img/fi.jpg">
@@ -291,12 +265,12 @@
                     <a href="javascript:;" class="goFaBtn sfbtn">进入加工厂</a>
                     <div class="r">
                         <span class="city">广东--深圳</span>
-                        <span class="faStatus">工厂状态：<i class="red">工厂繁忙</i></span>
+                        <span class="faStatus">工厂状态：<i class="orange">可接新单</i></span>
                     </div>
                 </div>
             </div>
         </div>
-        <!--list end-->
+        <!--flower end-->
 
     </div>
     <!--foot start-->
@@ -395,10 +369,46 @@
     </div>
     <!--foot end-->
 
+    <div class="diyFloatWrapper">
+        
+        <div class="w relative">
+            
+            <div class="diyFloatBox flr fst">
+                <i class="add icon"></i>
+                <div class="diyFloat">
+                    <div class="txt">已选花型</div>
+                    <a href="javascript:;" class="pic">
+                        <img src="../public/common/img/w2.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="diyFloatBox fa">
+                <i class="add icon"></i>
+                <div class="diyFloat">
+                    <div class="txt">已选工厂</div>
+                    <a href="javascript:;" class="pic">
+                        <img src="../public/common/img/w2.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="diyFloatBox ma">
+                <i class="add icon"></i>
+                <div class="diyFloat">
+                    <div class="txt">已选面料</div>
+                    <a href="javascript:;" class="pic">
+                        <img src="../public/common/img/w2.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="fixed"></div>
+            <button class="nextBtn">下一步</button>
+        </div>
+    </div>
+
     <script type="text/javascript" src="../public/common/js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="../public/common/js/jquery.SuperSlide.2.1.1.source.min.js"></script>
     <script src="../public/common/js/com.min.js"></script>
-    <script src="../public/factory/index.min.js"></script>
+    <script src="../public/diy/index.min.js"></script>
 
     
 </body>
