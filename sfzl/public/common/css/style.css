@@ -1184,10 +1184,188 @@ em, b, i{font-style: normal;font-weight: normal;}
   float: left;
   margin-right: 25px;
 }
+.detailBox .detailInfo .title{
+  float: left;
+  font-size: 24px;
+  width: inherit;
+}
+.detailBox .detailInfo .priceBox{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .price{
+  float: left;
+  width: inherit;
+  color: #C92027;
+  font-size: 32px;
+  font-weight: bold;
+}
+.detailBox .detailInfo .price i{
+  font-size: 24px;
+}
+.detailBox .detailInfo .oldPrice{
+  float: left;
+  width: inherit;
+  font-size: 24px;
+}
+.detailBox .detailInfo .oldPrice i{
+
+}
+.detailBox .detailInfo .b1{
+  background-color: #F8F0F1;
+  width: inherit;
+  height: 58px;
+  float: left;
+}
+.detailBox .detailInfo .b1 .s{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .b1 .s label{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .b1 .s span{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .b1 .s1{
+
+}
+.detailBox .detailInfo .b1 .s2{
+
+}
+.detailBox .detailInfo .b1 .s3{
+
+}
+.detailBox .detailInfo .info{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .info label{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .info .c{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .info .c .selBtn{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .express{}
+.detailBox .detailInfo .express .s1{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .express .s2{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .express .s3{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .express .s4{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .gy{}
+.detailBox .detailInfo .gy a{}
+.detailBox .detailInfo .hd{}
+.detailBox .detailInfo .hd a{}
+.detailBox .detailInfo .num{}
+.detailBox .detailInfo .num .minusBtn{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .num .txtInput{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .num .addBtn{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .num .text{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .btnBox{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .cartBtn{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .buyBtn{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .likeBox{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .likeBox i{}
+.detailBox .detailInfo .shareBtn{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailInfo .shareBtn i{}
+.detailBox .detailInfo .reportBtn{
+  float: left;
+}
+
+
 .detailBox .detailShop{
   float: left;
   width: 230px;
 }
+.detailBox .detailShop .logo{
+  float: left;
+  width: 230px;
+}
+.detailBox .detailShop .logo .pic{
+  float: left;
+  width: 60px;
+  height: 58px;
+  border:1px solid #ddd;
+  margin-right: 12px;
+}
+.detailBox .detailShop .logo .r{
+  float: left;
+  width: 150px;
+}
+.detailBox .detailShop .logo .r h3{
+  float: left;
+  width: inherit;
+  margin: 6px 0;
+}
+.detailBox .detailShop .logo .r .stars{
+  float: left;
+}
+.detailBox .detailShop .info{
+  float: left;
+  width: inherit;
+  margin: 10px 0;
+}
+.detailBox .detailShop .info li{
+  float: left;
+  width: inherit;
+  line-height: 30px;
+}
+.detailBox .detailShop .btnBox{
+  float: left;
+  width: inherit;
+}
+.detailBox .detailShop .btnBox a{
+  width: 100px;
+  margin-right: 10px;
+}
+
+
 #shopDetailBox .pro_box .titname{
   font-size: 18px;
 }
