@@ -325,7 +325,7 @@ em, b, i{font-style: normal;font-weight: normal;}
 /*index page*/
 #index .bannerbox{padding-left: 250px;}
 
-#indexBox, #shopIndexBox{padding-bottom: 40px;}
+.wrapperBox{padding-bottom: 40px;}
 /*changebox*/
 #indexBox .changebox{ height: 169px; padding-top: 15px;}
 #indexBox .change_one{background-color: #eee; width: 230px; height: 100%; text-align: center; float: left;}
@@ -368,10 +368,10 @@ em, b, i{font-style: normal;font-weight: normal;}
 #indexBox .factoryList .item .f .s2{float:left;width: 100%;}
 
 /*recommend*/
-#shopIndexBox #recommend .card-item .f, #indexBox #recommend .card-item .f{}
-#shopIndexBox #recommend .card-item .f .item-price, #indexBox #recommend .card-item .f .item-price{float: left;}
-#shopIndexBox #recommend .card-item .f .r, #indexBox #recommend .card-item .f .r{float: right; margin-top: 7px;color: #696969}
-#shopIndexBox #recommend .card-item .f .r i, #indexBox #recommend .card-item .f .r i{margin-top:3px;float: left;width:15px; height: 13px; background: -15px 0 no-repeat url(../img/icon.png);}
+#recommend .card-item .f{}
+#recommend .card-item .f .item-price{float: left;}
+#recommend .card-item .f .r{float: right; margin-top: 7px;color: #696969}
+#recommend .card-item .f .r i{margin-top:3px;float: left;width:15px; height: 13px; background: -15px 0 no-repeat url(../img/icon.png);}
 
 
 /*designer page*/
@@ -993,6 +993,11 @@ em, b, i{font-style: normal;font-weight: normal;}
 .shopLogoBox{ height: 58px;padding-top: 22px;padding-bottom: 25px; width: 100%; background-color: #fff; }
 .shopLogoBox .logo{float:left; display:block;height: 55px;}
 .shopLogoBox .logo img{height: 55px;float: left;}
+.shopLogoBox .logoR{
+  float: left;
+  width: 308px;
+  height: 1px;
+}
 .shopLogoBox .b2{
   float: left;
   height: 45px;
@@ -1008,17 +1013,370 @@ em, b, i{font-style: normal;font-weight: normal;}
 .shopLogoBox .b2 .stars{
   float: left;
 }
+.shopLogoBox .contactBtn{
+  float: left;
+  display: inline-block;
+  border:1px solid #CC2D34;
+  padding: 5px;
+  color: #CC2D34;
+  margin-top: 17px;
+  margin-right: 60px;
+}
 
-.shopLogoBox .car_a{ float: right; background: url(image/car.png) no-repeat 12px center; padding:10px 15px 10px 45px; border: 1px solid #ddd; margin-top: 60px; }
+.shopLogoBox .car_a{ 
+  float: right; 
+  background: url(image/car.png) no-repeat 12px center; 
+  padding:10px 15px 10px 45px; 
+  border: 1px solid #ddd; 
+  margin-top: 10px; 
+}
 
-.shopLogoBox .selectbox{float: left; margin-top: 38px; margin-left: 80px;padding-right: 90px;}
-.shopLogoBox .selectbox .search_panel{position: relative;}
-.shopLogoBox .selectbox .search_btn{font-family:"微软雅黑", Arial, sans-serif;font-size: 20px;letter-spacing: 5px;color: #FFF;background-color: #c92027; cursor: pointer;height: 100%; border: none; width: 100%;}
-.shopLogoBox .selectbox .search_btnbox{position: absolute; right: -90px; top:0; z-index: 100; width: 90px;  height:38px; overflow: hidden; text-align: center;}
-.shopLogoBox .selectbox .search_input{font-family:"微软雅黑", Arial, sans-serif;vertical-align: middle;padding: 6px 0; text-indent: 10px; height: 22px; line-height: 22px; width: 610px; border: none; outline: 0; background-color: #FFF; *margin-left: -10px;*margin-top: -1px;}
-.shopLogoBox .selectbox .search_field{ padding: 2px 0 2px 2px;height: 34px; background-color: #c92027;}
-.shopLogoBox .selectbox .search_list{height: 25px;}
-.shopLogoBox .selectbox .search_list li{text-align: center; float: left;width: 60px;height: 25px; line-height: 25px; cursor: pointer;}
-.shopLogoBox .selectbox .search_list li.on{color: #FFF;background-color: #c92027;}
-.shopLogoBox .selectbox .search_info{ margin-top: 6px }
-.shopLogoBox .selectbox .search_info a{ margin-right: 15px; }
+.shopLogoBox .selectbox{
+  float: left; 
+  margin-top: 12px;
+}
+.shopLogoBox .selectbox .search_panel{
+  position: relative;
+}
+.shopLogoBox .selectbox .search_btn{
+  font-family:"微软雅黑", 
+  Arial, sans-serif;
+  font-size: 20px;
+  color: #FFF;
+  background-color: #c92027; 
+  cursor: pointer;
+  height: 100%; 
+  border: none; 
+  width: 100%;
+}
+.shopLogoBox .selectbox .search_btnbox{
+  position: absolute; 
+  right: -90px; 
+  top:0; 
+  z-index: 100; 
+  width: 90px;  
+  height:38px; 
+  overflow: hidden; 
+  text-align: center;
+}
+.shopLogoBox .selectbox .search_input{
+  font-family:"微软雅黑", Arial, sans-serif;
+  vertical-align: middle;
+  padding: 6px 0; 
+  text-indent: 10px; 
+  height: 22px; 
+  line-height: 22px; 
+  width: 410px; 
+  border: none; 
+  outline: 0; 
+  background-color: #FFF; 
+  *margin-left: -10px;
+  *margin-top: -1px;
+}
+.shopLogoBox .selectbox .search_field{ 
+  padding: 2px 0 2px 2px;
+  height: 34px; 
+  background-color: #c92027;
+}
+.shopLogoBox .selectbox .searchOwnBtn{
+  width: 90px;
+  height: 38px;
+  border:none;
+  position: absolute;
+  right: -190px;
+  background-color: #1B2139;
+  font-family:"微软雅黑", 
+  Arial, sans-serif;
+  font-size: 20px;
+  color: #FFF;
+}
+.shopLogoBox2{
+  background-color: #eee;
+  height: 118px;
+}
+.shopLogoBox2 .l{
+  float: left;
+  margin-top: 16px;
+}
+.shopLogoBox2 .l img{
+  float: left;
+}
+.shopLogoBox2 .r{
+  float: right;
+}
+.shopLogoBox2 .r .gz{
+  float: right;
+  margin-top: 59px;
+}
+.shopLogoBox2 .r .gzBtn{
+  float: right;
+  width: 84px;
+  height: 28px;
+  line-height: 28px;
+  color: white;
+  background-color: #C92027;
+  margin-top: 55px;
+  margin-right: 10px;
+  text-align: center;
+}
+.shopLogoBox2 .r .gzBtn i{
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.shopLogoBox2 .r .gzBtn span{
+  
+}
+
+/*产品详情*/
+.detailBox{
+  margin-top: 20px;
+  overflow: hidden;
+}
+.detailBox .slideBox{
+  width: 420px;
+  height: 550px;
+  overflow:hidden;
+  float: left;
+  margin-right: 25px;
+  padding-bottom: 80px;
+}
+.detailBox .detailInfo{
+  float: left;
+}
+.detailBox .slideBox .hd{
+  position: relative;
+  right: 0;
+  bottom: 0;
+  overflow: inherit;
+  height: 80px;
+}
+.detailBox .slideBox .hd ul{ 
+  float:left;  
+  position: relative;
+}
+.detailBox .slideBox .hd ul li{ 
+  float:left; 
+  margin-right:14px; 
+  width:70px; 
+  height:70px;
+  cursor:pointer;
+  overflow: hidden;
+  border-radius:0;
+  margin-top: 10px;
+}
+.detailBox .slideBox .hd ul li.on{
+  border:1px solid #c92027; 
+  width:68px; 
+  height:68px;
+}
+.detailBox .slideBox .bd{
+
+}
+.detailBox .slideBox .bd li{ 
+  vertical-align:middle; 
+}
+.detailBox .slideBox .bd img{
+  width:100%;
+}
+.detailBox .detailInfo{
+  width: 525px;
+  float: left;
+  margin-right: 25px;
+}
+.detailBox .detailShop{
+  float: left;
+  width: 230px;
+}
+#shopDetailBox .pro_box .titname{
+  font-size: 18px;
+}
+#shopDetailBox .detail{
+  margin-top: 40px;
+  overflow: hidden;
+}
+#shopDetailBox .detail .detailL{
+  float: left;
+  width: 224px;
+  margin-right: 26px;
+}
+#shopDetailBox .detail .detailR{
+  float: right;
+  width: 990px;
+}
+.lBox{
+  border:1px solid #ddd;
+  float: left;
+  width: 224px;
+  min-height: 50px;
+  margin-bottom: 15px;
+}
+.lBox .title{
+  float: left;
+  border-bottom:1px solid #ddd;
+  height: 38px;
+  line-height: 38px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 15px;
+}
+#shopDetailBox .detailL .bestSeller .list{
+  float: left;
+  padding-bottom: 20px;
+}
+#shopDetailBox .detailL .bestSeller .item{
+  float: left;
+  margin-top: 16px;
+  margin-left: 20px;
+  width: 190px;
+  height: 76px;
+}
+#shopDetailBox .detailL .bestSeller .item .pic{
+  width: 68px;
+  height: 76px;
+  float: left;
+  overflow: hidden;
+}
+#shopDetailBox .detailL .bestSeller .item .r{
+  float: left;
+  width: 100px;
+  margin-left: 14px;
+  margin-top: 5px;
+}
+#shopDetailBox .detailL .bestSeller .item .r span{
+  float: left;
+  width: 100%;
+  margin-top: 3px;
+}
+#shopDetailBox .detailL .bestSeller .more{
+  float: left;
+  border-top:1px solid #ddd;
+  height: 38px;
+  line-height: 38px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+#shopDetailBox .detailL .oftenLook .list{
+  float: left;
+  width: 140px;
+  margin-left: 40px;
+  margin-top: 15px;
+  padding-bottom: 20px;
+}
+#shopDetailBox .detailL .oftenLook .item{
+  float: left;
+  width: 140px;
+  height: 222px;
+  margin-top: 15px;
+}
+#shopDetailBox .detailL .oftenLook .item .pic{
+  width: 140px;
+  height: 172px;
+  float:left;
+  overflow: hidden;
+}
+#shopDetailBox .detailL .oftenLook .item .b{
+  float: left;
+  width: 140px;
+}
+#shopDetailBox .detailL .oftenLook .item .b .s1{
+  text-align: center;
+  float:left;
+  width:inherit;
+  margin-top: 6px;
+}
+#shopDetailBox .detailL .oftenLook .item .b .s2{
+  text-align: center;
+  float:left;
+  width:inherit;
+  margin-top: 3px;
+}
+
+#shopDetailBox .tabBox{
+  float: left;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+#shopDetailBox .tabBox a{
+  font-size: 16px;
+  height: 36px;
+  padding: 0 15px;
+  display: inline-block;
+  line-height: 36px;
+  float: left;
+}
+#shopDetailBox .tabBox a.on{
+  color: #C92027;
+  border-bottom: 1px solid #C92027;
+  margin-bottom: -1px;
+}
+#shopDetailBox .contentBox{
+  padding-left: 10px;
+}
+#shopDetailBox .deBox .info{
+  float: left;
+  margin-bottom: 15px;
+}
+#shopDetailBox .deBox label{
+  float: left;
+}
+#shopDetailBox .deBox .text{
+  float: left;
+}
+#shopDetailBox .deBoxInfo1{
+  float: left;
+  width: 100%;
+  margin-top: 25px;
+}
+#shopDetailBox .deBoxInfo1 .i1{
+  width: 755px;
+  margin-right: 10px;
+}
+#shopDetailBox .deBoxInfo1 .i2{
+  width: 210px;
+}
+#shopDetailBox .deBoxInfo1 .i3{
+  width: 306px;
+}
+#shopDetailBox .deBoxInfo1 .i4{
+  width: 665px;
+}
+#shopDetailBox .deBoxInfo2{
+  float: left;
+  width: 100%;
+  margin-top: 50px;
+}
+#shopDetailBox .deBoxInfo2 .i0{
+  width: 100%;
+}
+#shopDetailBox .deBoxInfo2 .i1{
+  width: 329px;
+}
+#shopDetailBox .deBoxInfo2 .i2{
+  width: 317px;
+}
+#shopDetailBox .deBoxInfo2 .i3{
+  width: 329px;
+}
+#shopDetailBox .deBoxInfo2 .i4{
+  width: 329px;
+}
+#shopDetailBox .deBoxInfo2 .i5{
+  width: 317px;
+}
+#shopDetailBox .deBoxInfo2 .i6{
+  width: 329px;
+}
+#shopDetailBox .deBoxInfo2 .i7{
+  width: 329px;
+}
+#shopDetailBox .deBoxInfo2 .i8{
+  width: 317px;
+}
+
+#shopDetailBox .content{
+  margin-top: 50px;
+  float: left;
+  width: 100%;
+}
