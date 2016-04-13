@@ -293,6 +293,22 @@ em, b, i{font-style: normal;font-weight: normal;}
 .listSearchBox .tabBox a{padding-left:1px;float: left;width: 94px;height: 40px;text-align: center;line-height: 40px;background-color: white;border:1px solid #ddd;border-left:none; }
 .listSearchBox .tabBox a.on{padding-left:0px;background-color: #E3E3E3;border:none;width: 96px;height: 42px;line-height: 42px;}
 .listSearchBox .tabBox a:first-child{border-left:1px solid #ddd; }
+.listSearchBox .tabBox2{
+  float: left;
+  border:1px solid #ddd;
+  height: 38px;
+  line-height: 38px;
+}
+.listSearchBox .tabBox2 a{
+  float: left;
+  margin-right: 28px;
+}
+.listSearchBox .tabBox2 a:first-child{
+  margin-left: 20px;
+}
+.listSearchBox .tabBox2 a.on{
+  color: #C92027;
+}
 /*列表页标签搜索*/
 .listSearchBox .searchTag{padding-bottom:20px; padding-left:10px; float: left;background-color: #e3e3e3;}
 .listSearchBox .searchTag .tagList{float: left;margin-top: 20px;width: 100%;}
@@ -313,7 +329,7 @@ em, b, i{font-style: normal;font-weight: normal;}
 .listSearchBox .searchTag .tagList .r a.c10{background-color:#ADB9B9;}
 .listSearchBox .searchTag .tagList .r a.c11{background-color:#000000;}
 .listSearchBox .search_wt{float: right;position: relative;}
-.listSearchBox .search_btn{background-color: #1B2139; float: left; font-family:"微软雅黑", Arial, sans-serif;font-size: 20px;text-align: center; color: #FFF;cursor: pointer;height: 100%;width:74px;height: 40px;border:none;}
+.listSearchBox .search_btn{background-color: #1B2139; float: left; font-family:"微软雅黑", Arial, sans-serif;font-size: 20px;text-align: center; color: #FFF;cursor: pointer;height: 100%;width:74px;height: 42px;border:none;}
 .listSearchBox .search_input{border:1px solid #ddd; float: left; font-family:"微软雅黑", Arial, sans-serif;vertical-align: middle;padding: 6px 0; text-indent: 10px; height:28px; line-height: 22px; width:348px; border-right: none; outline: 0; background-color: #FFF;}
 .selectBox{border:1px solid #ddd;border-bottom:none;position:absolute;width: 72px;background-color: white;padding-top: 40px;}
 .selectBox li{width: inherit;cursor: pointer; display: none;height: 40px;border-bottom:1px solid #ddd;text-indent:6px; line-height: 40px;background-color: white;}
@@ -325,7 +341,7 @@ em, b, i{font-style: normal;font-weight: normal;}
 /*index page*/
 #index .bannerbox{padding-left: 250px;}
 
-.wrapperBox{padding-bottom: 40px;}
+.wrapperBox{padding-bottom: 40px;overflow: hidden;}
 /*changebox*/
 #indexBox .changebox{ height: 169px; padding-top: 15px;}
 #indexBox .change_one{background-color: #eee; width: 230px; height: 100%; text-align: center; float: left;}
@@ -421,7 +437,9 @@ em, b, i{font-style: normal;font-weight: normal;}
 #designerBox .flowerList .item .m .r .s2{width: 150px;float: left;margin-top: 5px;color: #999;}
 
 #designerBox .listSearchBox .searchTag{display: none;}
-#designerBox .listSearchBox .selectBox{left: -74px;}
+#designerBox .listSearchBox .selectBox,
+#diyBox.flowerListWrapper .listSearchBox .selectBox,
+#diyBox.maListWrapper .listSearchBox .selectBox{left: -102px;}
 #designerBox .listSearchBox .search_input{border-left: none;}
 
 #designerBox.studioWrapper{
@@ -430,6 +448,7 @@ em, b, i{font-style: normal;font-weight: normal;}
 }
 #designerBox.studioWrapper .infoBox{
   width: 100%;
+  overflow: hidden;
 }
 #designerBox.studioWrapper .infoBox .face{
   float: left;
@@ -440,8 +459,17 @@ em, b, i{font-style: normal;font-weight: normal;}
 #designerBox.studioWrapper .infoBox .b1{
   float: left;
 }
-#designerBox.studioWrapper .infoBox .b1 h3{}
-#designerBox.studioWrapper .infoBox .b1 ul{}
+#designerBox.studioWrapper .infoBox .b1 h3{
+  font-size: 30px;
+  margin-top: 10px;
+  width: 600px;
+  max-height: 75px;
+  overflow: hidden;
+}
+#designerBox.studioWrapper .infoBox .b1 ul{
+  line-height: 30px;
+  margin-top: 20px;
+}
 #designerBox.studioWrapper .infoBox .b1 li{}
 #designerBox.studioWrapper .infoBox .linkBtn{
   float: right;
@@ -451,20 +479,18 @@ em, b, i{font-style: normal;font-weight: normal;}
   font-size: 18px;
   color: #999;
 }
-#designerBox.studioWrapper .infoBox .linkBtn .s1{
-
+#designerBox.studioWrapper .infoBox .linkBtn span{
+  float: left;
+  margin-left: 25px;
+  margin-top: 10px;
 }
-#designerBox.studioWrapper .infoBox .linkBtn .s1 i{
+#designerBox.studioWrapper .infoBox .linkBtn i{
   width: 30px;
   height: 32px;
   background-position: -54px -49px;
   float: left;
-}
-#designerBox.studioWrapper .infoBox .linkBtn .s1 span{
-  float: left;
-}
-#designerBox.studioWrapper .infoBox .linkBtn .s2{
-
+  margin-left: 54px;
+  margin-top: 40px;
 }
 #designerBox.studioWrapper .infoBox .likeBtn{
   float: right;
@@ -475,16 +501,33 @@ em, b, i{font-style: normal;font-weight: normal;}
   font-size: 24px;
   color: #999;
 }
-#designerBox.studioWrapper .infoBox .likeBtn i{
+#designerBox.studioWrapper .infoBox .likeBtn .s1{
+  float: left;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+#designerBox.studioWrapper .infoBox .likeBtn .s1 i{
   width: 23px;
   height: 25px;
   background-position: -85px -50px;
   float: left;
 }
-#designerBox.studioWrapper .infoBox .likeBtn span{
+#designerBox.studioWrapper .infoBox .likeBtn .s1 span{
   float: left;
+  margin-left: 5px;
 }
-
+#designerBox.studioWrapper .infoBox .likeBtn .s2{
+  float: left;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+#designerBox.studioWrapper .listSearchBox .searchTag{
+  display: inline-block;
+  background-color: white;
+}
+#designerBox.studioWrapper .listSearchBox .search_input{
+  border-left: 1px solid #ddd;
+}
 
 /*factory page*/
 #factoryBox{background-color: #EEEEEE;padding-bottom: 40px;}
@@ -775,6 +818,40 @@ em, b, i{font-style: normal;font-weight: normal;}
 #factoryBox .detailList .item .r .faStatus i.orange,
 #diyBox.faListWrapper .list .item .r .faStatus i.orange{color: #ff6700;}
 
+#factoryBox.detailWrapper{
+  margin-top: 15px;
+  background-color: white;
+}
+#factoryBox.detailWrapper .deLBox{
+  float: left;
+  width: 826px;
+  height: 402px;
+  margin-right: 15px;
+}
+#factoryBox.detailWrapper .deLBox .face{}
+#factoryBox.detailWrapper .deLBox .face img{}
+#factoryBox.detailWrapper .deRBox{
+  float: left;
+  width: 394px;
+}
+#factoryBox.detailWrapper .deRBox .ulBox{
+  float: left;
+  width: 390px;
+  border:2px solid #ddd;
+  height: 210px;
+}
+#factoryBox.detailWrapper .deRBox .ulBox:last-child{
+  height: 170px;
+  margin-top: 14px;
+}
+#factoryBox.detailWrapper .deRBox .ulBox .s1{}
+#factoryBox.detailWrapper .deRBox .ulBox .s1 h4{}
+#factoryBox.detailWrapper .deRBox .ulBox .s1 .line{}
+#factoryBox.detailWrapper .deRBox .ulBox .s1 .moreBtn{}
+#factoryBox.detailWrapper .deRBox .ulBox .s1 ul{}
+#factoryBox.detailWrapper .deRBox .ulBox .s1 li{}
+
+
 /*diy page*/
 #diyBox{padding-bottom: 40px;}
 #diyBox .banner{padding-top: 0;}
@@ -783,8 +860,6 @@ em, b, i{font-style: normal;font-weight: normal;}
   height: 198px;
   background: url(../img/diyBanner.png) no-repeat center;
 }
-#diyBox.flowerListWrapper .listSearchBox .selectBox,
-#diyBox.maListWrapper .listSearchBox .selectBox{left: -74px;}
 #diyBox.flowerListWrapper .listSearchBox .search_input,
 #diyBox.maListWrapper .listSearchBox .search_input{border-left: none;}
 
@@ -1765,28 +1840,39 @@ em, b, i{font-style: normal;font-weight: normal;}
 }
 .shopLogoBox2.flowerLogoBox2 .title{
   float: left;
-    width: 250px;
-    margin-left: 15px;
+  width: 650px;
+  margin-left: 15px;
 }
 .shopLogoBox2.flowerLogoBox2 .main{
+  float: left;
+  width: inherit;
+}
+.shopLogoBox2.flowerLogoBox2 .main span{
   float: left;
   font-size: 24px;
   margin-top: 15px;
   margin-bottom: 5px;
   position: relative;
 }
-}
 .shopLogoBox2.flowerLogoBox2 .main i{
   background-position: -53px -81px;
   width: 82px;
   height: 28px;
-  position: absolute;
-  top: 0;
-  right: -90px;
+  float: left;
+  margin-top: 16px;
+  margin-left: 15px;
 }
 .shopLogoBox2.flowerLogoBox2 .sub{
   float: left;
+  color: #aaa;
 }
+.shopLogoBox2.flowerLogoBox2 .r .view{
+  float: left;
+  font-size: 18px;
+  color: #999;
+  margin-top: 50px;
+}
+
 #shopDetailBox.flowerWrapper{
 
 }
