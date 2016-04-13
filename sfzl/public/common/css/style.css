@@ -424,6 +424,68 @@ em, b, i{font-style: normal;font-weight: normal;}
 #designerBox .listSearchBox .selectBox{left: -74px;}
 #designerBox .listSearchBox .search_input{border-left: none;}
 
+#designerBox.studioWrapper{
+  background-color: white;
+  padding-top: 20px;
+}
+#designerBox.studioWrapper .infoBox{
+  width: 100%;
+}
+#designerBox.studioWrapper .infoBox .face{
+  float: left;
+  width: 192px;
+  height: 192px;
+  margin-right: 25px;
+}
+#designerBox.studioWrapper .infoBox .b1{
+  float: left;
+}
+#designerBox.studioWrapper .infoBox .b1 h3{}
+#designerBox.studioWrapper .infoBox .b1 ul{}
+#designerBox.studioWrapper .infoBox .b1 li{}
+#designerBox.studioWrapper .infoBox .linkBtn{
+  float: right;
+  width: 140px;
+  height: 140px;
+  border:1px solid #ddd;
+  font-size: 18px;
+  color: #999;
+}
+#designerBox.studioWrapper .infoBox .linkBtn .s1{
+
+}
+#designerBox.studioWrapper .infoBox .linkBtn .s1 i{
+  width: 30px;
+  height: 32px;
+  background-position: -54px -49px;
+  float: left;
+}
+#designerBox.studioWrapper .infoBox .linkBtn .s1 span{
+  float: left;
+}
+#designerBox.studioWrapper .infoBox .linkBtn .s2{
+
+}
+#designerBox.studioWrapper .infoBox .likeBtn{
+  float: right;
+  margin-right: 30px;
+  width: 140px;
+  height: 140px;
+  border:1px solid #ddd;
+  font-size: 24px;
+  color: #999;
+}
+#designerBox.studioWrapper .infoBox .likeBtn i{
+  width: 23px;
+  height: 25px;
+  background-position: -85px -50px;
+  float: left;
+}
+#designerBox.studioWrapper .infoBox .likeBtn span{
+  float: left;
+}
+
+
 /*factory page*/
 #factoryBox{background-color: #EEEEEE;padding-bottom: 40px;}
 #factoryBox .banner,
@@ -1098,6 +1160,9 @@ em, b, i{font-style: normal;font-weight: normal;}
   float: left;
   margin-top: 16px;
 }
+.shopLogoBox2 .pic{
+  float: left;
+}
 .shopLogoBox2 .l img{
   float: left;
 }
@@ -1195,9 +1260,8 @@ em, b, i{font-style: normal;font-weight: normal;}
 }
 .detailBox .detailInfo .price{
   float: left;
-  width: inherit;
   color: #C92027;
-  font-size: 32px;
+  font-size: 42px;
   font-weight: bold;
 }
 .detailBox .detailInfo .price i{
@@ -1205,8 +1269,11 @@ em, b, i{font-style: normal;font-weight: normal;}
 }
 .detailBox .detailInfo .oldPrice{
   float: left;
-  width: inherit;
-  font-size: 24px;
+  font-size: 18px;
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 10px;
+  margin-top: 22px;
 }
 .detailBox .detailInfo .oldPrice i{
 
@@ -1216,106 +1283,194 @@ em, b, i{font-style: normal;font-weight: normal;}
   width: inherit;
   height: 58px;
   float: left;
+  margin-bottom: 20px;
+  width: 525px;
 }
 .detailBox .detailInfo .b1 .s{
   float: left;
   width: inherit;
+  height: 58px;
+  line-height: 58px;
 }
 .detailBox .detailInfo .b1 .s label{
   float: left;
-  width: inherit;
+  margin-right: 8px;
 }
 .detailBox .detailInfo .b1 .s span{
   float: left;
-  width: inherit;
+  color: #c92027;
 }
 .detailBox .detailInfo .b1 .s1{
-
+  width: 152px;
+  margin-left: 32px;
 }
 .detailBox .detailInfo .b1 .s2{
-
+  width: 221px;
 }
 .detailBox .detailInfo .b1 .s3{
-
+  width: 114px;
 }
 .detailBox .detailInfo .info{
   float: left;
-  width: inherit;
+  width: 520px;
+  height: 54px;
+  line-height: 54px;
 }
 .detailBox .detailInfo .info label{
   float: left;
-  width: inherit;
+  width: 80px;
 }
 .detailBox .detailInfo .info .c{
   float: left;
-  width: inherit;
+  width: 440px;
 }
 .detailBox .detailInfo .info .c .selBtn{
   float: left;
-  width: inherit;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+  border:1px solid #ddd;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.detailBox .detailInfo .info .c .selBtn:hover, 
+.detailBox .detailInfo .info .c .selBtn.on{
+  border-color: #c92027;
 }
 .detailBox .detailInfo .express{}
 .detailBox .detailInfo .express .s1{
   float: left;
-  width: inherit;
 }
 .detailBox .detailInfo .express .s2{
   float: left;
-  width: inherit;
+  margin: 0 3px;
 }
 .detailBox .detailInfo .express .s3{
   float: left;
-  width: inherit;
+  margin-right: 20px;
+  width: 76px;
+  position: relative;
+  cursor: pointer;
+}
+.detailBox .detailInfo .express .s3 i{
+  position: absolute;
+  width: 9px;
+  height: 7px;
+  background-position: -58px 0;
+  right: 8px;
+  top: 24px;
 }
 .detailBox .detailInfo .express .s4{
   float: left;
-  width: inherit;
 }
 .detailBox .detailInfo .gy{}
 .detailBox .detailInfo .gy a{}
 .detailBox .detailInfo .hd{}
 .detailBox .detailInfo .hd a{}
-.detailBox .detailInfo .num{}
+.detailBox .detailInfo .num{
+  
+}
+.detailBox .detailInfo .num .c{
+  margin-top: 8px;
+}
 .detailBox .detailInfo .num .minusBtn{
   float: left;
-  width: inherit;
+  width:32px;
+  height:32px;
+  border:1px solid #ddd;
+}
+.detailBox .detailInfo .num .minusBtn i{
+  background-position:-92px -5px;
+  width: 14px;
+  height: 3px;
+  float: left;
+  margin-left: 8px;
+  margin-top: 15px;
 }
 .detailBox .detailInfo .num .txtInput{
   float: left;
-  width: inherit;
+  width: 66px;
+  height: 32px;
+  border:1px solid #ddd;
+  border-left:none;
+  border-right:none;
+  text-align: center;
 }
 .detailBox .detailInfo .num .addBtn{
   float: left;
-  width: inherit;
+  width:32px;
+  height:32px;
+  border:1px solid #ddd;
+}
+.detailBox .detailInfo .num .addBtn i{
+  background-position:-79px 0;
+  width: 13px;
+  height: 12px;
+  float: left;
+  margin-left: 9px;
+  margin-top: 10px;
 }
 .detailBox .detailInfo .num .text{
   float: left;
-  width: inherit;
+  line-height: 40px;
+  margin-left: 10px;
 }
 .detailBox .detailInfo .btnBox{
   float: left;
-  width: inherit;
+  margin-top: 15px;
+}
+.detailBox .detailInfo .btnBox a{
+  width: 170px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+  margin-right: 15px;
+  color: white;
+  font-size: 18px;
 }
 .detailBox .detailInfo .cartBtn{
   float: left;
-  width: inherit;
+  background-color: #FF6700;
 }
 .detailBox .detailInfo .buyBtn{
   float: left;
-  width: inherit;
+  background-color: #C92027;
 }
 .detailBox .detailInfo .likeBox{
   float: left;
   width: inherit;
+  margin-top: 30px;
 }
-.detailBox .detailInfo .likeBox i{}
+.detailBox .detailInfo .likeBtn{
+  float: left;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 50px;
+}
+.detailBox .detailInfo .likeBtn i{
+  background-position: -15px 0;
+  width: 15px;
+  height: 13px;
+  position: absolute;
+  top: 3px;
+  left: -18px;
+}
 .detailBox .detailInfo .shareBtn{
   float: left;
-  width: inherit;
+  position: relative;
 }
-.detailBox .detailInfo .shareBtn i{}
+.detailBox .detailInfo .shareBtn i{
+  background-position: -133px 0;
+  width: 15px;
+  height: 14px;
+  position: absolute;
+  top: 3px;
+  left: -18px;
+}
 .detailBox .detailInfo .reportBtn{
   float: left;
+  margin-top: 25px;
 }
 
 
@@ -1355,6 +1510,33 @@ em, b, i{font-style: normal;font-weight: normal;}
   float: left;
   width: inherit;
   line-height: 30px;
+}
+.detailBox .detailShop .info li label{
+  float: left;
+}
+.detailBox .detailShop .info li span{
+  float: left;
+}
+.detailBox .detailShop .info li span i{
+  float: left;
+  margin-right: 5px;
+}
+.detailBox .detailShop .info li .zz{
+  margin-top: 7px;
+}
+.detailBox .detailShop .info li .zz .red{
+  background-position:-148px 0;
+  width: 17px;
+  height: 17px; 
+}
+.detailBox .detailShop .info li .zz .v{
+  background-position:-165px 0; 
+  width: 53px;
+  height: 17px; 
+  color: #FF6700;
+  padding-left: 20px;
+  line-height: 17px;
+  font-size: 12px;
 }
 .detailBox .detailShop .btnBox{
   float: left;
@@ -1496,7 +1678,8 @@ em, b, i{font-style: normal;font-weight: normal;}
   float: left;
   margin-bottom: 15px;
 }
-#shopDetailBox .deBox label{
+#shopDetailBox .deBox .deBoxInfo1 label,
+#shopDetailBox .deBox .deBoxInfo2 label{
   float: left;
 }
 #shopDetailBox .deBox .text{
@@ -1553,8 +1736,229 @@ em, b, i{font-style: normal;font-weight: normal;}
   width: 317px;
 }
 
-#shopDetailBox .content{
+/*文本编辑框样式重置*/
+.editBoxContent{
   margin-top: 50px;
   float: left;
   width: 100%;
+}
+.editBoxContent i,
+.editBoxContent b,
+.editBoxContent em{font-style: italic;}
+.editBoxContent b,
+.editBoxContent h1,
+.editBoxContent h2,
+.editBoxContent h3,
+.editBoxContent h4,
+.editBoxContent h5,
+.editBoxContent h6{font-weight: bold;}
+.editBoxContent dd, 
+.editBoxContent dl, 
+.editBoxContent dt, 
+.editBoxContent li, 
+.editBoxContent ul{list-style:inherit;}
+.editBoxContent ol{list-style-type: decimal;}
+
+/*花型详情*/
+.shopLogoBox2.flowerLogoBox2 {
+
+}
+.shopLogoBox2.flowerLogoBox2 .title{
+  float: left;
+    width: 250px;
+    margin-left: 15px;
+}
+.shopLogoBox2.flowerLogoBox2 .main{
+  float: left;
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  position: relative;
+}
+}
+.shopLogoBox2.flowerLogoBox2 .main i{
+  background-position: -53px -81px;
+  width: 82px;
+  height: 28px;
+  position: absolute;
+  top: 0;
+  right: -90px;
+}
+.shopLogoBox2.flowerLogoBox2 .sub{
+  float: left;
+}
+#shopDetailBox.flowerWrapper{
+
+}
+#shopDetailBox.flowerWrapper .lPic{
+  width: 576px;
+  height: 856px;
+  float: left;
+  margin-right: 48px;
+}
+#shopDetailBox.flowerWrapper .detailBox .detailInfo .b1{
+  background-color: #EBEBEB;
+}
+#shopDetailBox.flowerWrapper .detailBox .detailInfo{
+  width: 580px;
+}
+#shopDetailBox.flowerWrapper .detailInfo .tryBox{
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  padding: 26px;
+  width: 644px;
+  margin-left: -28px;
+  float: left;
+  margin-bottom: 30px;
+}
+#shopDetailBox.flowerWrapper .detailInfo .tryBox .openBtn{
+  background-position: 0 -169px;
+  float: left;
+  width: 143px;
+  height: 134px;
+}
+#shopDetailBox.flowerWrapper .detailInfo .tryBox .closeBtn{
+  background-position: -143px -169px;
+  float: left;
+  width: 143px;
+  height: 134px;
+  margin-top: 5px;
+}
+#shopDetailBox.flowerWrapper .detailInfo .tryBox .backBtn{
+  background-color: #1B2139;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 20px;
+  color: white;
+  margin-top: 10px;
+}
+#shopDetailBox.flowerWrapper .detailInfo .infoList{
+  float: left;
+  width: 400px;
+  margin-left: 40px;
+}
+#shopDetailBox.flowerWrapper .detailInfo .infoList li{
+  width: 195px;
+  float: left;
+  margin-right: 5px;
+  line-height: 25px;
+}
+#shopDetailBox.flowerWrapper .detailInfo .infoList li.maxW{
+  width: 100%;
+}
+#shopDetailBox.flowerWrapper .detailInfo .diyBtn{
+  background-color: #1B2139;
+}
+#shopDetailBox.flowerWrapper .detailInfo .tryBox .imgList{
+  float: left;
+  width: 610px;
+}
+#shopDetailBox.flowerWrapper .detailInfo .tryBox .imgList li{
+  float: left;
+  width: 102px;
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+#shopDetailBox.flowerWrapper .detailInfo .tryBox .imgList .pic{
+  float: left;
+  width: 90px;
+  height: 132px;
+  padding: 6px;
+  border:1px solid white;
+}
+#shopDetailBox.flowerWrapper .detailInfo .tryBox .imgList .pic:hover,
+#shopDetailBox.flowerWrapper .detailInfo .tryBox .imgList .pic.on{
+  border:1px solid #C92027;
+}
+#shopDetailBox.flowerWrapper .detailInfo .tryBox .imgList .pic img{
+  float: left;
+}
+#shopDetailBox.flowerWrapper .detailInfo .tryBox .imgList .text{
+  float: left;
+  text-align: center;
+  width: 98px;
+}
+#shopDetailBox.flowerWrapper .detailInfo .priceBox .text1{
+  float: left;
+  font-size: 18px;
+  color: #999;
+  margin-top: 22px;
+  margin-left:10px;
+}
+#shopDetailBox.flowerWrapper .detailInfo .priceBox .text2{
+  float: left;
+  font-size: 18px;
+  color: #999;
+  margin-top: 22px;
+  margin-left: 25px;
+}
+
+#shopDetailBox.flowerWrapper .flowerList{
+  
+}
+#designerBox.studioWrapper .list,
+#shopDetailBox.flowerWrapper .flowerList .list{
+  float: left;
+  padding-bottom: 30px;
+}
+#designerBox.studioWrapper .list .item, 
+#shopDetailBox.flowerWrapper .flowerList .item{
+  float: left;
+  width: 232px;
+  margin: 0 8px;
+  margin-top: 15px;
+}
+#designerBox.studioWrapper .list .item .pic,
+#shopDetailBox.flowerWrapper .flowerList .item .pic{
+  float: left;
+  width: inherit;
+}
+#designerBox.studioWrapper .list .item .s1,
+#shopDetailBox.flowerWrapper .flowerList .item .s1{
+  float: left;
+  width: inherit;
+  padding-left: 10px;
+  box-sizing: border-box;
+  margin-top: 6px;
+}
+#designerBox.studioWrapper .list .item .s2,
+#shopDetailBox.flowerWrapper .flowerList .item .s2{
+  float: left;
+  width: inherit;
+  padding-left: 10px;
+  box-sizing: border-box;
+  margin-top: 6px;
+}
+#designerBox.studioWrapper .list .item .s2 i,
+#shopDetailBox.flowerWrapper .flowerList .item .s2 i{
+  font-size: 18px;
+  color: #C92027;
+}
+#designerBox.studioWrapper .list .item .s3,
+#shopDetailBox.flowerWrapper .flowerList .item .s3{
+  float: left;
+  width: inherit;
+  padding-left: 10px;
+  box-sizing: border-box;
+  margin-top: 6px;
+}
+#designerBox.studioWrapper .list .item .s3 label,
+#shopDetailBox.flowerWrapper .flowerList .item .s3 label{
+  color: #aaa;
+}
+#shopDetailBox.flowerWrapper .deBox .infoTable {
+  float: left;
+  width: 100%;
+  margin-top: 30px;
+}
+#shopDetailBox.flowerWrapper .deBox .infoTable td,
+#shopDetailBox.flowerWrapper .deBox .infoTable th{
+  border: 1px solid #ddd;
+  text-indent: 10px;
+  height: 38px;
+  line-height: 38px;
+}
+#shopDetailBox.flowerWrapper .deBox .infoTable th{
+  background-color: #EEEEEE;
 }
