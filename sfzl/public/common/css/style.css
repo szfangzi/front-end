@@ -823,15 +823,31 @@ em, b, i{font-style: normal;font-weight: normal;}
   background-color: white;
 }
 #factoryBox.detailWrapper .deLBox{
-  float: left;
+  overflow: hidden;
+  display: inline-block;
   width: 826px;
   height: 402px;
   margin-right: 15px;
 }
-#factoryBox.detailWrapper .deLBox .face{}
-#factoryBox.detailWrapper .deLBox .face img{}
+#factoryBox.detailWrapper .deLBox .slideBox{
+  height: 402px;
+}
+#factoryBox.detailWrapper .deLBox .slideBox .hd{
+  right: 0;
+  width: 100%;
+  text-align: center;
+}
+#factoryBox.detailWrapper .deLBox .slideBox .hd ul{
+  float: none;
+}
+#factoryBox.detailWrapper .deLBox .slideBox .hd ul li{
+  float: none;
+  display: inline-block;
+}
+#factoryBox.detailWrapper .deLBox .slideBox img{}
 #factoryBox.detailWrapper .deRBox{
-  float: left;
+  overflow: hidden;
+  display: inline-block;
   width: 394px;
 }
 #factoryBox.detailWrapper .deRBox .ulBox{
@@ -844,12 +860,82 @@ em, b, i{font-style: normal;font-weight: normal;}
   height: 170px;
   margin-top: 14px;
 }
-#factoryBox.detailWrapper .deRBox .ulBox .s1{}
-#factoryBox.detailWrapper .deRBox .ulBox .s1 h4{}
-#factoryBox.detailWrapper .deRBox .ulBox .s1 .line{}
-#factoryBox.detailWrapper .deRBox .ulBox .s1 .moreBtn{}
-#factoryBox.detailWrapper .deRBox .ulBox .s1 ul{}
-#factoryBox.detailWrapper .deRBox .ulBox .s1 li{}
+#factoryBox.detailWrapper .deRBox .ulBox .s1,
+#factoryBox.detailWrapper .deRBox .ulBox .s2{
+  float: left;
+}
+#factoryBox.detailWrapper .deRBox .ulBox .s1 h4,
+#factoryBox.detailWrapper .deRBox .ulBox .s2 h4{
+  float: left;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#factoryBox.detailWrapper .deRBox .ulBox .s1 .line,
+#factoryBox.detailWrapper .deRBox .ulBox .s2 .line{
+  width: 292px;
+  height: 1px;
+  float: left;
+  background-color: #ddd;
+  margin-top: 20px;
+  margin-left: 8px;
+}
+#factoryBox.detailWrapper .deRBox .ulBox .s2 .moreBtn{
+  float: left;
+  margin-top: 9px;
+  margin-left: 6px;
+}
+#factoryBox.detailWrapper .deRBox .ulBox .s2 .line{
+  width: 242px;
+}
+#factoryBox.detailWrapper .deRBox .ulBox ul{
+  float: left;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#factoryBox.detailWrapper .deRBox .ulBox li{}
+
+#factoryBox.detailWrapper .listSearchBox .tabBox2{
+  width: 824px;
+  margin-right: 18px;
+}
+#factoryBox.detailWrapper .listSearchBox .btnBox button{
+  background-color: #1B2139;
+  padding: 0 15px;
+  margin-right: 8px;
+  height: 38px;
+  line-height: 38px;
+  border:none;
+  color: white;
+  font-size: 14px;
+  font-family: 微软雅黑;
+  cursor: pointer;
+}
+#factoryBox.detailWrapper .list{
+
+}
+#factoryBox.detailWrapper .list .item{
+  height: auto;
+}
+#factoryBox.detailWrapper .list .item .pic{
+  height: 300px;
+}
+#factoryBox.detailWrapper .list .item .pic img{
+  
+}
+#factoryBox.detailWrapper .list .item .s1{
+  margin-top: 10px;
+  text-align: left;
+}
+#factoryBox.detailWrapper .list .item .s2{
+  margin-top: 5px;
+  float: left;
+}
+#factoryBox.detailWrapper .list .item .s2 i{
+  color: #C92027;
+  font-size: 18px;
+}
 
 
 /*diy page*/
