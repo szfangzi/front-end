@@ -1,4 +1,8 @@
 $(function(){
+
+	initPage();
+
+
 	$(".slideBox").slide({
 		mainCell:".bd ul",
 		autoPlay:true,
@@ -16,5 +20,30 @@ $(function(){
 		pnLoop:false,
 		scroll:1
 	});
+	$('.change_btn dis_line').click(function(event) {
+		
+		ajax({
+			url:'', 
+			callback:function(data){
+				if(data.result == 0){
+					var html = _.template($('#tpl').html(), data);
+					$('.change_list').html(html);
+				}
+			}
+		});
+
+	});
 	
+	function initPage(){
+		ajax({
+			url:'', 
+			callback:function(data){
+				if(data.result == 0){
+					var html = _.template($('#tpl').html(), data);
+					$('').html(html);
+				}
+			}
+		});
+	}
+
 });

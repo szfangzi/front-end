@@ -11,6 +11,9 @@ a:focus{outline:none;}
 a:hover{ color: #c92027; }
 img,a img,fieldset{ border:none;}
 em, b, i{font-style: normal;font-weight: normal;}
+svg:not(:root) {
+    overflow: hidden;
+}
 .clearfix{ font-size:0;line-height:0; height: 0; clear: both;}
 .tc{ text-align:center;}
 .fl{ float:left;}
@@ -204,11 +207,11 @@ em, b, i{font-style: normal;font-weight: normal;}
 .menu_list li a{color: #fff;font-size: 16px; letter-spacing: 1px;}
 
 #index .menu_main{display: block;}
-.menu_main{display:none; padding-top: 10px; height: 440px;position:absolute;background-color: white;z-index: 999;}
+.menu_main{display:none; padding-top: 10px; border: 1px solid #ddd;height: 430px;position:absolute;background-color: white;z-index: 999;}
 .nav_list{font-size:16px;width: 230px;position: relative;}
 .nav_list li{float: left; width: 100%;}
 .nav_list li h3{font-size:16px;text-indent: 25px; letter-spacing: 1px; background: url(image/r_j.png) no-repeat 205px center; height: 40px; line-height: 40px; z-index: 999; position: relative; }
-.drop_box{font-size:14px;width:780px;min-height:440px;height:auto;display: none; position: absolute; left: 228px; top: 0px; border:2px solid #ddd; background-color: #fff;}
+.drop_box{font-size:14px;width:780px;min-height:428px;height:auto;display: none; position: absolute; left: 228px; top: 0px; border:2px solid #ddd; background-color: #fff;}
 .nav_list li.on h3{border:2px solid #ddd; border-right-color: #fff;height: 36px;line-height: 36px;}
 .fore{ overflow: hidden; border-bottom: 1px solid #eee; padding: 12px 0; margin:0 20px; }
 .fore dt{ float: left; width: 100px; text-align: right;}
@@ -261,9 +264,80 @@ em, b, i{font-style: normal;font-weight: normal;}
 .picScroll-left .hd ul{ float:right; overflow:hidden; zoom:1; zoom:1; display: none; }
 .picScroll-left .hd ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer; background:url("images/icoCircle.gif") 0 -9px no-repeat; }
 .picScroll-left .hd ul li.on{ background-position:0 0; }
-.picScroll-left .bd{ margin-top: 15px; }
+.picScroll-left .bd{ margin-top: 10px; }
 .picScroll-left .bd ul{ overflow:hidden; zoom:1; }
-.picScroll-left .bd ul li{ margin:0 9px; float:left; _display:isnline; overflow:hidden; }
+.picScroll-left .pro_list li{ 
+  margin:6px 7px 5px 7px; 
+  padding-bottom: 2px;
+  border:1px solid white;
+  float:left; 
+  _display:isnline; 
+/*  overflow:hidden; */
+  position: relative;
+}
+.picScroll-left ul li .item-info{
+  padding: 0 5px 0 13px;
+}
+.picScroll-left ul li:hover em.item-name{
+  color: #696969;
+}
+.no-csstransitions .picScroll-left ul li:hover,
+.no-csstransforms .picScroll-left ul li:hover,
+.no-csstransitions #indexBox .sp_biglist li a:hover,
+.no-csstransforms #indexBox .sp_biglist li a:hover,
+.no-csstransitions #indexBox .sp_smlist li a:hover,
+.no-csstransforms #indexBox .sp_smlist li a:hover{
+  border:1px solid #C92027;
+}
+li svg.borderTran {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 233px;
+    height: 378px;
+}
+
+li svg.borderTran line {
+    stroke-width:2;
+    fill: none;
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+/*.picScroll-left .bd ul li svg line.top, 
+.picScroll-left .bd ul li svg line.bottom {
+    stroke-dasharray: 330 240;
+}
+.picScroll-left .bd ul li svg line.left, 
+.picScroll-left .bd ul li svg line.right {
+    stroke-dasharray: 490 400;
+}*/
+li:hover svg.borderTran line {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+  stroke:#C92027;
+}
+li:hover svg.borderTran line.top {
+  -webkit-transform: translateX(-600px);
+  transform: translateX(-600px);
+}
+
+li:hover svg.borderTran line.bottom {
+  -webkit-transform: translateX(600px);
+  transform: translateX(600px);
+}
+
+li:hover svg.borderTran line.left {
+  -webkit-transform: translateY(520px);
+  transform: translateY(520px);
+}
+
+li:hover svg.borderTran line.right {
+  -webkit-transform: translateY(-520px);
+  transform: translateY(-520px);
+}
+
+
 .picScroll-left .bd ul li .pic img{ width:232px; height:300px; display:block; }
 .pageState{ display: none; }
 .picScroll-left .hd .prev:hover,.picScroll-left .hd .next:hover{background-color: #c0c0c0; }
@@ -281,8 +355,8 @@ em, b, i{font-style: normal;font-weight: normal;}
 
 /*jingxuan*/
 .products{width: 1240px; }
-.pro_list{ overflow: hidden; }
-.pro_list li{ width: 232px; float: left; margin-top: 15px; margin-left:8px;margin-right:8px;}
+.pro_list{ overflow: hidden;padding-bottom: 10px;}
+.pro_list li{position: relative; width: 232px; float: left; margin-top: 15px; margin-left:8px;margin-right:8px;}
 /*.pro_list li:first-child{ margin-left: 0; }*/
 .item-desc{ display: block; }
 .item-price{display: block;color: #c92027; font-size: 20px; margin-top: 5px;}
@@ -353,21 +427,59 @@ em, b, i{font-style: normal;font-weight: normal;}
 #indexBox .specilbox{overflow: hidden;margin-top: 15px;}
 #indexBox .sp_shop{ float:left; margin-right: 25px; }
 #indexBox .sp_big{width: 310px; height: 267px; float: left;}
-#indexBox .sp_biglist li{ margin-bottom: 10px; }
+#indexBox .sp_biglist li{ 
+  margin-bottom: 10px; 
+  width: 310px; 
+  height: 271px; 
+  float: left;
+}
+#indexBox .sp_biglist li a{
+  width: 308px; 
+  height: 269px; 
+  float: left;
+  position: relative;
+  border:1px solid white;
+  overflow: hidden;
+}
+#indexBox .sp_biglist li svg.borderTran{
+  width: 308px; 
+  height: 269px; 
+  top: 0;
+  left: 0;
+}
 #indexBox .sp_small{ float: left;width: 668px; }
 #indexBox .sp_smlist li{ float: left;width: 212px; height: 267px; margin-left: 10px; margin-bottom: 10px;}
-
+#indexBox .sp_smlist li{ 
+  margin-bottom: 10px; 
+  width: 212px; 
+  height: 267px; 
+  float: left;
+}
+#indexBox .sp_smlist li a{
+  width: 210px; 
+  height: 265px; 
+  float: left;
+  position: relative;
+  border:1px solid white;
+  overflow: hidden;
+}
+#indexBox .sp_smlist li svg.borderTran{
+  width: 210px; 
+  height: 265px; 
+  top: 0;
+  left: 0;
+}
 
 /*studio*/
 #indexBox .studioList{overflow: hidden;}
-#indexBox .studioList .item{width: 230px;float: left;margin:15px 9px;}
+#indexBox .studioList .item{width: 230px;height: 393px;float: left;margin:15px 9px;}
 #indexBox .studioList .item .pic{float: left;width: 230px;height: 258px;}
 #indexBox .studioList .item .m{float: left;width: 230px;margin-top: 15px;}
 #indexBox .studioList .item .m .face{float: left;border:1px solid #ccc;}
 #indexBox .studioList .item .m .r{float: right;width: 150px;}
 #indexBox .studioList .item .m .r .s1{width: 150px;float: left;margin-top: 10px;}
 #indexBox .studioList .item .m .r .s2{width: 150px;float: left;margin-top: 5px;color: #999;}
-#indexBox .studioList .item .goBtn{margin-top: 15px; float: left;width: 228px;border:1px solid #ccc;display: inline-block;text-align: center;padding-top: 10px;padding-bottom: 10px;}
+#indexBox .studioList .item .goBtn{height: auto;line-height: inherit;margin-top: 15px; float: left;width: 228px;display: inline-block;text-align: center;padding-top: 10px;padding-bottom: 10px;}
 
 /*factory*/
 #indexBox .factoryList{overflow: hidden;}
@@ -935,6 +1047,11 @@ em, b, i{font-style: normal;font-weight: normal;}
 #factoryBox.detailWrapper .list .item .s2 i{
   color: #C92027;
   font-size: 18px;
+}
+/*加工厂面料详情*/
+#shopDetailBox.faMaDetailWrapper{}
+#shopDetailBox.faMaDetailWrapper .detailBox .detailInfo .b1{
+  background-color: #EBEBEB;
 }
 
 
@@ -1594,9 +1711,15 @@ em, b, i{font-style: normal;font-weight: normal;}
   float: left;
   background-color: #FF6700;
 }
+.detailBox .detailInfo .cartBtn:hover{
+  background-color: #e85e00;
+}
 .detailBox .detailInfo .buyBtn{
   float: left;
   background-color: #C92027;
+}
+.detailBox .detailInfo .buyBtn:hover{
+  background-color: #bb0810;
 }
 .detailBox .detailInfo .likeBox{
   float: left;
@@ -1713,7 +1836,7 @@ em, b, i{font-style: normal;font-weight: normal;}
   font-size: 18px;
 }
 #shopDetailBox .detail{
-  margin-top: 40px;
+  margin-top: 60px;
   overflow: hidden;
 }
 #shopDetailBox .detail .detailL{
@@ -2021,6 +2144,9 @@ em, b, i{font-style: normal;font-weight: normal;}
 }
 #shopDetailBox.flowerWrapper .detailInfo .diyBtn{
   background-color: #1B2139;
+}
+#shopDetailBox.flowerWrapper .detailInfo .diyBtn:hover{
+  background-color: #0b0e1b;
 }
 #shopDetailBox.flowerWrapper .detailInfo .tryBox .imgList{
   float: left;
