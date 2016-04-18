@@ -28,17 +28,10 @@ $(function(){
 		$this.addClass('on').show();
 	});
 
-	//tab选项框
-	$('.listSearchBox .tabBox a').click(function(){
-		var $this = $(this);
-		$('.listSearchBox .tabBox a').removeClass('on');
-		$this.addClass('on');
-	});
-
 	//列表项选择
-	$('.flowerListWrapper .list .item').click(function(event) {
+	$('.faListWrapper .list .item .isSelected').click(function(event) {
 		var $this = $(this);
 		$this.parents('.list').find('.item').removeClass('on');
-		$this.addClass('on');
+		$this.parents('.item').addClass('on');
 	});
 });

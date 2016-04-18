@@ -1,10 +1,12 @@
 $(function(){
+	//轮播广告
 	$(".slideBox").slide({
 		mainCell:".bd ul",
 		autoPlay:true,
 		trigger:"click",
 		effect:"fold"
 	});
+	//头部导航
 	$('.all_type').hover(function(){
 		$('.menu_main').show();
 	});

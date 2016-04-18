@@ -26,4 +26,13 @@ $(function(){
 
 	});
 	
+	$('.tryBox .openBtn').click(function(){
+		$('.tryBox').hide();
+		$('.tryBox.open').show();
+	});
+	$('.tryBox .closeBtn').click(function(){
+		$('.tryBox').hide();
+		$('.tryBox.close').show();
+	});
+
 });

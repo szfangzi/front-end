@@ -1,14 +1,14 @@
 $(function(){
 
-	initPage();
-
-
+//轮播广告
 	$(".slideBox").slide({
 		mainCell:".bd ul",
 		autoPlay:true,
 		trigger:"click",
 		effect:"fold"
 	});
+
+	//精选滑动
 	$(".picScroll-left").slide({
 		titCell:".hd ul",
 		mainCell:".bd ul",
@@ -20,6 +20,8 @@ $(function(){
 		pnLoop:false,
 		scroll:1
 	});
+
+	//换推荐
 	$('.change_btn dis_line').click(function(event) {
 		
 		ajax({
@@ -33,17 +35,6 @@ $(function(){
 		});
 
 	});
-	
-	function initPage(){
-		ajax({
-			url:'', 
-			callback:function(data){
-				if(data.result == 0){
-					var html = _.template($('#tpl').html(), data);
-					$('').html(html);
-				}
-			}
-		});
-	}
+
 
 });

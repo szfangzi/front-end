@@ -6,6 +6,13 @@ $(function(){
 		trigger:"click",
 		effect:"fold"
 	});
+	//头部导航
+	$('.all_type').hover(function(){
+		$('.menu_main').show();
+	});
+	$('.all_typebox').mouseleave(function(){
+		$('.menu_main').hide();
+	});
 
 	// 详情 评价 晒单切换
 	$('.tabBox a').click(function(){
@@ -25,5 +32,5 @@ $(function(){
 		}
 
 	});
-	
+
 });

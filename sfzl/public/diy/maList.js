@@ -36,7 +36,7 @@ $(function(){
 	});
 
 	//列表项选择
-	$('.flowerListWrapper .list .item').click(function(event) {
+	$('.maListWrapper .list .item').click(function(event) {
 		var $this = $(this);
 		$this.parents('.list').find('.item').removeClass('on');
 		$this.addClass('on');

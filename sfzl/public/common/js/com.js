@@ -1,3 +1,4 @@
+//AJAX封装
 function ajax(option){
 
 	var ajaxFunc = $.ajax({
@@ -5,6 +6,7 @@ function ajax(option){
 		type: option.type || 'GET',
 		dataType: option.dataType || 'json',
 		data: option.data || {},
+		async:option.async == false ? false : true,
 		beforeSend:function(){
 			if(option.isLoad){
 				loading();
@@ -25,6 +27,8 @@ function ajax(option){
 	});
 	
 }
+
+//loading加载图
 function loading(){
 	var html = '<div class="loadingWrapper" style="display: block;">\
 		<div class="spinner">\
@@ -68,12 +72,14 @@ $(function(){
 		if(this.blur){this.blur()};
 	});
 
+	// 头部导航搜索类别切换
 	$('.search_list li').click(function(){
 		$(this).addClass('on').siblings('li').removeClass('on');
 		var valueText=$(this).html();
 		$('.search_input').attr('placeholder','请输入'+valueText+'名称');
 	});
 
+	//二级导航
 	$('.nav_list>li').hover(function() {
 		$(this).addClass('on').siblings('li').removeClass('on');
 		$('.drop_box').hide();

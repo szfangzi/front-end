@@ -6,7 +6,6 @@ $(function(){
 		trigger:"click",
 		effect:"fold"
 	});
-
 	
 
 });

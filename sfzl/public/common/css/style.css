@@ -1130,20 +1130,33 @@ li:hover svg.borderTran line.right {
   color: #c92027;
 }
 #diyBox.flowerListWrapper .list .item .isSelected,
-#diyBox.maListWrapper .list .item .isSelected{
+#diyBox.maListWrapper .list .item .isSelected,
+#diyBox.flowerListWrapper .list .item .hoverSelected,
+#diyBox.maListWrapper .list .item .hoverSelected{
   width: 230px;
   height: 49px;
   position: absolute;
   top: 0;
   left: 0;
+  color: white;
+  font-size: 18px;
+  box-sizing: border-box;
+  padding: 12px 0 0 15px;
+  display: none;
 }
-#diyBox.flowerListWrapper .list .item:hover .isSelected,
-#diyBox.maListWrapper .list .item:hover .isSelected{
+#diyBox.flowerListWrapper .list .item:hover .hoverSelected,
+#diyBox.maListWrapper .list .item:hover .hoverSelected{
   background: url(../img/icon.png) no-repeat 0 -303px;
+  display: block;
+}
+#diyBox.flowerListWrapper .list .item.on:hover .hoverSelected,
+#diyBox.maListWrapper .list .item.on:hover .hoverSelected{
+  display: none;
 }
 #diyBox.flowerListWrapper .list .item.on .isSelected,
 #diyBox.maListWrapper .list .item.on .isSelected{
   background: url(../img/icon.png) no-repeat 0 -352px;
+  display: block;
 }
 
 #diyBox.faListWrapper .list .item .boxMask{
@@ -2124,6 +2137,9 @@ li:hover svg.borderTran line.right {
   margin-left: -28px;
   float: left;
   margin-bottom: 30px;
+}
+#shopDetailBox.flowerWrapper .detailInfo .tryBox.open{
+  display: none;
 }
 #shopDetailBox.flowerWrapper .detailInfo .tryBox .openBtn{
   background-position: 0 -169px;
