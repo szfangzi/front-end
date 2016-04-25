@@ -11,7 +11,7 @@ a:focus{outline:none;}
 a:hover{ color: #c92027; }
 img,a img,fieldset{ border:none;}
 em, b, i{font-style: normal;font-weight: normal;}
-input{font-family: "微软雅黑",Arial,sans-serif;}
+input,button{font-family: "微软雅黑",Arial,sans-serif;}
 svg:not(:root) {
     overflow: hidden;
 }
@@ -215,12 +215,12 @@ svg:not(:root) {
 }
 
 
-.logoBox{
+.loginBox{
   height: 588px;
   width: 100%;
   background: url(../img/adminLoginBg.png) repeat-x center;
 }
-.logoBox .adBg{
+.loginBox .adBg{
   height: 166px;
   width:423px;
   background: url(../img/adminBigBg.png) no-repeat 0 0;
@@ -228,7 +228,7 @@ svg:not(:root) {
   top: 210px;
   left: 250px;
 }
-.logoBox .rBox{
+.loginBox .rBox{
   width: 330px;
   height: 416px;
   position: absolute;
@@ -239,13 +239,13 @@ svg:not(:root) {
   box-sizing: border-box;
   padding: 22px 20px;
 }
-.logoBox h3{
+.loginBox h3{
   float: left;
   margin-bottom: 18px;
   font-size: 18px;
   width: 100%;
 }
-.logoBox .username, .logoBox .password{
+.loginBox .username, .loginBox .password{
   float: left;
   margin-bottom: 18px;
   width: 292px;
@@ -256,21 +256,21 @@ svg:not(:root) {
   font-size: 14px;
   border:1px solid #ccc;
 }
-.logoBox .password{
+.loginBox .password{
   
 }
-.logoBox .forget{
+.loginBox .forget{
   float: left;
   width: 100%;
   margin-bottom: 24px;
 }
-.logoBox .forget .forgetBtn{
+.loginBox .forget .forgetBtn{
   float: left;
 }
-.logoBox .forget .registBtn{
+.loginBox .forget .registBtn{
   float: right;
 }
-.logoBox .loginBtn{
+.loginBox .loginBtn{
   float: left;
   margin-bottom: 28px;
   width: 100%;
@@ -283,35 +283,35 @@ svg:not(:root) {
   line-height: 50px;
   cursor: pointer;
 }
-.logoBox .loginBtn:hover{
+.loginBox .loginBtn:hover{
   background-color: #bb0810;
 }
-.logoBox .b1{
+.loginBox .b1{
   float: left;
   margin-bottom: 24px;
   width: 100%;
 }
-.logoBox .b1 .line{
+.loginBox .b1 .line{
   float: left;
   height: 1px;
   background-color: #ccc;
   width: 98px;
   margin-top: 10px;
 }
-.logoBox .b1 .otherLoginText{
+.loginBox .b1 .otherLoginText{
   float: left;
   margin: 0 5px;
   
 }
-.logoBox .otherLoginBox{
+.loginBox .otherLoginBox{
   width: 100%;
   float: left;
   text-align: center;
 }
-.logoBox .otherLoginBox .wx_log{
+.loginBox .otherLoginBox .wx_log{
   margin-right: 20px;
 }
-.logoBox .otherLoginBox .qq_log{}
+.loginBox .otherLoginBox .qq_log{}
 
 .loginFoot{    
   height: 150px;
@@ -328,4 +328,82 @@ svg:not(:root) {
   width: 100%;
   float: left;
   color: #aaa;
+  margin-bottom: 100px;
+}
+
+/*注册页面*/
+.registBody{
+  background-color: #F5F5F5;
+}
+.registForm{
+    background-color: #fff;
+    width: 1240px;
+    float: left;
+    padding: 50px 440px 50px 418px;
+    box-sizing: border-box;
+}
+.registForm .row{
+  float: left;
+  width: 366px;
+  margin-bottom: 25px;
+
+}
+.registForm .row .txt, .registForm .row .halfTxt{
+  width: 364px;
+  height: 46px;
+  border:1px solid #aaa;
+  box-sizing: border-box;
+  padding:15px 20px;
+  color: #666;
+  font-size: 14px;
+  float: left;
+}
+.registForm .row .nation{
+  width: 364px;
+  color: #666;
+  font-size: 14px;
+  padding:13px 20px;
+  float: left;
+}
+.registForm .row .halfTxt{
+  width: 226px;
+}
+.imgCheck{
+  float: left;
+  margin-left: 25px;
+}
+.mCheckBtn{
+  float: left;
+  margin-left: 10px;
+  background-color: #E5E5E5;
+  width: 128px;
+  height: 46px;
+  border:none;
+  font-size: 14px;
+  color: #666;
+}
+.registForm .row .isRead{
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+.isReadText{
+  float: left;
+  margin-left:15px;
+  color: #999;
+}
+.registForm .row .registBtn{
+  float: left;
+  width: 100%;
+  color: white;
+  background-color: #C92027;
+  font-size: 16px;
+  border:none;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+}
+.registForm .row .registBtn:hover{
+  background-color: #bb0810;
 }

@@ -11,7 +11,7 @@ a:focus{outline:none;}
 a:hover{ color: #c92027; }
 img,a img,fieldset{ border:none;}
 em, b, i{font-style: normal;font-weight: normal;}
-input{font-family: "微软雅黑",Arial,sans-serif;}
+input,button{font-family: "微软雅黑",Arial,sans-serif;}
 svg:not(:root) {
     overflow: hidden;
 }
