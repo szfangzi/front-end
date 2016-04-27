@@ -1394,3 +1394,98 @@ svg:not(:root) {
   width: 63px;
   height: 64px;
 }
+
+/*账号管理*/
+.account .accountTab{
+  float: left;
+  width: 100%;
+  background-color: #E9E9E9;
+  margin-top: 20px;
+}
+.account .accountTab a{
+  float: left;
+  padding: 10px 15px;
+
+}
+.account .accountTab a.on{
+  background-color: #495068;
+  color: white;
+}
+.account .accountInfo{
+  float: left;
+  width: 100%;
+  border:1px solid #ddd;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.account .accountInfo .basic{
+  border-bottom:1px solid #ddd;
+  float: left;
+  width: 964px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+.account .accountInfo .basic h3.ti{
+  float: left;
+  width: 100%;
+}
+.account .accountInfo .basic .li{
+  float: left;
+  width: 100%;
+  margin-top: 8px;
+}
+.account .accountInfo .basic .li .s1{
+  float: left;
+  width: 308px;
+}
+.account .accountInfo .safe{
+  float: left;
+  width: 100%;
+  padding-bottom: 15px;
+}
+.account .accountInfo .safe h3.ti{
+  float: left;
+  width: 100%;
+}
+.account .accountInfo .safe .level{
+  float: left;
+  margin-left: 38px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.account .accountInfo .safe .level span.ti{
+  float: left;
+}
+.account .accountInfo .safe .level .levelProgress{
+  float: left;
+  background-color: #E1E1E1;
+  width: 360px;
+  height: 16px;
+  margin-top: 3px;
+}
+.account .accountInfo .safe .level .progress{
+  float: left;
+  background-color: #1FB65F;
+  height: 16px;
+}
+.account .accountInfo .safe .level .progress.s1{width: 10%;}
+.account .accountInfo .safe .level .progress.s2{width: 20%;}
+.account .accountInfo .safe .level .progress.s3{width: 30%;}
+.account .accountInfo .safe .level .progress.s4{width: 40%;}
+.account .accountInfo .safe .level .progress.s5{width: 50%;}
+.account .accountInfo .safe .level .progress.s6{width: 60%;}
+.account .accountInfo .safe .level .progress.s7{width: 70%;}
+.account .accountInfo .safe .level .progress.s8{width: 80%;}
+.account .accountInfo .safe .level .progress.s9{width: 90%;}
+.account .accountInfo .safe .level .progress.s10{width: 100%;}
+.account .accountInfo .safe .level i.tip{
+  float: left;
+}
+.account .accountInfo .safe .level .text{
+  float: left;
+}
+.account .accountInfo .safe .level .passBtn{}
+.account .accountInfo .safe .item{
+  float: left;
+  margin-left: 38px;
+}

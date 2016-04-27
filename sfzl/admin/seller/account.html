@@ -60,7 +60,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="adminBox platformAuth">
+	<div class="adminBox account">
 		<div class="w">
 			<div class="l fl">
 				<ul class="menu">
@@ -108,60 +108,48 @@
 				</div>
 				<div class="tabBox">
 					<a href="javascript:;">店铺基本设置</a>
-					<a href="javascript:;" class="on">平台认证</a>
+					<a href="javascript:;">平台认证</a>
 					<a href="javascript:;">经营许可证</a>
-					<a href="javascript:;">账号管理</a>
+					<a href="javascript:;" class="on">账号管理</a>
 				</div>
-				<div class="authBox auth1">
-					<div class="fl">
-						<div class="icon authBg">
-							<i class="icon on"></i>
+				<div class="accountTab">
+					<a href="javascript:;" class="on">安全设置</a>
+					<a href="javascript:;">个人资料</a>
+					<a href="javascript:;">隐私设置</a>
+					<a href="javascript:;">银行卡绑定设置</a>
+					<a href="javascript:;">个人交易信息</a>
+					<a href="javascript:;">收货地址</a>
+					<a href="javascript:;">公司信息维护</a>
+				</div>
+				<div class="accountInfo">
+					<div class="basic">
+						<h3 class="ti">您的基础信息</h3>
+						<div class="li userId">
+							<span class="s1">会员名：ASD54564</span>
+						</div>
+						<div class="li mail">
+							<span class="s1">登录邮箱：您尚未设置登录邮箱</span>
+							<a href="javascript:;" class="addMailBtn">添加邮箱</a>
+						</div>
+						<div class="li mobile">
+							<span class="s1">绑定手机：136****5555</span>
+							<a href="javascript:;" class="changeMobileBtn">修改手机</a>
 						</div>
 					</div>
-					<div class="fr">
-						<span class="s1">亲爱的<span class="userId">1354446247</span>，您的身份</span>
-						<span class="s2">已通过认证</span>
-						<p class="p1">根据《网络交易管理办法》的规定，淘宝将定期或不定期复核您的身份信息。</p>
-						<p class="p2">请确保您账号绑定的身份信息真实有效，并确保账号为本人使用，请勿向他人转让、出租或借用账号。</p>
-					</div>
-				</div>
-				<div class="authBox auth2">
-					<div class="fl">
-						<div class="icon authBg">
-							<i class="icon on"></i>
+					<div class="safe">
+						<h3 class="ti">您的安全服务</h3>
+						<div class="level">
+							<span class="ti">安全等级：</span>
+							<div class="levelProgress">
+								<div class="progress s7"></div>
+							</div>
+							<i class="icon tip"></i>
+							<span class="text">完成<a href="javascript:;" class="passBtn">密保设置</a>，提升账户安全。</span>
+						</div>
+						<div class="item">
+							
 						</div>
 					</div>
-					<div class="fr">
-						<span class="s1">亲爱的<span class="userId">1354446247</span>，贵公司的营业执照</span>
-						<span class="s2">已通过认证</span>
-						<p class="p1">根据《网络交易管理办法》的规定，淘宝将定期或不定期复核您的身份信息。</p>
-						<p class="p2">请确保您账号绑定的身份信息真实有效，并确保账号为本人使用，请勿向他人转让、出租或借用账号。</p>
-					</div>
-				</div>
-				<div class="authInfo">
-					<h4 class="ti">上次认证信息：</h4>
-					<ul class="infos">
-						<li>姓名：*天天</li>
-						<li>电话：136****4545</li>
-						<li class="long">地址：深圳市罗湖区同益新</li>
-						<li>证件号码：4***********1</li>
-						<li>证件有效期：2022-06-29</li>
-						<li class="long">认证通过时间：2016年4月6日</li>
-					</ul>
-				</div>
-				<div class="legalRight">
-					<h4 class="ti">当前权益：</h4>
-					<span class="s1">平台认证状态是否通过，将会直接影响您的以下权益</span>
-					<ul class="rightList">
-						<li class="open">
-							<i class="icon"></i>
-							<span class="text">平台开店</span>
-						</li>
-						<li class="right">
-							<i class="icon"></i>
-							<span class="text">维护权益</span>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</div>
@@ -175,7 +163,12 @@
     <script type="text/javascript" src="../../public/common/js/modernizr-1.7.min.js"></script>
     <script type="text/javascript" src="../../public/common/js/admin.js"></script>
 	<script type="text/javascript">
+		$('.accountTab a').click(function(){
+			var $this = $(this);
+			$('.accountTab a').removeClass('on');
+			$this.addClass('on');
 
+		});
 	</script>
 
 </body>
