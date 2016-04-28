@@ -11,7 +11,7 @@ a:focus{outline:none;}
 a:hover{ color: #c92027; }
 img,a img,fieldset{ border:none;}
 em, b, i{font-style: normal;font-weight: normal;}
-input,button,textarea{font-family: "微软雅黑",Arial,sans-serif;}
+input,button,textarea,select{font-family: "微软雅黑",Arial,sans-serif;}
 svg:not(:root) {
     overflow: hidden;
 }
@@ -689,6 +689,7 @@ svg:not(:root) {
 }
 .adminBox .main .tabBox a.on{
   border-bottom: 2px solid #C92027;
+  color: #C92027;
 }
 
 /*个人中心*/
@@ -1185,7 +1186,7 @@ svg:not(:root) {
   font-weight: bold;
   position: relative;
 }
-.setForm{
+.adminBox.setShop .setForm{
   float: left;
   box-sizing: border-box;
   padding: 20px 20px 20px 0;
@@ -1254,21 +1255,21 @@ svg:not(:root) {
 
 
 /*平台认证*/
-.platformAuth{
+.adminBox.platformAuth{
   float: left;
   width: 100%;
 }
-.platformAuth .authBox{
+.adminBox.platformAuth .authBox{
   background-color: #80879D;
   float: left;
   width: 100%;
   height: 200px;
   margin-top: 20px;
 }
-.platformAuth .authBox .fl{
+.adminBox.platformAuth .authBox .fl{
   width: 200px;
 }
-.platformAuth .authBox .authBg{
+.adminBox.platformAuth .authBox .authBg{
   float: left;
   position: relative;
   margin-left: 42px;
@@ -1277,215 +1278,598 @@ svg:not(:root) {
   height: 132px;
   background-position: 0 -401px;
 }
-.platformAuth .authBox.auth2 .authBg{
+.adminBox.platformAuth .authBox.auth2 .authBg{
   background-position: -132px -401px;
 }
-.platformAuth .authBox .authBg i{
+.adminBox.platformAuth .authBox .authBg i{
   width: 27px;
   height: 32px;
   position: absolute;
   top: 67px;
   right: 20px;
 }
-.platformAuth .authBox .authBg i.on{
+.adminBox.platformAuth .authBox .authBg i.on{
   background-position: -320px -26px;
 }
-.platformAuth .authBox .fr{
+.adminBox.platformAuth .authBox .fr{
   width: 790px;
   margin-top: 40px;
 }
-.platformAuth .authBox .fr .s1{
+.adminBox.platformAuth .authBox .fr .s1{
   color: white;
   float: left;
   width: 100%;
 }
-.platformAuth .authBox .fr .userId{
+.adminBox.platformAuth .authBox .fr .userId{
   color: white;
 }
-.platformAuth .authBox .fr .s2{
+.adminBox.platformAuth .authBox .fr .s2{
   color: white;
   float: left;
   width: 100%;
   font-size: 24px;
 }
-.platformAuth .authBox .fr .p1{
+.adminBox.platformAuth .authBox .fr .p1{
   color: #eee;
   float: left;
   width: 100%;
   margin-bottom: 5px;
   margin-top: 20px;
 }
-.platformAuth .authBox .fr .p2{
+.adminBox.platformAuth .authBox .fr .p2{
   color: #eee;
   float: left;
   width: 100%;
 }
-.platformAuth .authBox.auth2{
+.adminBox.platformAuth .authBox.auth2{
   background-color: #C9A287;
 }
-.platformAuth .authInfo{
+.adminBox.platformAuth .authInfo{
   float: left;
   width: 100%;
   box-sizing: border-box;
   border-bottom: 1px solid #ddd;
   padding: 25px 15px;
 }
-.platformAuth .authInfo .ti{
+.adminBox.platformAuth .authInfo .ti{
   float: left;
   font-size: 16px;
   width: 100%;
 }
-.platformAuth .authInfo .infos{
+.adminBox.platformAuth .authInfo .infos{
   float: left;
   width: 100%;
 }
-.platformAuth .authInfo .infos li{
+.adminBox.platformAuth .authInfo .infos li{
   float: left;
   margin-top: 20px;
   width: 250px;
   margin-right: 10px;
 }
-.platformAuth .authInfo .infos li.long{
+.adminBox.platformAuth .authInfo .infos li.long{
   width: 400px;
 }
-.platformAuth .legalRight{
+.adminBox.platformAuth .legalRight{
   float: left;
   width: 100%;
   box-sizing: border-box;
   padding: 20px 15px;
 }
-.platformAuth .legalRight .ti{
+.adminBox.platformAuth .legalRight .ti{
   float: left;
   font-size: 16px;
   width: 100%;
 }
-.platformAuth .legalRight .s1{
+.adminBox.platformAuth .legalRight .s1{
   float: left;
   width: 100%;
   margin-top: 5px;
 }
-.platformAuth .legalRight .rightList{
+.adminBox.platformAuth .legalRight .rightList{
   float: left;
   width: 100%;
   margin-top: 20px;
 }
-.platformAuth .legalRight .rightList li{
+.adminBox.platformAuth .legalRight .rightList li{
   float: left;
   margin-right: 50px;
   width: 69px;
 }
-.platformAuth .legalRight .rightList li i{
+.adminBox.platformAuth .legalRight .rightList li i{
   float: left;
 }
-.platformAuth .legalRight .rightList li .text{
+.adminBox.platformAuth .legalRight .rightList li .text{
   float: left;
   text-align: center;
   font-size: 16px;
   color: #495068;
   width: 100%;
 }
-.platformAuth .legalRight .rightList li.open i{
+.adminBox.platformAuth .legalRight .rightList li.open i{
   background-position: -154px -101px;
   width: 69px;
   height: 63px;
 }
-.platformAuth .legalRight .rightList li.right i{
+.adminBox.platformAuth .legalRight .rightList li.right i{
   background-position: -223px -101px;
   width: 63px;
   height: 64px;
 }
 
 /*账号管理*/
-.account .accountTab{
+.adminBox.account .accountTab{
   float: left;
   width: 100%;
   background-color: #E9E9E9;
   margin-top: 20px;
 }
-.account .accountTab a{
+.adminBox.account .accountTab a{
   float: left;
   padding: 10px 15px;
 
 }
-.account .accountTab a.on{
+.adminBox.account .accountTab a.on{
   background-color: #495068;
   color: white;
 }
-.account .accountInfo{
+.adminBox.account .accountInfo{
   float: left;
   width: 100%;
   border:1px solid #ddd;
   padding: 15px;
   box-sizing: border-box;
 }
-.account .accountInfo .basic{
+.adminBox.account .accountInfo .basic{
   border-bottom:1px solid #ddd;
   float: left;
   width: 964px;
   padding-bottom: 15px;
   margin-bottom: 20px;
 }
-.account .accountInfo .basic h3.ti{
+.adminBox.account .accountInfo .basic h3.ti{
   float: left;
   width: 100%;
 }
-.account .accountInfo .basic .li{
+.adminBox.account .accountInfo .basic .li{
   float: left;
   width: 100%;
   margin-top: 8px;
 }
-.account .accountInfo .basic .li .s1{
+.adminBox.account .accountInfo .basic .li .s1{
   float: left;
   width: 308px;
 }
-.account .accountInfo .safe{
+.adminBox.account .accountInfo .safe{
   float: left;
   width: 100%;
   padding-bottom: 15px;
 }
-.account .accountInfo .safe h3.ti{
+.adminBox.account .accountInfo .safe h3.ti{
   float: left;
   width: 100%;
 }
-.account .accountInfo .safe .level{
+.adminBox.account .accountInfo .safe .level{
   float: left;
   margin-left: 38px;
   margin-top: 25px;
   margin-bottom: 50px;
 }
-.account .accountInfo .safe .level span.ti{
+.adminBox.account .accountInfo .safe .level span.ti{
   float: left;
 }
-.account .accountInfo .safe .level .levelProgress{
+.adminBox.account .accountInfo .safe .level .levelProgress{
   float: left;
   background-color: #E1E1E1;
   width: 360px;
   height: 16px;
   margin-top: 3px;
 }
-.account .accountInfo .safe .level .progress{
+.adminBox.account .accountInfo .safe .level .progress{
   float: left;
   background-color: #1FB65F;
   height: 16px;
 }
-.account .accountInfo .safe .level .progress.s1{width: 10%;}
-.account .accountInfo .safe .level .progress.s2{width: 20%;}
-.account .accountInfo .safe .level .progress.s3{width: 30%;}
-.account .accountInfo .safe .level .progress.s4{width: 40%;}
-.account .accountInfo .safe .level .progress.s5{width: 50%;}
-.account .accountInfo .safe .level .progress.s6{width: 60%;}
-.account .accountInfo .safe .level .progress.s7{width: 70%;}
-.account .accountInfo .safe .level .progress.s8{width: 80%;}
-.account .accountInfo .safe .level .progress.s9{width: 90%;}
-.account .accountInfo .safe .level .progress.s10{width: 100%;}
-.account .accountInfo .safe .level i.tip{
+.adminBox.account .accountInfo .safe .level .progress.s1{width: 10%;}
+.adminBox.account .accountInfo .safe .level .progress.s2{width: 20%;}
+.adminBox.account .accountInfo .safe .level .progress.s3{width: 30%;}
+.adminBox.account .accountInfo .safe .level .progress.s4{width: 40%;}
+.adminBox.account .accountInfo .safe .level .progress.s5{width: 50%;}
+.adminBox.account .accountInfo .safe .level .progress.s6{width: 60%;}
+.adminBox.account .accountInfo .safe .level .progress.s7{width: 70%;}
+.adminBox.account .accountInfo .safe .level .progress.s8{width: 80%;}
+.adminBox.account .accountInfo .safe .level .progress.s9{width: 90%;}
+.adminBox.account .accountInfo .safe .level .progress.s10{width: 100%;}
+.adminBox.account .accountInfo .safe .level i.tip{
   float: left;
+  margin-left: 5px;
+  background-position: -303px 0;
+  width: 18px;
+  height: 18px;
 }
-.account .accountInfo .safe .level .text{
+.adminBox.account .accountInfo .safe .level .text{
   float: left;
+  margin-left: 20px;
 }
-.account .accountInfo .safe .level .passBtn{}
-.account .accountInfo .safe .item{
+.adminBox.account .accountInfo .safe .level .passBtn{
+  text-decoration: underline;
+}
+.adminBox.account .accountInfo .safe .item{
   float: left;
   margin-left: 38px;
+  width: 100%;
+  margin-bottom: 20px;
 }
+.adminBox.account .accountInfo .safe .item .status{
+  float: left;
+  width: 42px;
+  height: 46px;
+  text-align: center;
+}
+.adminBox.account .accountInfo .safe .item .status i{
+  float: left;
+  width: 19px;
+  height: 15px;
+  background-position: -345px 0;
+  margin-left: 12px;
+}
+.adminBox.account .accountInfo .safe .item.on .status i{
+  width: 24px;
+  height: 24px;
+  background-position: -321px 0;
+  margin-left: 10px;
+  margin-top: -6px;
+}
+.adminBox.account .accountInfo .safe .item .status .text{
+  float: left;
+  width: 42px;
+  text-align: center;
+
+}
+.adminBox.account .accountInfo .safe .item .s1{
+  float: left;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.adminBox.account .accountInfo .safe .item .p1{
+  float: left;
+  width: 550px;
+  margin-right: 60px;
+}
+.adminBox.account .accountInfo .safe .item .btn{
+  float: left;
+}
+
+/*规则中心*/
+.adminBox.rule .ruleBox{
+  float: left;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  padding: 20px 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.adminBox.rule .ruleBox h3.ti{
+  font-size: 24px;
+  color: #aaa;
+  float: left;
+  width: 100%;
+}
+.adminBox.rule .ruleBox .date{
+  float: left;
+  width: 100%;
+  color: #aaa;
+  margin-top: 8px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+.adminBox.rule .ruleBox h4.ti{
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding-left: 22px;
+}
+.adminBox.rule .ruleBox .item{
+  float: left;
+  width: 100%;
+  margin-bottom: 35px;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding-left: 22px;
+}
+.adminBox.rule .ruleBox .item label{
+  float: left;
+  width: 105px;
+  color: #333;
+}
+.adminBox.rule .ruleBox .item p{
+  float: left;
+  width: 825px;
+}
+
+/*已售出的商品*/
+.adminBox.sold .orderSearchForm{
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.adminBox.sold .orderSearchForm fieldset{
+  float: left;
+  margin: 0 20px 15px 20px;
+}
+.adminBox.sold .orderSearchForm fieldset.max{
+  width: 100%;
+}
+.adminBox.sold .orderSearchForm label{
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  width: 78px;
+}
+.adminBox.sold .orderSearchForm .text{
+  float: left;
+  width: 204px;
+  height: 34px;
+  border:1px solid #ddd;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+.adminBox.sold .orderSearchForm .uText{
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 10px;
+}
+.adminBox.sold .orderSearchForm select{
+  float: left;
+  width: 204px;
+  height: 34px;
+  border:1px solid #ddd;
+  box-sizing: border-box;
+  padding: 0 5px;
+  color: #999;
+}
+.adminBox.sold .orderSearchForm .searchBtn{
+  background-color: #C92027;
+  color: white;
+  font-size: 16px;
+  width: 94px;
+  height: 36px;
+  float: left;
+  border:none;
+}
+.adminBox.sold .orderSearchForm .closeSearchBtn,
+.adminBox.sold .orderSearchForm .openSearchBtn{
+  float: left;
+  padding-left: 20px;
+  position: relative;
+  color: #999;
+  margin-left: 450px;
+}
+.adminBox.sold .orderSearchForm .closeSearchBtn i,
+.adminBox.sold .orderSearchForm .openSearchBtn i{
+  background-position: -150px -17px;
+  width: 17px;
+  height: 16px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+.adminBox.sold .orderSearchForm .openSearchBtn{
+  float: left;
+  display: none;
+}
+.adminBox.sold .orderSearchForm .openSearchBtn i{
+  background-position: -133px -17px;
+}
+.adminBox.sold .list{
+  float: left;
+  width: 100%;
+}
+.adminBox.sold .list .tHead{
+  background-color: #E5EAF0;
+  width: 100%;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+}
+.adminBox.sold .list .tHead .th{
+  float: left;
+}
+.adminBox.sold .list .tHead .t1{
+  width: 350px;
+  padding-left: 15px;
+}
+.adminBox.sold .list .tHead .t2{
+  width: 112px;
+}
+.adminBox.sold .list .tHead .t3{
+  width: 82px;
+}
+.adminBox.sold .list .tHead .t4{
+  width: 130px;
+}
+.adminBox.sold .list .tHead .t5{
+  width: 120px;
+}
+.adminBox.sold .list .tHead .t6{
+  width: 110px;
+}
+.adminBox.sold .list .tHead .t7{
+  width: 76px;
+}
+.adminBox.sold .list .tBody{
+  float: left;
+  width: 100%;
+}
+.adminBox.sold .list .tBody .item{
+  float: left;
+  width: 100%;
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+.adminBox.sold .list .tBody .item .checkbox{
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin: 5px 10px 0 5px;
+}
+.adminBox.sold .list .tBody .item .pic{
+  float: left;
+  width: 78px;
+  height: 102px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.adminBox.sold .list .tBody .item .pic img{
+  float: left;
+  
+}
+.adminBox.sold .list .tBody .item .info{
+  float: left;
+  width: 200px;
+  height: 100px;
+}
+.adminBox.sold .list .tBody .item .info .ti{
+  float: left;
+  margin-bottom: 10px;
+  width: 200px;
+  margin-top: 5px;
+}
+.adminBox.sold .list .tBody .item .info .b{
+  float: left;
+  width: 200px;
+}
+.adminBox.sold .list .tBody .item .info .b .color{
+  width: 90px;
+  margin-right: 10px;
+  float: left;
+}
+.adminBox.sold .list .tBody .item .info .b .tech{
+  width: 100px;
+  float: left;
+}
+.adminBox.sold .list .tBody .item .info .b .thickness{
+  width:200px;
+  float: left;
+  margin-top: 5px;
+}
+.adminBox.sold .list .tBody .item .priceBox{
+  float: left;
+  height: 100px;
+  margin-left:15px;
+  width: 110px;
+  text-align: center;
+}
+.adminBox.sold .list .tBody .item .numBox{
+  float: left;
+  height: 100px;
+  width: 80px;
+  margin: 0 3px;
+  text-align: center;
+}
+.adminBox.sold .list .tBody .item .buyerBox{
+  float: left;
+  height: 100px;
+  width: 125px;
+  margin-left: 10px;
+}
+.adminBox.sold .list .tBody .item .statusBox{
+  float: left;
+  height: 100px;
+  width: 92px;
+  margin: 0 3px;
+  text-align: center;
+}
+.adminBox.sold .list .tBody .item .statusBox .emsStatus{
+  float: left;
+  width: 92px;
+  text-align: center;
+}
+.adminBox.sold .list .tBody .item .statusBox .orderDetailBtn{
+  float: left;
+  width: 92px;
+  text-align: center;
+}
+.adminBox.sold .list .tBody .item .statusBox .emsBtn{
+  float: left;
+  width: 92px;
+  text-align: center;
+}
+.adminBox.sold .list .tBody .item .totalBox{
+  float: left;
+  height: 100px;
+  width: 130px;
+  margin: 0 3px;
+  text-align: center;
+}
+.adminBox.sold .list .tBody .item .reviewBox{
+  float: left;
+  height: 100px;
+  width: 80px;
+  margin-left: 10px;
+}
+.adminBox.sold .list .tBody .item .reviewBox .reviewBtn{
+  float: left;
+  width: 76px;
+  height: 26px;
+  background-color: #C92027;
+  color: white;
+  padding: 0 15px;
+  box-sizing: border-box;
+  line-height: 26px;
+}
+.adminBox.sold .list .listBottom{
+  float: left;
+  width: 100%;
+}
+.adminBox.sold .list .listBottom .checkAll{
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin: 4px 3px 0 5px;
+}
+.adminBox.sold .list .listBottom .s1{
+  float: left;
+  margin-right: 44px;
+  margin-top: 2px;
+}
+.adminBox.sold .list .listBottom .btn{
+  float: left;
+  padding: 3px 10px;
+  border:1px solid #ddd;
+  margin-right: 8px;
+}
+.adminBox.sold .list .listBottom .btn:hover{
+  color: white;
+  background-color: #1B2139;
+}
+.adminBox.sold .list .listBottom .pageBox{
+  width: 305px;
+}
+.adminBox.sold .list .listBottom .pageBox a{
+  float: left;
+  padding: 3px 10px;
+  border:1px solid #ddd;
+  margin-right: 8px;
+}
+.adminBox.sold .list .listBottom .pageBox a:hover,
+.adminBox.sold .list .listBottom .pageBox a.on{
+  color: white;
+  background-color: #1B2139;
+}
+.adminBox.sold .list .listBottom .pageBox .prev{}
+.adminBox.sold .list .listBottom .pageBox .numBtnBox{}
+.adminBox.sold .list .listBottom .pageBox .numBtn{}
+.adminBox.sold .list .listBottom .pageBox .uText{
+  float: left;
+  margin-right: 8px;
+}
+.adminBox.sold .list .listBottom .pageBox .next{}
