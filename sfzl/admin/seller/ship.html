@@ -60,7 +60,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="adminBox sold">
+	<div class="adminBox sold ship">
 		<div class="w">
 			<div class="l fl">
 				<ul class="menu">
@@ -104,12 +104,12 @@
 				<div class="nav">
 					<a href="javascript:;">我是卖家 ></a>
 					<a href="javascript:;">基础设置 ></a>
-					<a href="javascript:;">已卖出的宝贝</a>
+					<a href="javascript:;">发货</a>
 				</div>
 				<form class="orderSearchForm">
 					<div class="form">
 					<fieldset>
-						<label>商品名称：</label>
+						<label>收货人名称：</label>
 						<input type="text" placeholder="请输入" class="text" />
 					</fieldset>
 					<fieldset>
@@ -127,29 +127,8 @@
 						<input type="text" placeholder="请输入" class="text" />
 					</fieldset>
 					<fieldset>
-						<label>订单状态：</label>
+						<label>买家选择：</label>
 						<select class="orderStatusSel">
-							<option>请选择</option>
-							<option>1</option>
-						</select>
-					</fieldset>
-					<fieldset>
-						<label>评价状态：</label>
-						<select class="reviewStatusSel">
-							<option>请选择</option>
-							<option>1</option>
-						</select>
-					</fieldset>
-					<fieldset>
-						<label>订单类型：</label>
-						<select class="orderTypeSel">
-							<option>请选择</option>
-							<option>1</option>
-						</select>
-					</fieldset>
-					<fieldset>
-						<label>付款方式：</label>
-						<select class="payTypeSel">
 							<option>请选择</option>
 							<option>1</option>
 						</select>
@@ -163,15 +142,9 @@
 					<a href="javascript:;" class="openSearchBtn"><i class="icon"></i>展开搜索</a>
 				</form>
 				<div class="tabBox">
-					<a href="javascript:;" class="on">商品订单</a>
-					<a href="javascript:;">DIY订单</a>
-					<a href="javascript:;">等待买家付款</a>
-					<a href="javascript:;">等待发货</a>
-					<a href="javascript:;">已发货</a>
-					<a href="javascript:;">退款中</a>
-					<a href="javascript:;">需要评价</a>
-					<a href="javascript:;">成功的订单</a>
-					<a href="javascript:;">全部订单</a>
+					<a href="javascript:;" class="on">等待发货的订单</a>
+					<a href="javascript:;">发货中的订单</a>
+					<a href="javascript:;">已发货的订单</a>
 				</div>
 				<div class="list">
 					<div class="tHead">
@@ -179,7 +152,6 @@
 						<span class="th t2">单价(元)</span>
 						<span class="th t3">数量</span>
 						<span class="th t4">买家</span>
-						<span class="th t5">交易状态</span>
 						<span class="th t6">实收款(元)</span>
 						<span class="th t7">评价</span>
 					</div>
@@ -205,17 +177,13 @@
 							</div>
 							<div class="buyerBox">
 								<span class="s1">136662545456</span>
-							</div>
-							<div class="statusBox">
-								<span class="emsStatus">物流派件中</span>
-								<a href="javascript:;" class="orderDetailBtn">订单详情</a>
-								<a href="javascript:;" class="emsBtn">查看物流</a>
+								<a href="javascript:;" class="linkBuyer">联系买家</a>
 							</div>
 							<div class="totalBox">
 								￥14.90
 							</div>
 							<div class="reviewBox">
-								<a href="javascript:;" class="reviewBtn">待评价</a>
+								<a href="javascript:;" class="reviewBtn">发货</a>
 							</div>
 							
 						</div>
@@ -240,60 +208,21 @@
 							</div>
 							<div class="buyerBox">
 								<span class="s1">136662545456</span>
-							</div>
-							<div class="statusBox">
-								<span class="emsStatus">物流派件中</span>
-								<a href="javascript:;" class="orderDetailBtn">订单详情</a>
-								<a href="javascript:;" class="emsBtn">查看物流</a>
+								<a href="javascript:;" class="linkBuyer">联系买家</a>
 							</div>
 							<div class="totalBox">
 								￥14.90
 							</div>
 							<div class="reviewBox">
-								<a href="javascript:;" class="reviewBtn">待评价</a>
+								<a href="javascript:;" class="reviewBtn">发货</a>
 							</div>
 							
 						</div>
-						<div class="item">
-							<input type="checkbox" class="checkbox" />
-							<a href="javascript:;" class="pic">
-								<img src="../../public/common/img/flower1.jpg">
-							</a>
-							<div class="info">
-								<a href="javascript:;" class="ti">法莱舒卡真丝围巾女长款桑蚕丝丝巾秋冬季丝绸披肩</a>
-								<div class="b">
-									<span class="color">颜色：红色</span>
-									<span class="tech">工艺：数码印花</span>
-									<span class="thickness">厚度：16MM</span>
-								</div>
-							</div>
-							<div class="priceBox">
-								￥14.90
-							</div>
-							<div class="numBox">
-								10件
-							</div>
-							<div class="buyerBox">
-								<span class="s1">136662545456</span>
-							</div>
-							<div class="statusBox">
-								<span class="emsStatus">物流派件中</span>
-								<a href="javascript:;" class="orderDetailBtn">订单详情</a>
-								<a href="javascript:;" class="emsBtn">查看物流</a>
-							</div>
-							<div class="totalBox">
-								￥14.90
-							</div>
-							<div class="reviewBox">
-								<a href="javascript:;" class="reviewBtn">待评价</a>
-							</div>
-							
-						</div>
+						
 					</div>
 					<div class="listBottom">
 						<input type="checkbox" class="checkAll" /><label class="s1">全选</label>
 						<a href="javascript:;" class="btn sendBtn">批量发货</a>
-						<a href="javascript:;" class="btn tagBtn">批量标记</a>
 						<a href="javascript:;" class="btn freeBtn">批量免运费</a>
 						<div class="fr pageBox">
 							<a href="javascript:;" class="prev">上一页</a>

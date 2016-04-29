@@ -50,7 +50,7 @@
 		<div class="w menuBox">
 			<ul class="fl">
 				<li><a href="openShop.html">管理首页</a></li>
-				<li class="on"><a href="setShop.html">基础设置</a></li>
+				<li><a href="setShop.html">基础设置</a></li>
 				<li><a href="rule.html">规则中心</a></li>
 				<li><a href="javascript:;">安全中心</a></li>
 				<li><a href="javascript:;">服务中心</a></li>
@@ -60,15 +60,15 @@
 			</div>
 		</div>
 	</div>
-	<div class="adminBox setShop">
+	<div class="adminBox review">
 		<div class="w">
 			<div class="l fl">
 				<ul class="menu">
 					<li class="li on">
 						<a href="javascript:;" class="a">交易管理<i class="icon"></i></a>
 						<ul class="subMenu">
-							<li><a href="sold.html" class="on">已卖出的商品</a></li>
-							<li><a href="review.html">评价管理</a></li>
+							<li><a href="sold.html">已卖出的商品</a></li>
+							<li><a href="review.html" class="on">评价管理</a></li>
 							<li><a href="ship.html">发货</a></li>
 						</ul>
 					</li>
@@ -104,58 +104,118 @@
 				<div class="nav">
 					<a href="javascript:;">我是卖家 ></a>
 					<a href="javascript:;">基础设置 ></a>
-					<a href="javascript:;">店铺基本设置</a>
+					<a href="javascript:;">评价管理</a>
 				</div>
+				<h4 class="ti">店铺动态评分</h4>
+				<table class="scoreBox" cellpadding="0" cellspacing="0" border="1">
+					<tr>
+						<th width="152">星级</th>
+						<th>最近1周</th>
+						<th>最近1个月</th>
+						<th>最近6个月</th>
+						<th>6个月前</th>
+						<th>总计</th>
+					</tr>
+					<tr>
+						<td><i class="icon bigStars s5"></i></td>
+						<td>12</td>
+						<td>20</td>
+						<td>36</td>
+						<td>60</td>
+						<td>120</td>
+					</tr>
+					<tr>
+						<td><i class="icon bigStars s4"></i></td>
+						<td>12</td>
+						<td>20</td>
+						<td>36</td>
+						<td>60</td>
+						<td>120</td>
+					</tr>
+					<tr>
+						<td><i class="icon bigStars s3"></i></td>
+						<td>12</td>
+						<td>20</td>
+						<td>36</td>
+						<td>60</td>
+						<td>120</td>
+					</tr>
+					<tr>
+						<td><i class="icon bigStars s2"></i></td>
+						<td>12</td>
+						<td>20</td>
+						<td>36</td>
+						<td>60</td>
+						<td>120</td>
+					</tr>
+					<tr>
+						<td><i class="icon bigStars s1"></i></td>
+						<td>12</td>
+						<td>20</td>
+						<td>36</td>
+						<td>60</td>
+						<td>120</td>
+					</tr>
+				</table>
 				<div class="tabBox">
-					<a href="javascript:;" class="on">店铺基本设置</a>
-					<a href="javascript:;">平台认证</a>
-					<a href="javascript:;">经营许可证</a>
-					<a href="javascript:;">账号管理</a>
+					<a href="javascript:;" class="on">来自买家的评价</a>
+					<a href="javascript:;">来自卖家的评价</a>
+					<a href="javascript:;">给他人的评价</a>
+					<a href="javascript:;">已删除的评价</a>
 				</div>
-				<div class="setBox">
-					<div class="setTab">
-						<a href="javascript:;" class="on shop">丝纺店铺</a>
-						<a href="javascript:;" class="mobileShop">手机丝纺店铺</a>
-					</div>
-					<form class="setForm">
-						<div id="setShopForm">
-							<h4 class="ti">基础信息</h4>
-							<div class="item">
-								<label><i>*</i>店铺名称：</label>
-								<input type="text" placeholder="请输入店铺名称" class="text">
-								<span class="error">必填</span>
-							</div>
-							<div class="item">
-								<label><i>*</i>店铺LOGO：</label>
-								<!-- 上传控件 -->
-								<span class="error"></span>
-							</div>
-							<div class="item">
-								<label><i>*</i>店铺简介：</label>
-								<textarea placeholder="店铺简介会在店铺索引中展示！"></textarea>
-								<span class="error"></span>
-							</div>
-							<div class="item">
-								<label><i>*</i>联系地址：</label>
-								<input type="text" class="text">
-								<span class="error"></span>
-							</div>
-							<div class="item">
-								<label><i>*</i>店铺介绍：</label>
-								<!-- 编辑器控件 -->
-								<span class="error"></span>
-							</div>
-							<div class="item">
-								<label></label>
-								<input type="submit" value="保存" class="saveBtn" >
-							</div>
-						</div>
-						<div id="setMobileShopForm">
-							
-						</div>
-					</form>
-				</div>
-			</div>
+				<table class="reviewTable" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<th class="t1" width="118"><a href="javascript:;" class="starSort sortBtn">星级<i class="icon"></i></a></th>
+						<th class="t2" width="300"><a href="javascript:;" class="reviewSort sortBtn asc">评价<i class="icon"></i></a></th>
+						<th class="t3" width="180">评价人</th>
+						<th class="t4" width="170">商品信息</th>
+						<th class="t5" width="90">操作</th>
+					</tr>
+					<tr>
+						<td class="t1" align="center"><i class="icon bigStars s5"></i></td>
+						<td class="t2">
+							<p class="p1">东西很不错啊，丝绸摸起来很舒服就是物流稍微有点慢</p>
+							<p class="p2">
+								[店铺回复] 亲，咱们的宝贝送的都是品质赠品哦产品成本很高的，炒锅是含铁量很高生铁锅很耐用的哦~用铁锅炒菜对人体是很有好处的~但是再好的锅都需要亲们精心的保养哈，亲可以看一下我店的养锅秘诀哈！
+							</p>
+							<span class="date">2016-04-08 10:55:34</span>
+						</td>
+						<td class="t3">
+							<span class="s1">VIP会员：zhang张88</span>
+							<span class="s2">会员等级：<i class="icon"></i><i class="lvl">5</i></span>
+						</td>
+						<td class="t4">
+							<p class="p1">
+								浓艳不羁 中国风正红色 真丝新丝缎服装高品质
+ 面料桑蚕丝H415-1#
+							</p>
+							<span class="price">￥506</span>
+						</td>
+						<td class="t5"><a href="javascript:;" class="replyBtn">回复</a></td>
+					</tr>
+					<tr>
+						<td class="t1" align="center"><i class="icon bigStars s5"></i></td>
+						<td class="t2">
+							<p class="p1">东西很不错啊，丝绸摸起来很舒服就是物流稍微有点慢</p>
+							<span class="date">2016-04-08 10:55:34</span>
+						</td>
+						<td class="t3">
+							<span class="s1">VIP会员：zhang张88</span>
+							<span class="s2">会员等级：<i class="icon"></i><i class="lvl">5</i></span>
+						</td>
+						<td class="t4">
+							<p class="p1">
+								浓艳不羁 中国风正红色 真丝新丝缎服装高品质
+ 面料桑蚕丝H415-1#
+							</p>
+							<span class="price">￥506</span>
+						</td>
+						<td class="t5"><a href="javascript:;" class="replyBtn">回复</a></td>
+					</tr>
+					
+				</table>
+
+			</div>	
 		</div>
 	</div>
 
@@ -167,18 +227,7 @@
     <script type="text/javascript" src="../../public/common/js/modernizr-1.7.min.js"></script>
     <script type="text/javascript" src="../../public/common/js/admin.js"></script>
 	<script type="text/javascript">
-		$('.setTab a').click(function(){
-			var $this = $(this);
-			$('.setTab a').removeClass('on');
-			$this.addClass('on');
-			if($this.hasClass('shop')){
-				$('#setMobileShopForm').hide();
-				$('#setShopForm').show();
-			}else{
-				$('#setMobileShopForm').show();
-				$('#setShopForm').hide();
-			}
-		});
+
 	</script>
 
 </body>

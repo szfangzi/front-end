@@ -184,6 +184,26 @@ svg:not(:root) {
 .stars.s5{
   background-position: -386px -135px;
 }
+.bigStars{
+  width: 83px;
+  height: 15px;
+  background: url(../img/icon.png) no-repeat -371px -147px;
+}
+.bigStars.s1{
+  background-position: -371px -162px;
+}
+.bigStars.s2{
+  background-position: -371px -177px;
+}
+.bigStars.s3{
+  background-position: -371px -192px;
+}
+.bigStars.s4{
+  background-position: -371px -207px;
+}
+.bigStars.s5{
+  background-position: -371px -222px;
+}
 
 .loginHead{
   height: 120px;
@@ -1228,6 +1248,8 @@ svg:not(:root) {
   float: left;
   color: #C92027;
   margin-left: 5px;
+  margin-top: 5px;
+  display: none;
 }
 #setShopForm .item textarea{
   float: left;
@@ -1600,7 +1622,7 @@ svg:not(:root) {
 }
 .adminBox.sold .orderSearchForm fieldset{
   float: left;
-  margin: 0 20px 15px 20px;
+  margin: 0 15px 15px 20px;
 }
 .adminBox.sold .orderSearchForm fieldset.max{
   width: 100%;
@@ -1609,7 +1631,9 @@ svg:not(:root) {
   float: left;
   height: 36px;
   line-height: 36px;
-  width: 78px;
+  width: 84px;
+  text-align: right;
+  margin-right: 5px;
 }
 .adminBox.sold .orderSearchForm .text{
   float: left;
@@ -1670,6 +1694,7 @@ svg:not(:root) {
 .adminBox.sold .list{
   float: left;
   width: 100%;
+  margin-top: 15px;
 }
 .adminBox.sold .list .tHead{
   background-color: #E5EAF0;
@@ -1746,6 +1771,7 @@ svg:not(:root) {
 .adminBox.sold .list .tBody .item .info .b{
   float: left;
   width: 200px;
+  color: #aaa;
 }
 .adminBox.sold .list .tBody .item .info .b .color{
   width: 90px;
@@ -1767,6 +1793,8 @@ svg:not(:root) {
   margin-left:15px;
   width: 110px;
   text-align: center;
+  font-size: 16px;
+  color: #333;
 }
 .adminBox.sold .list .tBody .item .numBox{
   float: left;
@@ -1780,6 +1808,10 @@ svg:not(:root) {
   height: 100px;
   width: 125px;
   margin-left: 10px;
+}
+.adminBox.sold .list .tBody .item .buyerBox .s1{
+  width: 125px;
+  float: left;
 }
 .adminBox.sold .list .tBody .item .statusBox{
   float: left;
@@ -1809,6 +1841,8 @@ svg:not(:root) {
   width: 130px;
   margin: 0 3px;
   text-align: center;
+  font-size: 16px;
+  color: #333;
 }
 .adminBox.sold .list .tBody .item .reviewBox{
   float: left;
@@ -1818,7 +1852,6 @@ svg:not(:root) {
 }
 .adminBox.sold .list .tBody .item .reviewBox .reviewBtn{
   float: left;
-  width: 76px;
   height: 26px;
   background-color: #C92027;
   color: white;
@@ -1873,3 +1906,269 @@ svg:not(:root) {
   margin-right: 8px;
 }
 .adminBox.sold .list .listBottom .pageBox .next{}
+
+/*评价管理*/
+.adminBox.review h4.ti{
+  float: left;
+  width: 100%;
+  margin: 15px 0 10px 0;
+}
+.adminBox.review .scoreBox{
+  float: left;
+  width: 100%;
+  border:1px solid #ddd;
+  margin-bottom: 20px;
+}
+.adminBox.review .scoreBox th{
+  height: 46px;
+}
+.adminBox.review .scoreBox td{
+  text-align: center;
+  height: 42px;
+  color: #57659C;
+  font-size: 16px;
+}
+.adminBox.review .scoreBox td .bigStars{
+  float: left;
+  margin-left: 33px;
+}
+
+.adminBox.review .reviewTable{
+  float: left;
+  width: 100%;
+  margin-top:15px;
+}
+.adminBox.review .reviewTable th{
+  background-color: #E5EAF0;
+  height: 42px;
+  text-align: left;
+}
+.adminBox.review .reviewTable th.t1{
+  text-align: center;
+}
+.adminBox.review .reviewTable th .sortBtn{
+  width: 86px;
+  height: 28px;
+  background-color: white;
+  line-height: 28px;
+  text-align: center;
+  display: inline-block;
+  position:relative;
+}
+.adminBox.review .reviewTable th .sortBtn i{
+  background-position: -58px 0;
+  width: 9px;
+  height: 7px;
+  position: absolute;
+  top: 11px;
+  right: 10px; 
+}
+.adminBox.review .reviewTable th .sortBtn.asc i{
+  background-position: -58px -7px;
+}
+.adminBox.review .reviewTable td{
+  border-bottom: 1px solid #ddd;
+}
+.adminBox.review .reviewTable td .bigStars{
+  display: block;
+}
+.adminBox.review .reviewTable .t2{
+  padding-left: 33px;
+  padding-right: 30px;
+}
+.adminBox.review .reviewTable td.t2{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.adminBox.review .reviewTable td.t2 .p1{
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.adminBox.review .reviewTable td.t2 .p2{
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.adminBox.review .reviewTable td.t2 .date{
+  color: #aaa;
+}
+.adminBox.review .reviewTable .t3{
+  padding-right: 23px;
+}
+.adminBox.review .reviewTable td.t3 .s1,
+.adminBox.review .reviewTable td.t3 .s2{
+  float: left;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.adminBox.review .reviewTable td.t3 .s2 .icon{
+  background-position: -238px 0;
+  width: 17px;
+  height: 13px;
+  display: inline-block;
+}
+.adminBox.review .reviewTable td.t3 .s2 .lvl{
+  color: #FF6700;
+  margin-left: -2px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.adminBox.review .reviewTable .t4{
+  padding-right: 24px;
+}
+.adminBox.review .reviewTable .t4 .p1{
+  line-height: 24px;
+}
+.adminBox.review .reviewTable .t4 .price{
+  color: #C92027;
+}
+
+.adminBox.review .reviewTable .replyBtn{
+  background-color: #1B2139;
+  color: white;
+  width: 72px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  float: left;
+}
+
+/*发货*/
+.adminBox.sold.ship .list .tHead .t1{
+  width: 455px;
+}
+.adminBox.sold.ship .list .tHead .t2{
+  width: 105px;
+}
+.adminBox.sold.ship .list .tHead .t4{
+  width: 146px;
+}
+.adminBox.sold.ship .list .tBody .item .info{
+  width: 298px;
+}
+
+/*发布商品*/
+.adminBox.release .releaseForm{
+  float: left;
+  width: 100%;
+}
+.adminBox.release .releaseForm .productTypeBox{
+  float: left;
+  width: 100%;
+  background-color: #eee;
+  height: 106px;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-top: 10px;
+}
+.adminBox.release .releaseForm .productTypeBox label{
+  float: left;
+  width: 100%;
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 13px;
+}
+.adminBox.release .releaseForm .productTypeBox label i{
+  color: #C92027;
+}
+.adminBox.release .releaseForm .productTypeBox select{
+  width: 292px;
+  height: 40px;
+  float: left;
+  box-sizing: border-box;
+  padding: 0 10px;
+  font-size: 16px;
+  border:none;
+  color: #666;
+  margin-right: 25px;
+}
+.adminBox.release .releaseForm nav{
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding: 12px 10px 0 15px;
+}
+.adminBox.release .releaseForm .basic{
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding: 12px 10px 0 15px;
+}
+.adminBox.release .releaseForm .basic h3.ti{
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+}
+.adminBox.release .releaseForm .basic .f1,
+.adminBox.release .releaseForm .basic .pField{
+  float: left;
+  width: 100%;
+  margin-top: 15px;
+}
+.adminBox.release .releaseForm .basic .f1 label,
+.adminBox.release .releaseForm .basic .pField label{
+  float: left;
+  width: 87px;
+  margin-right: 10px;
+  text-align: right;
+  height: 44px;
+  line-height: 44px;
+}
+.adminBox.release .releaseForm .basic .f1 label i{
+  color: #C92027;
+}
+.adminBox.release .releaseForm .basic .f1 .fr{
+  width: 870px;
+}
+.adminBox.release .releaseForm .basic .f1 .fr .text,
+.adminBox.release .releaseForm .basic .pField .fl .text,
+.adminBox.release .releaseForm .basic .pField .fl select{
+  float: left;
+  width: 784px;
+  height: 38px;
+  border:1px solid #ddd;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.adminBox.release .releaseForm .basic .f1 .fr .length{
+  float: left;
+  margin-left: 10px;
+  margin-top: 8px;
+}
+.adminBox.release .releaseForm .basic .f1 .fr .length i.err{
+  color: #C92027;
+}
+.adminBox.release .releaseForm .basic .f1 .fr .error,
+.adminBox.release .releaseForm .basic .pField .fl .error{
+  color: #C92027;
+  width: 100%;
+  float: left;
+  margin-top: 5px;
+  display: none;
+}
+.adminBox.release .releaseForm .basic .f1 .fr textarea{
+  float: left;
+  width: 784px;
+  height: 68px;
+  border:1px solid #ddd;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+.adminBox.release .releaseForm .basic .f1 .fr .p1{
+  line-height: 44px;
+  color: #999;
+}
+
+.adminBox.release .releaseForm .basic .pField label{
+  width: 110px;
+}
+.adminBox.release .releaseForm .basic .pField label i{
+  color: #C92027;
+}
+.adminBox.release .releaseForm .basic .pField .fl{
+  width: 275px;
+}
+.adminBox.release .releaseForm .basic .pField .fl .text,
+.adminBox.release .releaseForm .basic .pField .fl select{
+  width: 275px;
+
+}
