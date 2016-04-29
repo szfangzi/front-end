@@ -2113,7 +2113,7 @@ svg:not(:root) {
   height: 44px;
   line-height: 44px;
 }
-.adminBox.release .releaseForm .basic .f1 label i{
+.adminBox.release .releaseForm .basic i.reqI{
   color: #C92027;
 }
 .adminBox.release .releaseForm .basic .f1 .fr{
@@ -2134,11 +2134,11 @@ svg:not(:root) {
   margin-left: 10px;
   margin-top: 8px;
 }
-.adminBox.release .releaseForm .basic .f1 .fr .length i.err{
+.adminBox.release .releaseForm .basic i.err{
   color: #C92027;
 }
 .adminBox.release .releaseForm .basic .f1 .fr .error,
-.adminBox.release .releaseForm .basic .pField .fl .error{
+.adminBox.release .releaseForm .basic .pField .error{
   color: #C92027;
   width: 100%;
   float: left;
@@ -2148,6 +2148,8 @@ svg:not(:root) {
 .adminBox.release .releaseForm .basic .f1 .fr textarea{
   float: left;
   width: 784px;
+  max-width: 784px;
+  min-width: 784px;
   height: 68px;
   border:1px solid #ddd;
   padding: 10px 10px;
@@ -2161,14 +2163,151 @@ svg:not(:root) {
 .adminBox.release .releaseForm .basic .pField label{
   width: 110px;
 }
-.adminBox.release .releaseForm .basic .pField label i{
-  color: #C92027;
-}
 .adminBox.release .releaseForm .basic .pField .fl{
   width: 275px;
 }
 .adminBox.release .releaseForm .basic .pField .fl .text,
 .adminBox.release .releaseForm .basic .pField .fl select{
   width: 275px;
+}
+.adminBox.release .releaseForm .basic .pField .fr{
+  width: 850px;
+}
+.adminBox.release .releaseForm .basic .pField .colors{
+  width: 739px;
+  height: 5px;
+  float: left;
+  background-position: 0 -533px;
+  margin-top: 17px;
+}
+.adminBox.release .releaseForm .basic .pField .fr .colorList{
+  float: left;
+  width: 100%;
+  margin-top: 8px;
+}
+.adminBox.release .releaseForm .basic .pField .fr .colorList li{
+  float: left;
+  width: 68px;
+}
+.adminBox.release .releaseForm .basic .pField .fr .colorList li input[type="checkbox"]{
+  float: left;
+  width: 15px;
+  height: 15px;
+}
+.adminBox.release .releaseForm .basic .pField .fr .colorList li label{
+  float: left;
+  width: auto;
+  line-height: 14px;
+  margin-left: 5px;
+}
+.adminBox.release .releaseForm .basic .attrsBox{
+  float: left;
+  width: 665px;
+  position:relative;
+  margin-top: 20px;
+  margin-left: 120px;
+}
+.adminBox.release .releaseForm .basic .attrsBtnTab{
+  float: left;
+  width: 665px;
+  position: absolute;
+  top: -28px;
+  left: 0;
+  z-index: 1;
+}
+.adminBox.release .releaseForm .basic .attrsBtnTab a{
+  float: left;
+  width: 110px;
+  height: 28px;
+  border:1px solid #ddd;
+  border-bottom: none;
+  margin-right:8px;
+  text-align: center;
+  line-height: 28px;
+}
+.adminBox.release .releaseForm .basic .attrsBtnTab a.on{
+  background-color: #F2F2F2;
+}
+.adminBox.release .releaseForm .basic .attrsDetail{
+  float: left;
+  width: 665px;
+  border:1px solid #ddd;
+  box-sizing: border-box;
+  background-color: #F2F2F2;
+  min-height: 100px;
+  padding: 13px 15px;
+}
+.adminBox.release .releaseForm .basic .attrsDetail .p1{
+  width: 100%;
+  float: left;
+  color: #999;
+}
+.adminBox.release .releaseForm .basic .attrsDetail .gyBox{
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+}
+.adminBox.release .releaseForm .basic .attrsDetail .gyBox .label,
+.adminBox.release .releaseForm .basic .attrsDetail .priceBox label{
+  float: left;
+  margin-right: 8px;
+  height: 34px;
+  line-height: 34px;
+}
+.adminBox.release .releaseForm .basic .attrsDetail .gyBox select,
+.adminBox.release .releaseForm .basic .attrsDetail .priceBox select,
+.adminBox.release .releaseForm .basic .attrsDetail .priceBox .text{
+  float: left;
+  margin-right: 40px;
+  width: 202px;
+  height: 34px;
+  border:1px solid #ddd;
+  box-sizing: border-box;
+  padding: 0 8px;
+  color: #999;
+}
+.adminBox.release .releaseForm .basic .attrsDetail .gyBox .hasSel{
+  float: left;
+  width: 100%;
+  margin-left: 16px;
+  margin-top: 15px;
 
+}
+.adminBox.release .releaseForm .basic .attrsDetail .gyBox .hasSel .c{
+  color: #333;
+}
+.adminBox.release .releaseForm .basic .attrsDetail .priceBox{
+  float: left;
+  margin-left: 72px;
+  margin-top: 10px;
+}
+.adminBox.release .releaseForm .basic .attrsDetail .priceBox fieldset{
+  float: left;
+  width: 525px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.adminBox.release .releaseForm .basic .attrsDetail .priceBox label{
+  float: left;
+  margin-right: 8px;
+  height: 34px;
+  line-height: 34px;
+}
+.adminBox.release .releaseForm .basic .attrsDetail .priceBox .text{
+  width: 134px;
+  margin-right: 20px;
+}
+.adminBox.release .releaseForm .basic .attrsDetail .priceBox select.short{
+  width: 70px;
+}
+.adminBox.release .releaseForm .basic .attrsDetail .priceBox .confirmBtn{
+  float: left;
+  width: 140px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  background-color: #E0585E;
+  font-size: 16px;
+  color: white;
+  margin-left: 56px;
 }

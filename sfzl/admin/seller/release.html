@@ -108,7 +108,7 @@
 				</div>
 				<form class="releaseForm">
 					<div class="productTypeBox">
-						<label><i>*</i> 请选择产品类别(必选)</label>
+						<label><i class="reqI">*</i> 请选择产品类别(必选)</label>
 						<select>
 							<option>丝绸</option>
 						</select>
@@ -128,7 +128,7 @@
 					<div class="basic">
 						<h3 class="ti">1.商品基本信息</h3>
 						<fieldset class="f1">
-							<label><i>*</i>商品标题</label>
+							<label><i class="reqI">*</i>商品标题</label>
 							<div class="fr">
 								<input type="text" class="text" placeholder="请输入标题">
 								<span class="length"><i>0</i>/30</span>
@@ -137,7 +137,7 @@
 							
 						</fieldset>
 						<fieldset class="f1">
-							<label><i>*</i>商品卖点</label>
+							<label><i class="reqI">*</i>商品卖点</label>
 							<div class="fr">
 								<textarea placeholder="请输入卖点"></textarea>
 								<span class="length"><i class="err">300</i>/200</span>
@@ -151,7 +151,7 @@
 							</div>
 						</fieldset>
 						<fieldset class="pField">
-							<label><i>*</i>编号</label>
+							<label><i class="reqI">*</i>编号</label>
 							<div class="fl">
 								<input type="text" class="text" placeholder="请输入编号">
 								<span class="error">这是必填！</span>
@@ -224,6 +224,71 @@
 								<span class="error">这是必填！</span>
 							</div>
 						</fieldset>
+						<fieldset class="pField">
+							<label><i class="reqI">*</i>颜色选择</label>
+							<div class="fr">
+								<div class="icon colors"></div>
+								<ul class="colorList">
+									<li><input type="checkbox" class="checkbox" ><label>青色</label></li>
+									<li><input type="checkbox" class="checkbox" ><label>绿色</label></li>
+									<li><input type="checkbox" class="checkbox" ><label>蓝色</label></li>
+									<li><input type="checkbox" class="checkbox" ><label>紫色</label></li>
+									<li><input type="checkbox" class="checkbox" ><label>深色</label></li>
+									<li><input type="checkbox" class="checkbox" ><label>黄色</label></li>
+									<li><input type="checkbox" class="checkbox" ><label>橙色</label></li>
+									<li><input type="checkbox" class="checkbox" ><label>红色</label></li>
+									<li><input type="checkbox" class="checkbox" ><label>白色</label></li>
+									<li><input type="checkbox" class="checkbox" ><label>灰色</label></li>
+									<li><input type="checkbox" class="checkbox" ><label>黑色</label></li>
+								</ul>
+								<span class="error">这是必选！</span>
+							</div>
+						</fieldset>
+						<div class="attrsBox">
+							<div class="attrsBtnTab">
+								<a href="javascript:;" class="newAttrBtn on">新增属性组合</a>
+								<a href="javascript:;" class="changeAttrBtn">修改属性组合</a>
+							</div>
+							<div class="attrsDetail">
+								<p class="p1"><i class="reqI">*</i>选择工艺幅宽在选择厚度最后定义价格完成一个销售组合</p>
+								<div class="gyBox">
+									<span class="label"><i class="reqI">*</i>工艺幅度</span>
+									<select>
+										<option>请选择</option>
+									</select>
+									<span class="label"><i class="reqI">*</i>厚度</span>
+									<select>
+										<option>请选择</option>
+									</select>
+									<div class="hasSel">已选择：<span class="c">传统108M+16m/m</span></div>
+								</div>
+								<div class="priceBox">
+									<fieldset>
+										<label>平台价格</label>
+										<input type="text" class="text" placeholder="元">
+										<label>APP价格</label>
+										<input type="text" class="text" placeholder="元">
+									</fieldset>
+									<fieldset>
+										<label>市场价格</label>
+										<input type="text" class="text" placeholder="元">
+										<label>价格单位</label>
+										<select class="short">
+											<option>1米</option>
+										</select>
+									</fieldset>
+									<fieldset>
+										<label>总库存量</label>
+										<input type="text" class="text" placeholder="请输入">
+									</fieldset>
+									<fieldset>
+										<label></label>
+										<a href="javascript:;" class="confirmBtn">确认组合</a>
+									</fieldset>
+								</div>
+							</div>
+						</div>
+
 					</div>
 
 				</form>
