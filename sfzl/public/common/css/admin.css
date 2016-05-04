@@ -12,6 +12,7 @@ a:hover{ color: #c92027; }
 img,a img,fieldset{ border:none;}
 em, b, i{font-style: normal;font-weight: normal;}
 input,button,textarea,select{font-family: "微软雅黑",Arial,sans-serif;}
+textarea, input[type="text"]{border:1px solid #ccc;box-sizing: content-box;}
 svg:not(:root) {
     overflow: hidden;
 }
@@ -268,7 +269,9 @@ svg:not(:root) {
   font-size: 18px;
   width: 100%;
 }
-.loginBox .username, .loginBox .password{
+.loginBox .username, 
+.loginBox .password, 
+.loginBox .row input[name="imgCheck"]{
   float: left;
   margin-bottom: 18px;
   width: 292px;
@@ -281,6 +284,16 @@ svg:not(:root) {
 }
 .loginBox .password{
   
+}
+.loginBox .row{
+  float: left;
+}
+.loginBox .row input[name="imgCheck"]{
+  float: left;
+  width: 160px;
+}
+.loginBox .row .imgCheck{
+  float: left;
 }
 .loginBox .forget{
   float: left;
@@ -360,23 +373,23 @@ svg:not(:root) {
 }
 .registForm{
     background-color: #fff;
-    width: 1240px;
+    width: 382px;
     float: left;
     padding: 50px 440px 50px 418px;
-    box-sizing: border-box;
 }
 .registForm .row{
   float: left;
-  width: 366px;
+  *float: none;
+  width: 100%;
   margin-bottom: 25px;
-
+  display: block;
 }
 .registForm .row .txt, .registForm .row .halfTxt{
-  width: 364px;
-  height: 46px;
+  width: 322px;
+  height: 44px;
+  line-height: 44px;
   border:1px solid #aaa;
-  box-sizing: border-box;
-  padding:15px 20px;
+  padding:0px 20px;
   color: #666;
   font-size: 14px;
   float: left;
@@ -389,7 +402,7 @@ svg:not(:root) {
   float: left;
 }
 .registForm .row .halfTxt{
-  width: 226px;
+  width: 184px;
 }
 .imgCheck{
   float: left;
@@ -605,17 +618,18 @@ svg:not(:root) {
 }
 .adminBox{
   width: 100%;
-  height:2000px;
+  /*height:2000px;*/
   padding-top: 10px;
+  overflow: hidden;
+  margin-bottom: 100px;
 }
 .adminBox .l,
 .adminBox .m{
   background-color: white;
 }
 .adminBox .l{
-  width: 230px;
+  width: 204px;
   margin-right: 13px;
-  box-sizing: border-box;
   padding-left: 25px;
   padding-top: 0px;
   border:1px solid #ddd;
@@ -644,7 +658,7 @@ svg:not(:root) {
 .adminBox .l .menu li a{
   float: left;
   position: relative;
-  width: 100%;
+  width: 203px;
   color: #333;
   font-weight: bold;
 }
@@ -666,8 +680,7 @@ svg:not(:root) {
 .adminBox .l .menu .subMenu{
   float: left;
   padding-left: 20px;
-  width: 100%;
-  box-sizing: border-box;
+  width: 170px;
   display: none;
 }
 .adminBox .l .menu .li.on .subMenu{
@@ -687,10 +700,9 @@ svg:not(:root) {
 }
 .adminBox .main .nav{
   float: left;
-  width: 100%;
+  width:965px;
   border:1px solid #ddd;
   padding: 10px 15px;
-  box-sizing: border-box;
 }
 .adminBox .main .nav a{
   float: left;
@@ -711,6 +723,17 @@ svg:not(:root) {
   border-bottom: 2px solid #C92027;
   color: #C92027;
 }
+/*foot*/
+.foot{height: 400px;padding-top: 30px; background-color: #F2F2F2; width: 100%;border-top:1px solid #ccc; }
+.foot .fMenu{}
+.foot .fMenu .line{
+  margin: 0 5px;
+}
+.foot .copyrightBox{padding-top: 15px; margin-top:15px;float: left;width: 100%;}
+.foot .fcompanyList{float: left;width: 100%;margin-top: 15px;}
+.foot .fcompanyList a{float: left;margin-right: 20px;width: 150px;height: 50px;}
+
+
 
 /*个人中心*/
 .adminBox.userIndex{
@@ -900,8 +923,7 @@ svg:not(:root) {
 .adminBox.openShop{}
 .adminBox.openShop .infoBox{
   float: left;
-  width: 100%;
-  box-sizing: border-box;
+  width: 965px;
   padding: 15px;
   border:1px solid #ddd;
 }
@@ -1113,14 +1135,12 @@ svg:not(:root) {
 .adminBox.openShop .business .toDoBox{
   width: 994px;
   border:1px solid #ddd;
-  box-sizing: border-box;
   float: left;
   padding-bottom: 20px;
 }
 .adminBox.openShop .business .toDoBox h4{
   height: 40px;
-  width: 100%;
-  box-sizing: border-box;
+  width: 974px;
   line-height: 40px;
   padding-left: 20px;
   background-color: #F3F3F3;
@@ -1253,12 +1273,10 @@ svg:not(:root) {
 }
 #setShopForm .item textarea{
   float: left;
-  width: 400px;
-  min-height: 60px;
-  border:1px solid #ddd;
+  width: 380px;
+  min-height: 50px;
   font-size: 14px;
   padding: 5px 10px;
-  box-sizing: border-box;
 }
 #setShopForm .item .saveBtn{
   float: left;
@@ -1436,10 +1454,9 @@ svg:not(:root) {
 }
 .adminBox.account .accountInfo{
   float: left;
-  width: 100%;
+  width: 965px;
   border:1px solid #ddd;
   padding: 15px;
-  box-sizing: border-box;
 }
 .adminBox.account .accountInfo .basic{
   border-bottom:1px solid #ddd;
@@ -1637,10 +1654,8 @@ svg:not(:root) {
 }
 .adminBox.sold .orderSearchForm .text{
   float: left;
-  width: 204px;
+  width: 184px;
   height: 34px;
-  border:1px solid #ddd;
-  box-sizing: border-box;
   padding: 0 10px;
 }
 .adminBox.sold .orderSearchForm .uText{
@@ -1651,10 +1666,9 @@ svg:not(:root) {
 }
 .adminBox.sold .orderSearchForm select{
   float: left;
-  width: 204px;
+  width: 194px;
   height: 34px;
-  border:1px solid #ddd;
-  box-sizing: border-box;
+  border:1px solid #ccc;
   padding: 0 5px;
   color: #999;
 }
@@ -2053,10 +2067,9 @@ svg:not(:root) {
 }
 .adminBox.release .releaseForm .productTypeBox{
   float: left;
-  width: 100%;
+  width: 966px;
   background-color: #eee;
-  height: 106px;
-  box-sizing: border-box;
+  height: 76px;
   padding: 15px;
   margin-top: 10px;
 }
@@ -2081,31 +2094,31 @@ svg:not(:root) {
   color: #666;
   margin-right: 25px;
 }
-.adminBox.release .releaseForm nav{
-  width: 100%;
+.adminBox.release .releaseForm .formNav{
+  width: 972px;
   float: left;
   box-sizing: border-box;
   padding: 12px 10px 0 15px;
 }
-.adminBox.release .releaseForm .basic{
-  width: 100%;
+.adminBox.release .releaseForm .item{
+  width:984px;
   float: left;
-  box-sizing: border-box;
   padding: 12px 10px 0 15px;
 }
-.adminBox.release .releaseForm .basic h3.ti{
+.adminBox.release .releaseForm .item h3.ti{
   float: left;
   width: 100%;
   margin-top: 10px;
+  font-size: 16px;
 }
-.adminBox.release .releaseForm .basic .f1,
-.adminBox.release .releaseForm .basic .pField{
+.adminBox.release .releaseForm .item .f1,
+.adminBox.release .releaseForm .item .pField{
   float: left;
   width: 100%;
   margin-top: 15px;
 }
-.adminBox.release .releaseForm .basic .f1 label,
-.adminBox.release .releaseForm .basic .pField label{
+.adminBox.release .releaseForm .item .f1 label,
+.adminBox.release .releaseForm .item .pField label{
   float: left;
   width: 87px;
   margin-right: 10px;
@@ -2113,101 +2126,110 @@ svg:not(:root) {
   height: 44px;
   line-height: 44px;
 }
-.adminBox.release .releaseForm .basic i.reqI{
+.adminBox.release .releaseForm .item i.reqI{
   color: #C92027;
 }
-.adminBox.release .releaseForm .basic .f1 .fr{
-  width: 870px;
-}
-.adminBox.release .releaseForm .basic .f1 .fr .text,
-.adminBox.release .releaseForm .basic .pField .fl .text,
-.adminBox.release .releaseForm .basic .pField .fl select{
+.adminBox.release .releaseForm .item .f1 .fr{
+  width: 860px;
   float: left;
-  width: 784px;
-  height: 38px;
-  border:1px solid #ddd;
-  padding: 0 10px;
-  box-sizing: border-box;
+  margin-left: 5px;
 }
-.adminBox.release .releaseForm .basic .f1 .fr .length{
+.adminBox.release .releaseForm .item .f1 .fr .text,
+.adminBox.release .releaseForm .item .pField .fl .text,
+.adminBox.release .releaseForm .item .pField .fl select{
+  float: left;
+  width: 764px;
+  height: 38px;
+  border:1px solid #ccc;
+  padding: 0 10px;
+}
+.adminBox.release .releaseForm .item .pField .fl .text.small{
+  width: 170px;
+  height: 28px;
+  margin-top: 5px;
+}
+.adminBox.release .releaseForm .item .f1 .fr .length{
   float: left;
   margin-left: 10px;
   margin-top: 8px;
 }
-.adminBox.release .releaseForm .basic i.err{
+.adminBox.release .releaseForm .item i.err{
   color: #C92027;
 }
-.adminBox.release .releaseForm .basic .f1 .fr .error,
-.adminBox.release .releaseForm .basic .pField .error{
+.adminBox.release .releaseForm .item .f1 .fr .error,
+.adminBox.release .releaseForm .item .pField .error{
   color: #C92027;
   width: 100%;
   float: left;
   margin-top: 5px;
   display: none;
 }
-.adminBox.release .releaseForm .basic .f1 .fr textarea{
+.adminBox.release .releaseForm .item .f1 .fr textarea{
   float: left;
-  width: 784px;
-  max-width: 784px;
-  min-width: 784px;
-  height: 68px;
-  border:1px solid #ddd;
+  width: 764px;
+  max-width: 764px;
+  min-width: 764px;
+  height: 48px;
   padding: 10px 10px;
-  box-sizing: border-box;
 }
-.adminBox.release .releaseForm .basic .f1 .fr .p1{
+.adminBox.release .releaseForm .item .f1 .fr .p1{
   line-height: 44px;
   color: #999;
 }
 
-.adminBox.release .releaseForm .basic .pField label{
+.adminBox.release .releaseForm .item .pField label{
   width: 110px;
 }
-.adminBox.release .releaseForm .basic .pField .fl{
+.adminBox.release .releaseForm .item .pField .fl{
   width: 275px;
 }
-.adminBox.release .releaseForm .basic .pField .fl .text,
-.adminBox.release .releaseForm .basic .pField .fl select{
+.adminBox.release .releaseForm .item .pField .fl .text,
+.adminBox.release .releaseForm .item .pField .fl select{
   width: 275px;
 }
-.adminBox.release .releaseForm .basic .pField .fr{
+.adminBox.release .releaseForm .item .pField .fl select{
+  *margin-top: 12px;
+  *height: 31px;
+  width: 295px;
+}
+.adminBox.release .releaseForm .item .pField .fr{
   width: 850px;
 }
-.adminBox.release .releaseForm .basic .pField .colors{
+.adminBox.release .releaseForm .item .pField .colors{
   width: 739px;
   height: 5px;
   float: left;
   background-position: 0 -533px;
   margin-top: 17px;
 }
-.adminBox.release .releaseForm .basic .pField .fr .colorList{
+.adminBox.release .releaseForm .item .pField .fr .colorList{
   float: left;
   width: 100%;
   margin-top: 8px;
 }
-.adminBox.release .releaseForm .basic .pField .fr .colorList li{
+.adminBox.release .releaseForm .item .pField .fr .colorList li{
   float: left;
   width: 68px;
 }
-.adminBox.release .releaseForm .basic .pField .fr .colorList li input[type="checkbox"]{
+.adminBox.release .releaseForm .item .checkbox{
   float: left;
   width: 15px;
   height: 15px;
 }
-.adminBox.release .releaseForm .basic .pField .fr .colorList li label{
+.adminBox.release .releaseForm .item .pField .fr .colorList li label{
   float: left;
   width: auto;
   line-height: 14px;
   margin-left: 5px;
 }
-.adminBox.release .releaseForm .basic .attrsBox{
+.adminBox.release .releaseForm .item .attrsBox{
   float: left;
   width: 665px;
   position:relative;
   margin-top: 20px;
   margin-left: 120px;
 }
-.adminBox.release .releaseForm .basic .attrsBtnTab{
+.adminBox.release .releaseForm .item .attrsBtnTab{
   float: left;
   width: 665px;
   position: absolute;
@@ -2215,7 +2237,7 @@ svg:not(:root) {
   left: 0;
   z-index: 1;
 }
-.adminBox.release .releaseForm .basic .attrsBtnTab a{
+.adminBox.release .releaseForm .item .attrsBtnTab a{
   float: left;
   width: 110px;
   height: 28px;
@@ -2225,10 +2247,10 @@ svg:not(:root) {
   text-align: center;
   line-height: 28px;
 }
-.adminBox.release .releaseForm .basic .attrsBtnTab a.on{
+.adminBox.release .releaseForm .item .attrsBtnTab a.on{
   background-color: #F2F2F2;
 }
-.adminBox.release .releaseForm .basic .attrsDetail{
+.adminBox.release .releaseForm .item .attrsDetail{
   float: left;
   width: 665px;
   border:1px solid #ddd;
@@ -2237,70 +2259,69 @@ svg:not(:root) {
   min-height: 100px;
   padding: 13px 15px;
 }
-.adminBox.release .releaseForm .basic .attrsDetail .p1{
+.adminBox.release .releaseForm .item .attrsDetail .p1{
   width: 100%;
   float: left;
   color: #999;
 }
-.adminBox.release .releaseForm .basic .attrsDetail .gyBox{
+.adminBox.release .releaseForm .item .attrsDetail .gyBox{
   float: left;
   width: 100%;
   margin-top: 10px;
 }
-.adminBox.release .releaseForm .basic .attrsDetail .gyBox .label,
-.adminBox.release .releaseForm .basic .attrsDetail .priceBox label{
+.adminBox.release .releaseForm .item .attrsDetail .gyBox .label,
+.adminBox.release .releaseForm .item .attrsDetail .priceBox label{
   float: left;
   margin-right: 8px;
   height: 34px;
   line-height: 34px;
 }
-.adminBox.release .releaseForm .basic .attrsDetail .gyBox select,
-.adminBox.release .releaseForm .basic .attrsDetail .priceBox select,
-.adminBox.release .releaseForm .basic .attrsDetail .priceBox .text{
+.adminBox.release .releaseForm .item .attrsDetail .gyBox select,
+.adminBox.release .releaseForm .item .attrsDetail .priceBox select,
+.adminBox.release .releaseForm .item .attrsDetail .priceBox .text{
   float: left;
   margin-right: 40px;
-  width: 202px;
+  width: 186px;
   height: 34px;
-  border:1px solid #ddd;
-  box-sizing: border-box;
+  border:1px solid #ccc;
   padding: 0 8px;
   color: #999;
 }
-.adminBox.release .releaseForm .basic .attrsDetail .gyBox .hasSel{
+.adminBox.release .releaseForm .item .attrsDetail .gyBox .hasSel{
   float: left;
   width: 100%;
   margin-left: 16px;
   margin-top: 15px;
 
 }
-.adminBox.release .releaseForm .basic .attrsDetail .gyBox .hasSel .c{
+.adminBox.release .releaseForm .item .attrsDetail .gyBox .hasSel .c{
   color: #333;
 }
-.adminBox.release .releaseForm .basic .attrsDetail .priceBox{
+.adminBox.release .releaseForm .item .attrsDetail .priceBox{
   float: left;
   margin-left: 72px;
   margin-top: 10px;
 }
-.adminBox.release .releaseForm .basic .attrsDetail .priceBox fieldset{
+.adminBox.release .releaseForm .item .attrsDetail .priceBox fieldset{
   float: left;
   width: 525px;
   margin-bottom: 10px;
   margin-top: 5px;
 }
-.adminBox.release .releaseForm .basic .attrsDetail .priceBox label{
+.adminBox.release .releaseForm .item .attrsDetail .priceBox label{
   float: left;
   margin-right: 8px;
   height: 34px;
   line-height: 34px;
 }
-.adminBox.release .releaseForm .basic .attrsDetail .priceBox .text{
+.adminBox.release .releaseForm .item .attrsDetail .priceBox .text{
   width: 134px;
   margin-right: 20px;
 }
-.adminBox.release .releaseForm .basic .attrsDetail .priceBox select.short{
+.adminBox.release .releaseForm .item .attrsDetail .priceBox select.short{
   width: 70px;
 }
-.adminBox.release .releaseForm .basic .attrsDetail .priceBox .confirmBtn{
+.adminBox.release .releaseForm .item .attrsDetail .priceBox .confirmBtn{
   float: left;
   width: 140px;
   height: 34px;
@@ -2311,3 +2332,171 @@ svg:not(:root) {
   color: white;
   margin-left: 56px;
 }
+.adminBox.release .releaseForm .item .pField .max{
+  width: 800px;
+}
+.adminBox.release .releaseForm .pcPicText,
+.adminBox.release .releaseForm .longPicText{
+  margin-top: 12px;
+  float: left;
+}
+.adminBox.release .releaseForm .pcPics,
+.adminBox.release .releaseForm .longPics{
+  float: left;
+  width: 820px;
+  margin-top: 20px;
+}
+.adminBox.release .releaseForm .pcPics .pic,
+.adminBox.release .releaseForm .longPics .pic{
+  float: left;
+  width: 118px;
+  height: 118px;
+  border:1px solid #ccc;
+  background-color: #F3F3F3;
+  position: relative;
+  cursor: pointer;
+  margin-right: 28px;
+}
+.adminBox.release .releaseForm .longPics .pic{
+  height: 168px;
+}
+.adminBox.release .releaseForm .pcPics .pic .mainText,
+.adminBox.release .releaseForm .longPics .pic .mainText{
+  float: left;
+  width: 118px;
+  background-color: #D3D4D7;
+  text-align: center;
+  line-height: 26px;
+  height: 26px;
+}
+.adminBox.release .releaseForm .pcPics .pic b.icon,
+.adminBox.release .releaseForm .longPics .pic b.icon{
+  position: absolute;
+  top: 35px;
+  left: 32px;
+  width: 52px;
+  height: 52px;
+  background-position: -102px -112px;
+}
+.adminBox.release .releaseForm .longPics .pic b.icon{
+  top: 60px;
+}
+.adminBox.release .releaseForm .deviceTab{
+  margin-top: 9px;
+  float: left;
+}
+.adminBox.release .releaseForm .deviceTab a{
+  float: left;
+  width: 72px;
+  height:24px;
+  background-color: #495068;
+  border-radius:8px;
+  text-align: center;
+  line-height: 24px;
+  color: white;
+  margin-right: 8px;
+}
+.adminBox.release .releaseForm .deviceTab a.on,
+.adminBox.release .releaseForm .deviceTab a:hover{
+  background-color: #E0585E;
+}
+.adminBox.release .releaseForm .editBox{
+  min-width: 800px;
+  min-height: 500px;
+  float: left;
+  margin-top: 10px;
+  margin-left: -50px;
+}
+.adminBox.release .releaseForm .extractionCheck{
+  float: left;
+  width: 820px;
+}
+.adminBox.release .releaseForm .extractionCheck li{
+  float: left;
+}
+.adminBox.release .releaseForm .extractionCheck .checkbox{
+  margin-top: 15px;
+  margin-right: 5px;
+}
+.adminBox.release .releaseForm .item .extractionCheck label{
+  width: auto;
+}
+.adminBox.release .releaseForm .serviceCheck{
+  float: left;
+  width: 820px;
+  padding-left: 80px;
+  margin-top: 20px;
+}
+.adminBox.release .releaseForm .serviceCheck li{
+  float: left;
+  width: 100%;
+  height: 30px;
+}
+.adminBox.release .releaseForm .serviceCheck li .checkbox{
+  margin-top: 3px;margin-right: 5px;
+}
+.adminBox.release .releaseForm .serviceCheck li label{
+  
+}
+.adminBox.release .releaseForm .policy{
+  float: left;
+  width: 880px;
+  padding-left: 20px;
+}
+.adminBox.release .releaseForm .policy .checkbox{
+  margin-top: 3px;
+  margin-right: 5px;
+}
+.adminBox.release .releaseForm .policy label{
+  
+}
+.adminBox.release .releaseForm .time{
+  margin-top: 20px;
+}
+.adminBox.release .releaseForm .time h6{
+  font-size: 16px;
+  float: left;
+}
+.adminBox.release .releaseForm .time .timeCheck{
+  float: left;
+  width: 800px;
+  margin-left: 10px;
+}
+.adminBox.release .releaseForm .time .timeCheck li{
+  float: left;
+  margin-right: 5px;
+}
+.adminBox.release .releaseForm .time .timeCheck li .checkbox{
+  margin-top: 3px;
+  margin-right: 3px;
+  margin-left: 5px;
+}
+.adminBox.release .releaseForm .time .timeCheck li label{
+
+}
+.adminBox.release .releaseForm .btnList{
+  margin-top: 50px;
+}
+.adminBox.release .releaseForm .btnList .releaseBtn,
+.adminBox.release .releaseForm .btnList .saveTempBtn{
+  width: 144px;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  float: left;
+  font-size: 16px;
+  border:none;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.adminBox.release .releaseForm .btnList .releaseBtn{
+  background-color: #E0585E;
+  color: white;
+  margin-left: 320px;
+}
+.adminBox.release .releaseForm .btnList .saveTempBtn{
+  color: #495068;
+  background-color: white;
+  border:1px solid #ccc;
+}
+      

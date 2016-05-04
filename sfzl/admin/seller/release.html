@@ -119,13 +119,13 @@
 							<option>斜纹绸</option>
 						</select>
 					</div>
-					<nav>
+					<div class="formNav">
 						<span class="text">类目：</span>
 						<a href="javascript:;">丝绸 ></a>
 						<a href="javascript:;">绸类 ></a>
 						<a href="javascript:;">斜纹绸</a>
-					</nav>
-					<div class="basic">
+					</div>
+					<div class="item basic">
 						<h3 class="ti">1.商品基本信息</h3>
 						<fieldset class="f1">
 							<label><i class="reqI">*</i>商品标题</label>
@@ -229,17 +229,17 @@
 							<div class="fr">
 								<div class="icon colors"></div>
 								<ul class="colorList">
-									<li><input type="checkbox" class="checkbox" ><label>青色</label></li>
-									<li><input type="checkbox" class="checkbox" ><label>绿色</label></li>
-									<li><input type="checkbox" class="checkbox" ><label>蓝色</label></li>
-									<li><input type="checkbox" class="checkbox" ><label>紫色</label></li>
-									<li><input type="checkbox" class="checkbox" ><label>深色</label></li>
-									<li><input type="checkbox" class="checkbox" ><label>黄色</label></li>
-									<li><input type="checkbox" class="checkbox" ><label>橙色</label></li>
-									<li><input type="checkbox" class="checkbox" ><label>红色</label></li>
-									<li><input type="checkbox" class="checkbox" ><label>白色</label></li>
-									<li><input type="checkbox" class="checkbox" ><label>灰色</label></li>
-									<li><input type="checkbox" class="checkbox" ><label>黑色</label></li>
+									<li><input type="radio" name="color" class="checkbox" ><label>青色</label></li>
+									<li><input type="radio" name="color" class="checkbox" ><label>绿色</label></li>
+									<li><input type="radio" name="color" class="checkbox" ><label>蓝色</label></li>
+									<li><input type="radio" name="color" class="checkbox" ><label>紫色</label></li>
+									<li><input type="radio" name="color" class="checkbox" ><label>深色</label></li>
+									<li><input type="radio" name="color" class="checkbox" ><label>黄色</label></li>
+									<li><input type="radio" name="color" class="checkbox" ><label>橙色</label></li>
+									<li><input type="radio" name="color" class="checkbox" ><label>红色</label></li>
+									<li><input type="radio" name="color" class="checkbox" ><label>白色</label></li>
+									<li><input type="radio" name="color" class="checkbox" ><label>灰色</label></li>
+									<li><input type="radio" name="color" class="checkbox" ><label>黑色</label></li>
 								</ul>
 								<span class="error">这是必选！</span>
 							</div>
@@ -288,9 +288,100 @@
 								</div>
 							</div>
 						</div>
-
+						<fieldset class="pField">
+							<label><i class="reqI">*</i>商品条形码</label>
+							<div class="fl">
+								<input type="text" class="text small" placeholder="请输入">
+								<span class="error">这是必选！</span>
+							</div>
+						</fieldset>
+						<fieldset class="pField">
+							<label><i class="reqI">*</i>电脑端商品图片</label>
+							<div class="fl max">
+								<span class="pcPicText">商品主图大小不能超过3MB；700*700 以上的图片上传以后宝贝详情页自动提供放大镜的功能</span>
+								<div class="pcPics">
+									<div class="pic">
+										<span class="mainText"><i class="reqI">*</i>商品主图</span>
+										<b class="icon"></b>
+									</div>
+									<div class="pic">
+										<b class="icon"></b>
+									</div>
+									<div class="pic">
+										<b class="icon"></b>
+									</div>
+									<div class="pic">
+										<b class="icon"></b>
+									</div>
+									<div class="pic">
+										<b class="icon"></b>
+									</div>
+								</div>
+								<span class="error">这是必选！</span>
+							</div>
+						</fieldset>
+						<fieldset class="pField">
+							<label>图片长图</label>
+							<div class="fl max">
+								<span class="longPicText">长图横坚比必须为2：3，最小长度为480，建议上传500X760像素的尺寸</span>
+								<div class="longPics">
+									<div class="pic">
+										<span class="mainText">商品长图</span>
+										<b class="icon"></b>
+									</div>
+								</div>
+								<span class="error">这是必选！</span>
+							</div>
+						</fieldset>
+						<fieldset class="pField">
+							<label><i class="reqI">*</i>商品描述</label>
+							<div class="fl max">
+								<div class="deviceTab">
+									<a href="javascript:;" class="on">电脑端</a>
+									<a href="javascript:;">手机端</a>
+								</div>
+								<div class="editBox">
+									
+								</div>
+								<span class="error">这是必选！</span>
+							</div>
+						</fieldset>
 					</div>
-
+					<div class="item ems">
+						<h3 class="ti">2.商品物流服务</h3>
+						<fieldset class="pField extraction">
+							<label><i class="reqI">*</i>提取方式</label>
+							<div class="fl max">
+								<ul class="extractionCheck">
+									<li><input type="radio" name="extraction" class="checkbox" ><label>使用物流配送</label></li>
+									<li><input type="radio" name="extraction" class="checkbox" ><label>自行提货</label></li>
+								</ul>
+								<span class="error">这是必选！</span>
+							</div>
+						</fieldset>
+					</div>
+					<div class="item service">
+						<h3 class="ti">3.售后保障信息</h3>
+						<ul class="serviceCheck">
+							<li><input type="radio" name="service" class="checkbox" ><label>提供发票</label></li>
+							<li><input type="radio" name="service" class="checkbox" ><label>退换货承诺：凡使用支付宝服务付款购买本店商品，若存在质量问题或与描述不符，本店将主动提供退换货服务并承担来回邮费</label></li>
+						</ul>
+						<div class="policy">
+							<input type="checkbox" class="checkbox" ><label>我已接受并且阅读《丝纺之路规则》现在发布宝贝</label>
+						</div>
+					</div>
+					<div class="item time">
+						<h6><i class="reqI">*</i>开始时间</h6>
+						<ul class="timeCheck">
+							<li><input type="radio" name="time" class="checkbox" ><label>立即开始</label></li>
+							<li><input type="radio" name="time" class="checkbox" ><label>定时上架</label></li>
+							<li><input type="radio" name="time" class="checkbox" ><label>放入仓库</label></li>
+						</ul>
+					</div>
+					<div class="item btnList">
+						<input type="submit" value="马上发布" class="releaseBtn" />
+						<button class="saveTempBtn">保存草稿</button>
+					</div>
 				</form>
 
 			</div>
@@ -299,21 +390,48 @@
 
     <!--foot start-->
     <div class="foot">
+    	<div class="w">
+    		<div class="fMenu">
+    			<a href="javascript:;">帮助中心</a>   
+    			<span class="line">|</span>   
+    			<a href="javascript:;">购买流程</a>   
+    			<span class="line">|</span>   
+    			<a href="javascript:;">自助服务</a>   
+    			<span class="line">|</span>   
+    			<a href="javascript:;">平台新闻</a>   
+    			<span class="line">|</span>   
+    			<a href="javascript:;">行业动态</a>   
+    			<span class="line">|</span>   
+    			<a href="javascript:;">配送方式</a>   
+    			<span class="line">|</span>   
+    			<a href="javascript:;">我要买花</a>   
+    			<span class="line">|</span>   
+    			<a href="javascript:;">DIY定制</a>   
+    			<span class="line">|</span>   
+    			<a href="javascript:;">半成品丝绸</a>   
+    			<span class="line">|</span>   
+    			<a href="javascript:;">联系我们</a>   
+    			<span class="line">|</span>   
+    			<a href="javascript:;">关于丝纺栏</a>
+    		</div>
+			<div class="copyrightBox">
+				COPYRIGHT © 2015 深圳同益新中控实业有限公司 ALL RIGHTS RESERVED 技术支持：富润电商PHONE:0755-22969785
+			</div>
+			<div class="fcompanyList">
+				<a href="http://www.tong1sun.com" target="_blank"><img src="../../public/common/img/flogo.png"></a>
+				<a href="http://www.baidu.com" target="_blank"><img src="../../public/common/img/baidu.png"></a>
+			</div>
+    	</div>
     </div>
     <!--foot end-->
     <script type="text/javascript" src="../../public/common/js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="../../public/common/js/modernizr-1.7.min.js"></script>
     <script type="text/javascript" src="../../public/common/js/admin.js"></script>
 	<script type="text/javascript">
-		$('.closeSearchBtn').click(function(){
-			$(this).hide();
-			$('.openSearchBtn').show();
-			$('.orderSearchForm .form').hide();
-		});
-		$('.openSearchBtn').click(function(){
-			$(this).hide();
-			$('.closeSearchBtn').show();
-			$('.orderSearchForm .form').show();
+		$('.attrsBtnTab a').click(function(){
+			var $this = $(this);
+			$('.attrsBtnTab a').removeClass('on');
+			$this.addClass('on');
 		});
 	</script>
 

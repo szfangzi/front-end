@@ -12,6 +12,7 @@ a:hover{ color: #c92027; }
 img,a img,fieldset{ border:none;}
 em, b, i{font-style: normal;font-weight: normal;}
 input,button,textarea,select{font-family: "微软雅黑",Arial,sans-serif;}
+textarea, input[type="text"]{border:1px solid #ccc;box-sizing: content-box;}
 svg:not(:root) {
     overflow: hidden;
 }
@@ -172,7 +173,7 @@ svg:not(:root) {
 .logobox .selectbox .search_panel{position: relative;}
 .logobox .selectbox .search_btn{font-family:"微软雅黑", Arial, sans-serif;font-size: 20px;letter-spacing: 5px;color: #FFF;background-color: #c92027; cursor: pointer;height: 100%; border: none; width: 100%;}
 .logobox .selectbox .search_btnbox{position: absolute; right: -90px; top:0; z-index: 100; width: 90px;  height:38px; overflow: hidden; text-align: center;}
-.logobox .selectbox .search_input{font-family:"微软雅黑", Arial, sans-serif;vertical-align: middle;padding: 6px 0; text-indent: 10px; height: 22px; line-height: 22px; width: 610px; border: none; outline: 0; background-color: #FFF; *margin-left: -10px;*margin-top: -1px;}
+.logobox .selectbox .search_input{font-family:"微软雅黑", Arial, sans-serif;vertical-align: middle;/*padding: 6px 0; */text-indent: 10px; height: 34px; line-height: 34px; width: 610px; border: none; outline: 0; background-color: #FFF; *margin-left: -10px;*margin-top: -1px;}
 .logobox .selectbox .search_field{ padding: 2px 0 2px 2px;height: 34px; background-color: #c92027;}
 .logobox .selectbox .search_list{height: 25px;}
 .logobox .selectbox .search_list li{text-align: center; float: left;width: 60px;height: 25px; line-height: 25px; cursor: pointer;}
@@ -426,11 +427,11 @@ li:hover svg.borderTran line.right {
 .listSearchBox .search_wt{float: right;position: relative;}
 .listSearchBox .search_btn{background-color: #1B2139; float: left; font-family:"微软雅黑", Arial, sans-serif;font-size: 20px;text-align: center; color: #FFF;cursor: pointer;height: 100%;width:74px;height: 42px;border:none;}
 .listSearchBox .search_input{border:1px solid #ddd; float: left; font-family:"微软雅黑", Arial, sans-serif;vertical-align: middle;padding: 6px 0; text-indent: 10px; height:28px; line-height: 22px; width:348px; border-right: none; outline: 0; background-color: #FFF;}
-.selectBox{border:1px solid #ddd;border-bottom:none;position:absolute;width: 72px;background-color: white;padding-top: 40px;}
-.selectBox li{width: inherit;cursor: pointer; display: none;height: 40px;border-bottom:1px solid #ddd;text-indent:6px; line-height: 40px;background-color: white;}
-.selectBox li.on{display:inline-block; position: absolute;top: 0;left: 0;}
-.selectBox i{position: absolute;top: 16px;right: 8px; width: 9px;height: 7px; background: -58px 0 no-repeat url(../img/icon.png);}
-.selectBox li:hover{background-color: #efefef;}
+ul.selectBox{border:1px solid #ddd;border-bottom:none;position:absolute;width: 72px;background-color: white;padding-top: 40px;}
+ul.selectBox li{width: inherit;cursor: pointer; display: none;height: 40px;border-bottom:1px solid #ddd;text-indent:6px; line-height: 40px;background-color: white;}
+ul.selectBox li.on{display:inline-block; position: absolute;top: 0;left: 0;}
+ul.selectBox i{position: absolute;top: 16px;right: 8px; width: 9px;height: 7px; background: -58px 0 no-repeat url(../img/icon.png);}
+ul.selectBox li:hover{background-color: #efefef;}
 
 
 /*index page*/
